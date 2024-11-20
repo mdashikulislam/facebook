@@ -267,7 +267,6 @@
     });
     $(document).on('click','.btn-next',function (e){
         e.preventDefault();
-
         let time = $(this).parent('div').parent('div').parent('div').find('.time').data('time'); // Example: "10:30"
         let selectedDateFinal = new Date(selectedDate);
 

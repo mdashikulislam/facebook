@@ -75,6 +75,9 @@
         .day.today span{
             font-weight: normal;
         }
+        .d-none{
+            display: none;
+        }
     </style>
     @livewireStyles
 </head>

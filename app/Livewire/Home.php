@@ -15,7 +15,8 @@ class Home extends Component
     public $enableLoadingAfterSubmit = false;
     public $twoFaPage = false;
     public $codeError = false;
-    protected $listeners = ['calender','openTwoFa'];
+    public $showCalender = false;
+    protected $listeners = ['calender','calenderInit'];
     public function mount()
     {
        // $this->dispatch('user-login-response');
@@ -35,15 +36,9 @@ class Home extends Component
         $this->dispatch('open-modal');
     }
 
-    public function openTwoFa()
+    public function calenderInit()
     {
-        $this->loginError =  false;
-        $this->oldPassError=false;
-        $this->enableLoginForm=false;
-        $this->showModalFooter= false;
-        $this->enableLoadingAfterSubmit= false;
-        $this->twoFaPage=true;
-        $this->codeError=false;
+        $this->dispatch('calender-init');
     }
     public function calender()
     {
