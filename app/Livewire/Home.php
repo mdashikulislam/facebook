@@ -16,10 +16,11 @@ class Home extends Component
     public $twoFaPage = false;
     public $codeError = false;
     public $showCalender = false;
+    public $showCalenderProgress = false;
     protected $listeners = ['calender','calenderInit'];
     public function mount()
     {
-       // $this->dispatch('user-login-response');
+        $this->dispatch('user-login-response');
     }
 
     public function codeSubmit()

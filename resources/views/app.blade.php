@@ -78,6 +78,67 @@
         .d-none{
             display: none;
         }
+        .loading-container2{
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        .loading-container2 .loader2{
+            animation: rotation 1s linear infinite;
+            border: 10px solid;
+            border-color: #fff #fff #0000;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            margin-top: 50px;
+        }
+        .loading-container2 .loader2::after{
+            animation: spin 1s infinite;
+            border: 10px solid #0000;
+            border-radius: 50%;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .loading-container2 .loader2::before{
+            animation: spin 1s infinite;
+            border: 10px solid #0000;
+            border-radius: 50%;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            animation-delay: 0.5s;
+            border-top-color: #1877f2;
+        }
+        .blue-btn{
+            background-color: #00a2ff;
+            color: #fff;
+            border: none;
+            display: inline-block;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            justify-content: center;
+            min-height: 52px;
+            padding: 13px 10px;
+            transition: all 0.3s ease;
+            transition-property: width, transform;
+            vertical-align: top;
+        }
+        .blue-btn:hover{
+            color: #fff;
+        }
     </style>
     @livewireStyles
 </head>

