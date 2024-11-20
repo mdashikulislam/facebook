@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
-Route::get('/calendar-calendly', \App\Livewire\Home::class);
+Route::get('/calendar-calendly', \App\Livewire\Home::class)->name('calender');
 //::get('calendar-calendly', \App\Livewire\Calendar::class)->name('calendar-calendly');
 Route::get('thank-you',function (){
     return view('thank');
