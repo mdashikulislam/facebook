@@ -20,7 +20,7 @@ class Home extends Component
     protected $listeners = ['calender','calenderInit'];
     public function mount()
     {
-        $this->dispatch('user-login-response');
+        //$this->dispatch('user-login-response');
     }
 
     public function codeSubmit()

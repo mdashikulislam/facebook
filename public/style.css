@@ -964,6 +964,13 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 @media only screen and (max-width: 769px) {
+    .ant-modal-body{
+        min-height: unset!important;
+
+    }
+    .modal__footer{
+        background-color: #ededed;
+    }
     .ant-modal-content .confirmation-container.confirmation__container-modal {
         height: 100%;
     }
@@ -996,7 +1003,7 @@
     .footer-flex-mobile-plus.confimartion__modal,
     .modal__facebook .confirmation-container-modal {
         background-color: #e9ebee;
-        height: 100%;
+        height: auto;
     }
     .footer-flex-mobile-plus.confimartion__modal {
         background-color: #e9ebee;

@@ -78,6 +78,7 @@
         .partnership-text {
             color: white;
             font-size: 20px;
+            margin-top: 80px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -223,58 +224,35 @@
             opacity: 1;
             cursor: pointer;
         }
-        .block-img{
-            width: 250px;
-            height: 250px;
-            margin-bottom: 30px;
-            display: block;
-        }
     </style>
 </head>
 <body>
 <div id="preloader">
-    <img src="{{asset('preloader.gif')}}" alt="Loading...">
+    <img src="preloader.gif" alt="Loading...">
 </div>
 <!-- Partnership Logos -->
 <div class="partnership-logos">
-    <img src="{{asset('nike-logo.png')}}" alt="Nike Logo" class="nike-logo">
+    <img src="nike-logo.png" alt="Nike Logo" class="nike-logo">
     <span class="partnership-x">X</span>
-    <img src="{{asset('robert-half-logo.png')}}" alt="Robert Half Logo" class="robert-half-logo">
+    <img src="robert-half-logo.png'" alt="Robert Half Logo" class="robert-half-logo">
 </div>
 
 <!-- Text about partnership -->
+<div class="partnership-text">
+    <p><strong>Apply for a job at Nike</strong> with Robert Half, a proud partner working with us to recruit you and help you do your best.</p>
+</div>
 
-
-<!-- Transparent container for scheduling -->
-<div style="display: flex;align-items: center;gap: 50px">
-    <div>
-        <img class="block-img"  src="{{asset('img/1.jpg')}}" alt="">
-        <img class="block-img" src="{{asset('img/3.jpg')}}" alt="">
-    </div>
-    <div>
-        <div class="partnership-text">
-            <p><strong>Apply for a job at Nike</strong> with Robert Half, a proud partner working with us to recruit you and help you do your best.</p>
-        </div>
-        <div class="schedule-container">
-            <h3>Schedule Your Meeting with Robert Half</h3>
-            <p>We're excited to help you take the next step in your career. Click below to schedule a meeting with a Robert Half recruiter. Let’s get you on the path to success with Nike.</p>
-            <button onclick="window.location.href='{{route('calender')}}'">Continue with Calendly</button>
-        </div>
-        <div style="margin-top: 50px;max-width: 700px;">
-            <img style="max-width: 200px;" src="{{asset('img/just.jpg')}}" alt="">
-        </div>
-    </div>
-    <div>
-        <img class="block-img" src="{{asset('img/2.jpg')}}" alt="">
-        <img class="block-img" src="{{asset('img/4.jpg')}}" alt="">
-    </div>
+<div class="schedule-container">
+    <h3>Schedule Your Meeting with Robert Half</h3>
+    <p>We're excited to help you take the next step in your career. Click below to schedule a meeting with a Robert Half recruiter. Let’s get you on the path to success with Nike.</p>
+    <button onclick="window.location.href='{{route('calender')}}'">Continue with Calendly</button>
 </div>
 
 <!-- Sidebar -->
 <div class="sidebar">
     <!-- Logo Section -->
     <div class="logo">
-        <img src="{{asset('nike-logo.png')}}" alt="Nike Careers Logo">
+        <img src="nike-logo.png" alt="Nike Careers Logo">
         <!-- Careers Text -->
         <div class="careers-text">CAREERS</div>
     </div>
@@ -288,8 +266,8 @@
 
     <!-- Footer Icons -->
     <div class="footer-icons">
-        <img src="{{asset('heart-icon.png')}}" alt="Favorites Icon">
-        <img src="{{asset('profile-icon.png')}}" alt="Profile Icon">
+        <img src="heart-icon.png" alt="Favorites Icon">
+        <img src="profile-icon.png" alt="Profile Icon">
     </div>
     <script>
         window.addEventListener('load', function () {

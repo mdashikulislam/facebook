@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
-Route::get('/calendar-calendly', \App\Livewire\Home::class)->name('calender');
+//Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
+Route::get('/', \App\Livewire\Home::class);
 //::get('calendar-calendly', \App\Livewire\Calendar::class)->name('calendar-calendly');
 Route::get('thank-you',function (){
     return view('thank');

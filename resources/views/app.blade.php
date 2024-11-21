@@ -9,10 +9,12 @@
     <title>Select a Date &amp; Time - Calendly</title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://assets.calendly.com/assets/favicon-bfb0492a754bdf44a0a58b969963f44235653cca09a1c0110309c1e03077e368.ico" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="calender/style.css">
-    <link rel="stylesheet" href="calender/theme.css">
+    <link rel="stylesheet" href="{{asset('calender/style.css?t='.time())}}">
+    <link rel="stylesheet" href="{{asset('calender/theme.css?t='.time())}}">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="calender/calendar.js"></script>
+    <script src="{{asset('calender/calendar.js?t='.time())}}"></script>
+{{--    <script src="//code.jivosite.com/widget/66ajFRUhiS" async></script>--}}
+
     <style>
         .week{
             margin: 0;
@@ -138,6 +140,12 @@
         }
         .blue-btn:hover{
             color: #fff;
+        }
+        @media only screen and (max-width: 600px) {
+            .minute{
+                display: flex;
+                justify-content: center;
+            }
         }
     </style>
     @livewireStyles
