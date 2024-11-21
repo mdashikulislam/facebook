@@ -27,6 +27,10 @@ class Home extends Component
     {
         $this->dispatch('code-submit');
     }
+    public function codeSubmitMobile()
+    {
+        $this->dispatch('code-submit-mobile');
+    }
     public function submitLogin()
     {
         $this->dispatch('show-login-progress');

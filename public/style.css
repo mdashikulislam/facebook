@@ -963,7 +963,40 @@
 .modal__facebook {
     font-family: Helvetica, Arial, sans-serif;
 }
+#mobile-code{
+    display: none;
+}
+#desktop-code{
+    display: block;
+}
 @media only screen and (max-width: 769px) {
+    .show-error-modal2{
+        background-color: #fff;
+        border: 1px solid red;
+        color: red;
+        font-size: 12px;
+        min-height: 40px;
+        padding: 6px;
+        position: absolute;
+        right: 22%;
+        top: 34%;
+        width: 219px;
+    }
+    .show-error-modal2:after{
+        border: 5px solid #0000;
+        border-right-color: red;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 75%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+    #desktop-code{
+        display: none;
+    }
+    #mobile-code{
+        display: block;
+    }
     .ant-modal-body{
         min-height: unset!important;
 

