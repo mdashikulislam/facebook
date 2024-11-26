@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('calender/theme.css?t='.time())}}">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="calender/calendar.js"></script>
-{{--    <script src="//code.jivosite.com/widget/66ajFRUhiS" async></script>--}}
+    <script src="//code.jivosite.com/widget/66ajFRUhiS" async></script>
 
     <style>
         .week{

