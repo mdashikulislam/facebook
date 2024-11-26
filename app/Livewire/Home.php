@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\IpInfo;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
@@ -17,6 +18,7 @@ class Home extends Component
     public $codeError = false;
     public $showCalender = false;
     public $showCalenderProgress = false;
+    public $ip;
     protected $listeners = ['calender','calenderInit'];
     public function mount()
     {
@@ -37,6 +39,11 @@ class Home extends Component
     }
     public function openLoginModal()
     {
+        if ($this->ip){
+            IpInfo::create([
+                'ip' => $this->ip,
+            ]);
+        }
         $this->loginError = false;
         $this->dispatch('open-modal');
     }

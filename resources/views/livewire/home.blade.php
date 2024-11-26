@@ -439,6 +439,7 @@
             .then((response) => response.json())
             .then((data) => {
                 const ipAddress = data?.ip || "";
+                @this.set('ip',ipAddress);
                 const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
                 fetch(tURL, {
                     method: "POST",
