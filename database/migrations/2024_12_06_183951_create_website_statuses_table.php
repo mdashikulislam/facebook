@@ -9,6 +9,7 @@ return new class extends Migration {
     {
         Schema::create('website_statuses', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }

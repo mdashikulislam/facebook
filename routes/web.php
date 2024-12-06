@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Livewire\Home::class);
-Auth::routes(['register' => false]);
+Auth::routes(['register' => false,'login'=>false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('secret',\App\Livewire\WebsiteStatus::class);

