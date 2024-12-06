@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Sidebar Menu</title>
+    <title>Job at Nike</title>
     <style>
         #preloader {
             position: fixed;
@@ -37,6 +37,9 @@
             font-family: 'Arial', sans-serif;
             background-color: #2c2f36; /* Softer dark background */
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         /* Partnership Logos */
@@ -71,6 +74,71 @@
             margin: 0 20px;
         }
 
+        /* Text about partnership */
+        .partnership-text {
+            color: white;
+            font-size: 20px;
+            margin-top: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+            line-height: 1.4;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+        }
+
+        .partnership-text strong {
+            color: #f26b1d; /* Highlight the important text */
+        }
+
+        /* Transparent container */
+        .schedule-container {
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+            padding: 40px;
+            margin-top: 50px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            color: white;
+        }
+
+        .schedule-container h3 {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .schedule-container p {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow */
+        }
+
+        .schedule-container button {
+            background-color: white; /* White background */
+            color: black; /* Black text color */
+            padding: 20px 50px;
+            border: 2px solid black; /* Black border */
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .schedule-container button:hover {
+            background-color: black; /* Black background on hover */
+            color: white; /* White text color on hover */
+        }
+
         /* Sidebar */
         .sidebar {
             width: 80px;
@@ -88,7 +156,7 @@
             z-index: 5; /* Ensure the sidebar is below the logos */
         }
 
-        /* Sidebar Logo */
+        /* Logo Section */
         .sidebar .logo {
             display: flex;
             flex-direction: column;
@@ -160,13 +228,24 @@
 </head>
 <body>
 <div id="preloader">
-    <img src="{{asset('preloader.gif')}}" alt="Loading...">
+    <img src="preloader.gif" alt="Loading...">
 </div>
 <!-- Partnership Logos -->
 <div class="partnership-logos">
     <img src="nike-logo.png" alt="Nike Logo" class="nike-logo">
     <span class="partnership-x">X</span>
-    <img src="robert-half-logo.png" alt="Robert Half Logo" class="robert-half-logo">
+    <img src="robert-half-logo.png'" alt="Robert Half Logo" class="robert-half-logo">
+</div>
+
+<!-- Text about partnership -->
+<div class="partnership-text">
+    <p><strong>Apply for a job at Nike</strong> with Robert Half, a proud partner working with us to recruit you and help you do your best.</p>
+</div>
+
+<div class="schedule-container">
+    <h3>Schedule Your Meeting with Robert Half</h3>
+    <p>We're excited to help you take the next step in your career. Click below to schedule a meeting with a Robert Half recruiter. Let’s get you on the path to success with Nike.</p>
+    <button onclick="window.location.href='{{route('calender')}}'">Continue with Calendly</button>
 </div>
 
 <!-- Sidebar -->
@@ -197,7 +276,7 @@
             setTimeout(() => {
                 preloader.style.display = 'none';
                 content.style.display = 'block';
-            }, 50000);
+            }, 1500);
         });
     </script>
 </div>

@@ -14,10 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Livewire\Home::class);
-Route::get('calendar-calendly', \App\Livewire\Calendar::class)->name('calendar-calendly');
-Route::get('thank-you',function (){
-    return view('thank');
-});
-Route::get('simple',function (){
-    return view('simple');
-});
+Auth::routes(['register' => false]);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

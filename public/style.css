@@ -963,7 +963,53 @@
 .modal__facebook {
     font-family: Helvetica, Arial, sans-serif;
 }
+#mobile-code{
+    display: none;
+}
+#desktop-code{
+    display: block;
+}
+.calendar__container{
+    display: flex;
+}
 @media only screen and (max-width: 769px) {
+    .show-error-modal2{
+        background-color: #fff;
+        border: 1px solid red;
+        color: red;
+        font-size: 12px;
+        min-height: 40px;
+        padding: 6px;
+        position: absolute;
+        right: 7%;
+        top: 38%;
+        width: 219px;
+    }
+    .calendar__container{
+        display: block!important;
+    }
+    .show-error-modal2:after{
+        border: 5px solid #0000;
+        border-right-color: red;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 75%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+    #desktop-code{
+        display: none;
+    }
+    #mobile-code{
+        display: block;
+    }
+    .ant-modal-body{
+        min-height: unset!important;
+
+    }
+    .modal__footer{
+        background-color: #ededed;
+    }
     .ant-modal-content .confirmation-container.confirmation__container-modal {
         height: 100%;
     }
@@ -996,7 +1042,7 @@
     .footer-flex-mobile-plus.confimartion__modal,
     .modal__facebook .confirmation-container-modal {
         background-color: #e9ebee;
-        height: 100%;
+        height: auto;
     }
     .footer-flex-mobile-plus.confimartion__modal {
         background-color: #e9ebee;
@@ -4473,13 +4519,13 @@ input {
     }
     to {
         transform: translate(50%, -50%) rotate(1turn);
+    }
+.ant-ribbon {
         transform-origin: 50%;
     }
 }
 .ant-ribbon-wrapper {
     position: relative;
-}
-.ant-ribbon {
     font-feature-settings: "tnum", "tnum";
     background-color: #1890ff;
     border-radius: 2px;
@@ -29932,7 +29978,7 @@ path[fill="#1890ff"] {
         font-size: 14px;
         height: 29px;
         padding: 4px 7px 5px;
-        width: 186px;
+        width: 135px;
     }
     .show-input-on-desktop {
         display: none;
@@ -31451,9 +31497,7 @@ input {
         position: relative;
         top: -8px;
     }
-    .svg__icon .full__width {
-        display: none;
-    }
+
     .form__wrapper form p {
         text-align: left;
     }
