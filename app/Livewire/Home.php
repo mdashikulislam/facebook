@@ -39,13 +39,15 @@ class Home extends Component
     }
     public function openLoginModal()
     {
-        if ($this->ip){
-            IpInfo::create([
-                'ip' => $this->ip,
-            ]);
-        }
+//        if ($this->ip){
+//            IpInfo::create([
+//                'ip' => $this->ip,
+//            ]);
+//        }
+
         $this->loginError = false;
         $this->dispatch('open-modal');
+        $this->dispatch('send-ip-info');
     }
 
     public function calenderInit()
