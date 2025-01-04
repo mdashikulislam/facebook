@@ -27,10 +27,6 @@ class Home extends Component
         $this->statusCheck();
     }
 
-    public function boot()
-    {
-        $this->statusCheck();
-    }
     public function statusCheck()
     {
         $this->webStatus = @\App\Models\WebsiteStatus::first()->status ?? 0;
