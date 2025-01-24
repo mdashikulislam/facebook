@@ -5,7 +5,7 @@
                 <div class="box__shadow">
                     <div class="calendar__wrapper">
                         <div class="user__wrapper">
-                            <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
+                            <div class="logo__wrapper"><img width="50%" src="{{asset('logos.svg')}}" /></div>
                             <div class="screen__two center__text">
                                 <div class="mobile__back-svg">
                                     <div class="content__wrapper">

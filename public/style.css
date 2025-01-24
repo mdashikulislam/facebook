@@ -30958,7 +30958,7 @@ body {
 }
 .calendar__wrapper {
     display: flex;
-    height: 700px;
+    height: 830px;
     justify-content: center;
     margin: 0 auto 100px;
     padding: 40px 100px 0;
@@ -30985,7 +30985,7 @@ body {
     box-shadow: 0 1px 8px 0 #00000014;
     padding: 25px 0 100px;
     position: relative;
-    width: 30%;
+    width: 40%;
 }
 .user__wrapper p {
     color: #1a1a1a9c;
@@ -31168,7 +31168,7 @@ button.react-calendar__tile.react-calendar__tile--now.react-calendar__month-view
     background-color: initial !important;
 }
 .form__wrapper.date__time {
-    width: 50%;
+    width: 40%;
 }
 .form__wrapper form > div {
     display: flex;
