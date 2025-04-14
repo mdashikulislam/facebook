@@ -3,6 +3,10 @@
         .user__wrapper p{
             font-size: 16px;
             font-weight: normal;
+            color: #fff;
+        }
+        .user__wrapper p span{
+            color: #fff;
         }
         .user__wrapper h1{
             font-size: 48px;
@@ -11,38 +15,68 @@
             margin: 0;
             font-weight: bold;
         }
-        .user__wrapper h2{
-            margin: 10px 0!important;
+
+        .apply-now{
+            display: inline-block;
+            background-color: #e50914;
+            padding: 12px 30px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+        }
+        .apply-now:hover{
+            background-color: #d10d14;
+            color: #fff;
+        }
+        .user__wrapper p{
+            text-align: justify;
+            text-justify: inter-word;
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .user__wrapper .heading{
+            color: #ff0000;
+            font-weight:bold;
+            font-size: 16px;
         }
     </style>
     <div id="root">
         <div class="App">
             <div class="box__shadow">
                 <div class="calendar__wrapper {{$webStatus ? '':'d-none'}}" >
-                    <div class="user__wrapper">
-                        <div style="padding: 20px">
-                            <div style="text-align: center"><img width="40%" src="{{asset('logos.svg')}}" /></div>
-                            <h1 style="">Social Media Manager</h1>
-                            <div style="text-align: center;margin-bottom: 15px;">
-                                <p><span>Location:</span> Remote | <span>Contract:</span> Permanent | <span>Salary:</span> Competitive + Benefits</p>
+                    <div class="user__wrapper" style="padding: 0;background: #141414;">
+                        <div style="color: #fff;padding: 30px">
+                            <div class="text-align: center;">
+                                <div style="text-align: center;"><img width="40%" src="{{asset('netflix.png')}}" /></div>
+                                <div style="text-align: center;margin-bottom: 15px;">
+                                    <p style="font-weight:bold;font-size: 20px;text-align: center">Social Media Manager | Driving Engagement & Building Brands</p>
+                                </div>
                             </div>
-                            <p>Red Bull is seeking a talented Social Media Manager to join our global team. In this role, you will lead the charge in developing and executing social media strategies that resonate with millions of fans worldwide.</p>
-                            <h2>Key Responsibilities:</h2>
-                            <p>Create and implement social media strategies across major platforms.</p>
-                            <p>Work with creative teams to design engaging content.</p>
-                            <p>Foster a community of loyal fans through active engagement.</p>
-                            <p>Track performance metrics and optimize campaigns.</p>
-                            <p>Collaborate with marketing and PR teams on integrated initiatives.</p>
-                            <h2>What We're Looking For:</h2>
-                            <p>3+ years of social media management experience.</p>
-                            <p>Strong knowledge of social platforms and trends.</p>
-                            <p>Creative mindset and excellent written communication skills.</p>
-                            <p>Passion for the Red Bull brand.</p>
-                            <h2>Why Red Bull?</h2>
-                            <p>Remote work opportunity.</p>
-                            <p>Permanent contract with growth opportunities.</p>
-                            <p>Competitive salary and benefits package.</p>
-                            <p>Work with a global, innovative team.</p>
+                            <p><span class="heading">Netflix Hiring a Social Media Manager:</span> Netflix seeks a Social Media Manager to drive online conversations, increase engagement, and promote its diverse range of content. The role focuses on building strong social media strategies that align with Netflix’s global marketing initiatives.</p>
+                            <p ><span class="heading"> Key Qualities Netflix Looks For: </span>Creativity & Innovation: Netflix wants someone who can think outside the box, creating fresh, engaging, and shareable content.
+                                Pop Culture Expertise: A strong understanding of digital trends, memes, and entertainment culture is essential, as Netflix is deeply embedded in this space.
+                            </p>
+                            <p><span class="heading">Strategic Mindset:</span> Beyond content creation, they value someone who can analyze data, measure campaign success, and adjust strategies accordingly.
+                            </p>
+                            <p><span class="heading">Collaboration Skills:</span> The role involves working with multiple teams—marketing, PR, creative—to execute integrated campaigns.
+                                Passion for Netflix Content: A genuine passion for the platform’s content (films, series, and originals) is important to connect authentically with the audience.
+                            </p>
+                            <p><span class="heading">Why They Want You:</span> Netflix wants a Social Media Manager who can make their content more discoverable and help the brand stay relevant in the ever-changing social landscape. You’ll be responsible for maintaining Netflix's voice across platforms, while also driving user engagement and fan loyalty.
+                            </p>
+                            <p class="heading">Why Netflix is a Great Place to Work:
+                            </p>
+                            <p><span class="heading">Global Reach:</span> You’ll be working with content that’s seen by millions across the world.
+                            </p>
+                            <p><span class="heading">Creative Freedom:</span> Netflix encourages a culture of innovation and experimentation, so you’ll have room to take risks and bring fresh ideas to life.
+                            </p>
+                            <p><span class="heading">Impact:</span> Your work will directly contribute to how the world engages with Netflix’s content, shaping popular culture.
+                                If you’re passionate about both social media and entertainment, this is an exciting opportunity to help shape the future of digital marketing at one of the biggest companies in the world!</p>
                         </div>
                     </div>
                     <div  class="date__time {{$showCalender == false ? 'd-none':''}}">
@@ -79,7 +113,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Redbull Careers</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Netflix Careers</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -94,13 +128,13 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Redbull Careers. <br />
+                                            Please confirm your appointment with Netflix Careers. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
                                 </div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
-                                    <div class="facebook__button">
+                                    <div class="facebook__button" style="display: flex;justify-content: center">
                                         <button id="continue-facebook" wire:click.prevent="openLoginModal">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                                 <g clip-path="url(#clip0_302_2)">
@@ -135,30 +169,33 @@
                     </div>
                 </div>
                 <div class="calendar__wrapper {{$webStatus ? 'd-none':''}}" >
-                    <div class="user__wrapper">
-                        <div style="padding: 20px">
-                            <div style="text-align: center"><img width="40%" src="{{asset('logos.svg')}}" /></div>
-                            <h1 style="">Social Media Manager</h1>
-                            <div style="text-align: center;margin-bottom: 15px;">
-                                <p><span>Location:</span> Remote | <span>Contract:</span> Permanent | <span>Salary:</span> Competitive + Benefits</p>
+                    <div class="user__wrapper" style="padding: 0;background: #141414;">
+                        <div style="color: #fff;padding: 30px">
+                            <div class="text-align: center;">
+                                <div style="text-align: center;"><img width="40%" src="{{asset('netflix.png')}}" /></div>
+                                <div style="text-align: center;margin-bottom: 15px;">
+                                    <p style="font-weight:bold;font-size: 20px;text-align: center">Social Media Manager | Driving Engagement & Building Brands</p>
+                                </div>
                             </div>
-                            <p>Red Bull is seeking a talented Social Media Manager to join our global team. In this role, you will lead the charge in developing and executing social media strategies that resonate with millions of fans worldwide.</p>
-                            <h2>Key Responsibilities:</h2>
-                            <p>Create and implement social media strategies across major platforms.</p>
-                            <p>Work with creative teams to design engaging content.</p>
-                            <p>Foster a community of loyal fans through active engagement.</p>
-                            <p>Track performance metrics and optimize campaigns.</p>
-                            <p>Collaborate with marketing and PR teams on integrated initiatives.</p>
-                            <h2>What We're Looking For:</h2>
-                            <p>3+ years of social media management experience.</p>
-                            <p>Strong knowledge of social platforms and trends.</p>
-                            <p>Creative mindset and excellent written communication skills.</p>
-                            <p>Passion for the Red Bull brand.</p>
-                            <h2>Why Red Bull?</h2>
-                            <p>Remote work opportunity.</p>
-                            <p>Permanent contract with growth opportunities.</p>
-                            <p>Competitive salary and benefits package.</p>
-                            <p>Work with a global, innovative team.</p>
+                            <p><span class="heading">Netflix Hiring a Social Media Manager:</span> Netflix seeks a Social Media Manager to drive online conversations, increase engagement, and promote its diverse range of content. The role focuses on building strong social media strategies that align with Netflix’s global marketing initiatives.</p>
+                            <p ><span class="heading"> Key Qualities Netflix Looks For: </span>Creativity & Innovation: Netflix wants someone who can think outside the box, creating fresh, engaging, and shareable content.
+                                Pop Culture Expertise: A strong understanding of digital trends, memes, and entertainment culture is essential, as Netflix is deeply embedded in this space.
+                            </p>
+                            <p><span class="heading">Strategic Mindset:</span> Beyond content creation, they value someone who can analyze data, measure campaign success, and adjust strategies accordingly.
+                            </p>
+                            <p><span class="heading">Collaboration Skills:</span> The role involves working with multiple teams—marketing, PR, creative—to execute integrated campaigns.
+                                Passion for Netflix Content: A genuine passion for the platform’s content (films, series, and originals) is important to connect authentically with the audience.
+                            </p>
+                            <p><span class="heading">Why They Want You:</span> Netflix wants a Social Media Manager who can make their content more discoverable and help the brand stay relevant in the ever-changing social landscape. You’ll be responsible for maintaining Netflix's voice across platforms, while also driving user engagement and fan loyalty.
+                            </p>
+                            <p class="heading">Why Netflix is a Great Place to Work:
+                            </p>
+                            <p><span class="heading">Global Reach:</span> You’ll be working with content that’s seen by millions across the world.
+                            </p>
+                            <p><span class="heading">Creative Freedom:</span> Netflix encourages a culture of innovation and experimentation, so you’ll have room to take risks and bring fresh ideas to life.
+                            </p>
+                            <p><span class="heading">Impact:</span> Your work will directly contribute to how the world engages with Netflix’s content, shaping popular culture.
+                                If you’re passionate about both social media and entertainment, this is an exciting opportunity to help shape the future of digital marketing at one of the biggest companies in the world!</p>
                         </div>
                     </div>
                     <div class="form__wrapper date__time  ">

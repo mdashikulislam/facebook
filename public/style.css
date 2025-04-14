@@ -31418,9 +31418,7 @@ input {
         text-align: center;
         width: 100%;
     }
-    .user__wrapper p {
-        padding-top: 20px;
-    }
+
     .user__wrapper .minute {
         padding-left: 30px;
     }

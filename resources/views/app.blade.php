@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <title>Select a Date &amp; Time - Calendly</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon-32x32.png')}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('nficon2023.ico')}}" />
     <link href="{{asset('style.css?t='.time())}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('calender/style.css?t='.time())}}">
     <link rel="stylesheet" href="{{asset('calender/theme.css?t='.time())}}">
