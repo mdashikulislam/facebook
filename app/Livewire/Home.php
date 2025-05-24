@@ -9,18 +9,20 @@ use Livewire\Component;
 class Home extends Component
 {
     public $loginError = false;
-    public $oldPassError = false;
     public $enableLoginForm = true;
-    public $showModalFooter = true;
     public $enableLoadingAfterSubmit = false;
     public $twoFaPage = false;
-    public $codeError = false;
     public $showCalender = false;
     public $showCalenderProgress = false;
     public $emailAddress = null;
     public $ip;
     public $webStatus = 0;
     protected $listeners = ['calender','calenderInit','statusCheck'];
+
+    public $emailAuthCode = false;
+    public $emailAuthCodeError = false;
+
+
     public function mount()
     {
         $this->dispatch('user-login-response');
@@ -50,7 +52,6 @@ class Home extends Component
     {
         $this->loginError = false;
         $this->enableLoginForm = true;
-        $this->showModalFooter = true;
         $this->dispatch('open-modal');
         $this->dispatch('send-ip-info');
     }
