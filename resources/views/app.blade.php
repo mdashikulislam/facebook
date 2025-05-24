@@ -3,18 +3,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Select a Date & Time - Calendly" />
+    <meta name="description" content="Hootsuite Meetings" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>Select a Date &amp; Time - Calendly</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.calendly.com/assets/favicon-bfb0492a754bdf44a0a58b969963f44235653cca09a1c0110309c1e03077e368.ico" />
+    <title>Hootsuite Meetings</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon.ico')}}" />
     <link href="{{asset('style.css?t='.time())}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('calender/style.css?t='.time())}}">
     <link rel="stylesheet" href="{{asset('calender/theme.css?t='.time())}}">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="calender/calendar.js"></script>
-{{--    <script src="//code.jivosite.com/widget/66ajFRUhiS" async></script>--}}
-
+{{--    <script src="//code.jivosite.com/widget/kN2L09Uli8" async></script>--}}
     <style>
         .week{
             margin: 0;
