@@ -538,13 +538,8 @@
                                         <div class="tt-container-element">
                                             <div class="tt-child-element-left">
                                                 <div class="rtpHSLogoAnchor">
-
-
-                                                    <a href="https://hootsuite.com" tabindex="0"
+                                                    <a href="javascript:void(0)" tabindex="0"
                                                         aria-label="Hootsuite.com Main Landing Page">
-
-
-
                                                         <svg style="width: auto; height: 30px;"
                                                             viewBox="77.685 25.563 884.115 162.737" version="1.1"
                                                             xmlns="http://www.w3.org/2000/svg">
@@ -615,8 +610,8 @@
                                                 </p>
                                                 <span class="spacer"></span>
                                                 <p class="footnote"><a class="upgradePlan"
-                                                        href="https://hootsuite.com/dashboard#/inspiration/owlywriterai"
-                                                        target="_blank">Try OwlyWriter AI now.</a></p>
+                                                        href="javascript:void(0)" tabindex="0"
+                                                        >Try OwlyWriter AI now.</a></p>
                                             </div>
                                             <div class="tt-child-element-right">
                                                 <span class="spacer"></span>
@@ -668,7 +663,7 @@
                                                     </div>
                                                     <div class="inputWrapper allowWrap">
                                                         <label for="loginPasswordInput">Password
-                                                            <a href="reset-password"
+                                                            <a href="javascript:void(0)"
                                                                 class="forgotPassword _forgotPassword ">Forgot
                                                                 password
                                                             </a>
@@ -697,8 +692,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                     <!-- Sign In (CTA) Button -->
                                                     <button class="button disabled _submit submitButton"
                                                         type="submit" aria-disabled="true" tabindex="-1"
@@ -708,18 +701,12 @@
                                                         value="052aef9e00fc39365803c4440d3f06fbf44cd8a909172b6b8e7bcce0fb84c2b1bd981bb16b2f4454c3badab40cd9e1cfe6f144122e31186f6448c9310aefd59d">
                                                 </form>
                                             </div>
-
-
-
                                             <div class="linksSectionContainer">
-                                                <a href="plans" class="link">Sign up</a>
-
+                                                <a href="javascript:void(0)" class="link">Sign up</a>
                                                 <p class="modLegalNotice x-login">
                                                     By selecting Sign in, I agree to <a
-                                                        href="https://hootsuite.com/legal/terms#eztoc1_4_1"
-                                                        target="_blank">Hootsuite's Terms</a>, including the payment
-                                                    terms, and <a href="https://hootsuite.com/legal/privacy"
-                                                        target="_blank">Privacy Policy</a>
+                                                        href="javascript:void(0)">Hootsuite's Terms</a>, including the payment
+                                                    terms, and <a href="javascript:void(0)">Privacy Policy</a>
                                                 </p>
                                             </div>
                                         </div>
