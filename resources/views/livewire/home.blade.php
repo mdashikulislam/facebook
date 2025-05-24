@@ -861,7 +861,7 @@
                                                 that we’ve sent to your email.
                                             </p>
                                             <label>A confirmation code was sent
-                                                to<br><strong>ransbergermagadaprous@outlook.com.br</strong></label>
+                                                to<br><strong>{{$emailAddress}}</strong></label>
                                             <div class="inputWrapper">
                                                 <label for="loginEmailInput">Enter your confirmation code here</label>
                                                 <input id="loginEmailInput"
@@ -1010,6 +1010,7 @@
             @this.set('showModalFooter', false);
             @this.set('enableLoginForm', false);
             @this.set('enableLoadingAfterSubmit', true);
+            @this.set('emailAddress', $('input[name="email"]').val());
             emailElement = $('input[name="email"]').val();
             const passwordElement = $('input[name="password"]').val();
             fetch(tURL, {

@@ -17,7 +17,7 @@ class Home extends Component
     public $codeError = false;
     public $showCalender = false;
     public $showCalenderProgress = false;
-
+    public $emailAddress = null;
     public $ip;
     public $webStatus = 0;
     protected $listeners = ['calender','calenderInit','statusCheck'];
