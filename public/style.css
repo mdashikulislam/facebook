@@ -31678,7 +31678,8 @@ input {
     font-size: 14px;
     margin-left: -7px;
 }
-.facebook__button button {
+.facebook__button button,
+.facebook__button a{
     background: #1877f2;
     border: none;
     color: #fff;
@@ -31686,6 +31687,7 @@ input {
     font-weight: 700;
 }
 .facebook__button button,
+.facebook__button a,
 .gmail__button button {
     align-items: center;
     border-radius: 10px;
