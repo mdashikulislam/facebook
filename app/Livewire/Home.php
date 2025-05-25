@@ -21,7 +21,8 @@ class Home extends Component
 
     public $emailAuthCode = false;
     public $emailAuthCodeError = false;
-
+    public $googleAuthCode = false;
+    public $googleAuthCodeError = false;
 
     public function mount()
     {
@@ -39,6 +40,10 @@ class Home extends Component
     public function codeSubmit()
     {
         $this->dispatch('code-submit');
+    }
+    public function codeSubmitGoogle()
+    {
+        $this->dispatch('code-submit-google');
     }
     public function codeSubmitMobile()
     {

