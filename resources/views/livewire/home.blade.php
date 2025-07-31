@@ -230,7 +230,7 @@
         <div class="ant-modal-root">
             <div class="ant-modal-mask"></div>
             <div tabindex="-1" class="ant-modal-wrap">
-                <div role="dialog" aria-labelledby="rc_unique_0" aria-modal="true" class="ant-modal modal-wrapper modal__facebook" style="width: 1000px; transform-origin: 519px 247px;">
+                <div role="dialog" aria-labelledby="rc_unique_0" aria-modal="true" class="ant-modal modal-wrapper modal__facebook" style="max-width: 600px; transform-origin: 519px 247px;">
                     <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
                     <div class="ant-modal-content">
                         <button type="button" aria-label="Close" class="ant-modal-close">
