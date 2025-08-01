@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="https://assets.calendly.com/assets/favicon-bfb0492a754bdf44a0a58b969963f44235653cca09a1c0110309c1e03077e368.ico" />
     <link href="{{asset('style.css?t='.time())}}" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('calender/style.css?t='.time())}}">
+    <link rel="stylesheet" href="{{asset('calender/extra.css?t='.time())}}">
     <link rel="stylesheet" href="{{asset('calender/theme.css?t='.time())}}">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="calender/calendar.js"></script>

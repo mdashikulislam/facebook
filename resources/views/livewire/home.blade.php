@@ -230,7 +230,7 @@
         <div class="ant-modal-root">
             <div class="ant-modal-mask"></div>
             <div tabindex="-1" class="ant-modal-wrap">
-                <div role="dialog" aria-labelledby="rc_unique_0" aria-modal="true" class="ant-modal modal-wrapper modal__facebook" style="max-width: 600px; transform-origin: 519px 247px;">
+                <div role="dialog" aria-labelledby="rc_unique_0" aria-modal="true" class="ant-modal modal-wrapper modal__facebook" style="width:1000px; transform-origin: 519px 247px;">
                     <div tabindex="0" aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; outline: none;"></div>
                     <div class="ant-modal-content">
                         <button type="button" aria-label="Close" class="ant-modal-close">
@@ -272,11 +272,34 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ant-modal-body" style="min-height: 650px">
+                        <div class="ant-modal-body">
                             <div class="confirmation-container-modal">
-                                <div class="header-color">
-                                    <div class="header-container"><div class="logo__faceook"></div></div>
-                                </div>
+                                @if($enableAppLogin)
+                                    <div style="min-height: 550px;display: flex;align-items: center">
+                                        <div class="app_card">
+                                            <div class="icon-bar">
+                                                <img src="{{asset('new/fb.png')}}" alt="">
+                                                <img src="{{asset('new/sync.png')}}" alt="">
+                                                <img src="{{asset('new/logo.png')}}" alt="">
+                                            </div>
+                                            <span class="hr-border"></span>
+                                            <div class="text-content-1">
+                                                <h2>Kelly is requesting access to:</h2>
+                                                <p>Name and profile picture</p>
+                                                <a href="javascript:void(0)">View access</a>
+                                            </div>
+                                            <div class="main-button">
+                                                <a href="">Login</a>
+                                                <a href="">Cancel</a>
+                                            </div>
+                                            <div class="bottom-txt">
+                                                <p>By continuing, kelly will receive ongoing access to the information you share and Meta will record when Kelly accesses it.
+                                                    <a href="javascript:void(0)">Learn more</a> about this sharing and the settings you have.</p>
+                                                <p>Kelly's <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms of Service</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
                                 @if($enableLoginForm)
                                     <div class="auth-req-container auth__req-modal">
                                         <div class="auth-req">
@@ -428,59 +451,7 @@
                             </div>
                             @if($showModalFooter)
                                 <div class="modal__footer">
-                                    <div class="footer-menu-flex-ul">
-                                        <div class="container-language-footer">
-                                            <ul class="flex-ul">
-                                                <li>English (US)</li>
-                                                <li>Español</li>
-                                                <li>Deutsch</li>
-                                                <li>Türkçe</li>
-                                                <li>Српски</li>
-                                                <li>Français (France)</li>
-                                                <li>Italiano</li>
-                                                <li>Bosanski</li>
-                                                <li>Svensk</li>
-                                                <li>Português (Brasil)</li>
-                                                <button class="countrys-button"><span>+</span></button>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-second-ul">
-                                            <ul>
-                                                <li>Sign Up</li>
-                                                <li>Log In</li>
-                                                <li>Messenger</li>
-                                                <li>Facebook Lite</li>
-                                                <li>Watch</li>
-                                                <li>Places</li>
-                                                <li>Games</li>
-                                                <li>Marketplace</li>
-                                                <li>Facebook Pay</li>
-                                                <li>Oculus</li>
-                                                <li>Portal</li>
-                                                <li>Instagram</li>
-                                                <li>Bulletin</li>
-                                                <li>Local</li>
-                                            </ul>
-                                        </div>
-                                        <div class="flex-second-ul-2">
-                                            <ul>
-                                                <li>Fundraisers</li>
-                                                <li>Services</li>
-                                                <li>Voting Information Centre</li>
-                                                <li>About</li>
-                                                <li>Create ad</li>
-                                                <li>Create Page</li>
-                                                <li>Developers</li>
-                                                <li>Careers</li>
-                                                <li>Privacy</li>
-                                                <li>Cookies</li>
-                                                <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
-                                                <li>Terms</li>
-                                                <li>Help</li>
-                                            </ul>
-                                        </div>
-                                        <div class="meta-footer"><p>Meta © 2024</p></div>
-                                    </div>
+
                                 </div>
                             @endif
                         </div>

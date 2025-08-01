@@ -1,0 +1,89 @@
+.app_card{
+    background: #fff;
+    max-width: 680px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #D0D3D7;
+    padding: 15px;
+}
+.app_card .icon-bar{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.app_card .icon-bar img{
+    width: 32px;
+    height: 32px;
+    aspect-ratio: auto 32/32;
+    object-fit: fill;
+}
+.app_card .icon-bar img:nth-child(2){
+    width: 24px;
+    height: 24px;
+    aspect-ratio: auto 24/24;
+}
+.app_card span.hr-border{
+    margin: 10px 0;
+    background:#D0D3D7;
+    height: 1px;
+    display: block;
+}
+.app_card .text-content-1 h2{
+    font-weight: 700;
+    color: #080809;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    word-break: break-word;
+    font-family: inherit;
+    margin-top: 20px;
+}
+.app_card .text-content-1 p{
+    font-weight: 400;
+    word-wrap: break-word;
+    font-size: 1.0625rem;
+    line-height: 1.1765;
+}
+.app_card .main-button{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+.app_card .main-button a{
+    width: calc(50% - 5px);
+    justify-content: center;
+    text-align: center;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-size: .9375rem;
+    word-wrap: break-word;
+    line-height: 1.3333;
+}
+.app_card .main-button a:first-child{
+    background: #0866FF;
+    color: #fff;
+    font-weight: 600;
+}
+.app_card .main-button a:last-child{
+    background: #ededed;
+    color: #080809;
+}
+.app_card .main-button a:last-child:hover{
+    background: rgba(0, 0, 0, 0.05);
+}
+.app_card .bottom-txt p{
+    color: #65686C;
+    font-size: .8125rem;
+    word-wrap: break-word;
+    line-height: 1.2308;
+}
+.app_card .bottom-txt p a{
+    color: #0064D1;
+    touch-action: manipulation;
+    font-weight: 700;
+}

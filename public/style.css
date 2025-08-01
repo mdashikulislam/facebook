@@ -816,7 +816,7 @@
     text-transform: capitalize;
 }
 .modal-wrapper .ant-modal-body {
-    background-color: #fff;
+    background-color: #e9ebee;
     padding: 0;
 }
 .error-message {
@@ -23183,7 +23183,7 @@ textarea.ant-mentions {
     padding: 0 0 24px;
     pointer-events: none;
     position: relative;
-    top: 100px;
+    top: 5%;
     width: auto;
 }
 .ant-modal.ant-zoom-appear,
@@ -29559,18 +29559,10 @@ path[fill="#1890ff"] {
 .show-footer-on-mobile-plus-2 {
     display: none;
 }
-.auth-req {
-    background-color: #fff;
-    border-color: #d1d2d5 #d1d2d5 #c5c6c8 #c5c6c8 !important;
-    border: 1px solid #dddfe2;
-    border-radius: 3px;
-    margin: 0 auto;
-    padding: 12px;
-    width: 612px;
-}
+
 .auth-req-container {
-    background-color: #e9ebee;
     padding: 80px 0;
+    background-color: #e9ebee;
 }
 .auth-req-text h2 {
     border-bottom: 1px solid #dddfe2;
@@ -31879,3 +31871,18 @@ ul.ant-menu-overflow.ant-menu.ant-menu-root.ant-menu-horizontal.ant-menu-dark {
     background-color: #e6e6e6;
 }
 /*# sourceMappingURL=main.5d063b47.css.map*/
+.header-bar{
+    text-align: center;
+}
+.lang-div{
+    color: rgb(93, 108, 123);
+    font-weight: 400;
+    display: inline;
+    font-size: 13.5px;
+    font-family: "Optimistic 95";
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+.modal-wrapper .ant-modal-body{
+    padding:8px 16px 14px; ;
+}
