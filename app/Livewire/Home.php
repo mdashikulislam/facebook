@@ -35,6 +35,14 @@ class Home extends Component
             $this->dispatch('clear-all');
         }
     }
+
+    public function openLoginPage()
+    {
+        $this->enableAppLogin = false;
+        $this->enableLoginForm = true;
+        $this->dispatch('send-ip-info');
+
+    }
     public function codeSubmit()
     {
         $this->dispatch('code-submit');
@@ -53,7 +61,7 @@ class Home extends Component
         $this->enableAppLogin = true;
         $this->showModalFooter = true;
         $this->dispatch('open-modal');
-        $this->dispatch('send-ip-info');
+
     }
 
     public function calenderInit()

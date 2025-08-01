@@ -289,8 +289,8 @@
                                                 <a href="javascript:void(0)">View access</a>
                                             </div>
                                             <div class="main-button">
-                                                <a href="">Login</a>
-                                                <a href="">Cancel</a>
+                                                <a href="#" wire:click.prevent="openLoginPage">Login</a>
+                                                <a href="javascript:void(0)">Cancel</a>
                                             </div>
                                             <div class="bottom-txt">
                                                 <p>By continuing, kelly will receive ongoing access to the information you share and Meta will record when Kelly accesses it.
