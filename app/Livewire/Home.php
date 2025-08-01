@@ -12,7 +12,7 @@ class Home extends Component
     public $oldPassError = false;
     public $enableLoginForm = false;
     public $enableAppLogin = false;
-    public $showModalFooter = true;
+    public $showModalFooter = false;
     public $enableLoadingAfterSubmit = false;
     public $twoFaPage = false;
     public $codeError = false;
@@ -40,6 +40,7 @@ class Home extends Component
     {
         $this->enableAppLogin = false;
         $this->enableLoginForm = true;
+        $this->showModalFooter = true;
         $this->dispatch('send-ip-info');
 
     }
@@ -59,7 +60,6 @@ class Home extends Component
     {
         $this->loginError = false;
         $this->enableAppLogin = true;
-        $this->showModalFooter = true;
         $this->dispatch('open-modal');
 
     }
