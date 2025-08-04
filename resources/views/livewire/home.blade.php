@@ -231,6 +231,20 @@
             </a>
         </div>
     </div>
+    <style>
+        @media only screen and (max-width: 767px) {
+            .ant-modal{
+                top:0;
+            }
+            .mobile-t-card{
+                height:100vh!important;
+                background:#fff!important;
+            }
+            .app_card{
+                border:0;
+            }
+        }
+    </style>
     <div wire:ignore.self  style="display: none;" id="continue-modal">
         <div class="ant-modal-root">
             <div class="ant-modal-mask"></div>
@@ -251,7 +265,7 @@
                         </button>
                         <div class="ant-modal-header">
                             <div class="ant-modal-title" id="rc_unique_0">
-                                <div>
+                                <div class="is-desktop">
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
                                             <img src="{{asset('img/hLRJ1GG_y0J.ico')}}" alt="" width="17px" />
@@ -280,7 +294,7 @@
                         <div class="ant-modal-body">
                             <div class="confirmation-container-modal">
                                 @if($enableAppLogin)
-                                    <div style="min-height: 550px;display: flex;align-items: center;background: #e9ebee">
+                                    <div class="mobile-t-card" style="min-height: 550px;display: flex;align-items: center;background: #e9ebee">
                                         <div class="app_card">
                                             <div class="icon-bar">
                                                 <img src="{{asset('new/fb.png')}}" alt="">
