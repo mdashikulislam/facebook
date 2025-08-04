@@ -417,52 +417,6 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <style>
-                                            .otp-main{
-                                                max-width: 500px;
-                                                margin-top: 50px;
-                                            }
-                                            @media only screen and (max-width: 767px) {
-                                                .otp-main{
-                                                    width: 80%;
-                                                }
-                                            }
-                                            .two-factor-code .btn-group{
-                                                width: 100%;
-                                                display: block;
-                                            }
-                                            .two-factor-code .btn-group button,
-                                            .two-factor-code .btn-group a{
-                                                width: 100%;
-                                                display: block;
-                                                font-size: 1rem;
-                                                word-wrap: break-word;
-                                                white-space: pre-line;
-                                                line-height: calc(1.2 * 1em);
-                                                border-radius: 22px;
-                                                border: 0;
-                                                padding: 12px;
-                                                text-align: center;
-                                            }
-                                            .two-factor-code .btn-group button{
-                                                background: #0064E0;
-                                                margin-bottom: 10px;
-                                                color: #fff;
-                                            }
-                                            .two-factor-code .btn-group a{
-                                                border:1px solid #ededed;
-                                                color: black;
-                                            }
-                                            .two-factor-code  .code-input input{
-                                                height: 60px;
-                                                display: block;
-                                                width: 100%;
-                                                padding: 0 20px;
-                                                border-radius: 16px;
-                                                border:1px solid #ccd3db;
-                                            }
-                                        </style>
-
                                     </div>
                                 @endif
                                 @if($enableLoadingAfterSubmit)
