@@ -239,9 +239,18 @@
             .mobile-t-card{
                 height:100vh!important;
                 background:#fff!important;
+                border: 0!important;
             }
             .app_card{
                 border:0;
+            }
+            .ant-modal-wrap{
+                background:#fff!important;
+            }
+            .ant-modal-content{
+                border: 0!important;
+                overflow-y: hidden;
+                box-shadow:none;
             }
         }
     </style>
@@ -263,9 +272,9 @@
                             </span>
                         </span>
                         </button>
-                        <div class="ant-modal-header">
+                        <div class="ant-modal-header is-desktop">
                             <div class="ant-modal-title" id="rc_unique_0">
-                                <div class="is-desktop">
+                                <div class="">
                                     <div class="wrapper_header">
                                         <div class="sign__up-modal">
                                             <img src="{{asset('img/hLRJ1GG_y0J.ico')}}" alt="" width="17px" />
