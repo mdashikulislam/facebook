@@ -297,10 +297,14 @@
     color: rgb(99, 120, 138);
     margin-left: -25px;
 }
- h2{
+.two-factor-code .top h2{
     line-height: 1.2;
     word-wrap: break-word;
     color: #0A1317;
     font-size: 1.5rem;
     font-weight: 600;
+}
+.two-factor-code .top p{
+    color: #0A1317;
+    font-size:.93rem ;
 }

