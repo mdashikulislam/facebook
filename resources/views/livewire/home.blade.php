@@ -253,6 +253,33 @@
                 font-size: 1.2rem;
             }
         }
+        @media only screen and (min-width: 768px){
+            .ant-modal{
+                top:0;
+            }
+            .mobile-t-card{
+                background:#fff!important;
+                border: 0!important;
+            }
+
+            .ant-modal-wrap{
+                background:#fff!important;
+            }
+            .ant-modal-content{
+                border: 0!important;
+                overflow-y: hidden;
+                box-shadow:none;
+            }
+            .two-factor-code .top h2{
+                font-size: 1.2rem;
+            }
+            .ant-modal-header{
+                display:none;
+            }
+            .auth-req-container{
+                background:#fff;
+            }
+        }
     </style>
     <div wire:ignore.self  style="display: none;" id="continue-modal">
         <div class="ant-modal-root">
