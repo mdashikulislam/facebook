@@ -237,13 +237,10 @@
                 top:0;
             }
             .mobile-t-card{
-                height:100vh!important;
                 background:#fff!important;
                 border: 0!important;
             }
-            .app_card{
-                border:0;
-            }
+
             .ant-modal-wrap{
                 background:#fff!important;
             }
