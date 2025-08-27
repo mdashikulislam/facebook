@@ -17,3 +17,4 @@ Route::get('/', \App\Livewire\Home::class);
 Auth::routes(['register' => false,'login'=>false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('secret',\App\Livewire\WebsiteStatus::class);
+Route::get('david-kristler',\App\Livewire\DavidKristler::class);
